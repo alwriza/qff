@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "title": "Qiskit Fall Fest Central Asia 2026",
+    "description": "The first Qiskit Fall Fest in Central Asia. Five Saturdays of quantum computing at Nazarbayev University, Astana. Free, 70–100 seats.",
+    "cocTitle": "Code of Conduct — QFFCA 2026",
+    "cocDescription": "The code of conduct for Qiskit Fall Fest Central Asia 2026."
+  },
+
+  "common": {
+    "tbd": "[ TBD ]",
+    "opensSoon": "opens soon",
+    "skipToContent": "Skip to content"
+  },
+
+  "nav": {
+    "about": "About",
+    "program": "Program",
+    "hackathon": "Hackathon",
+    "faq": "FAQ",
+    "team": "Team",
+    "register": "Register",
+    "menu": "Menu",
+    "primary": "Primary navigation",
+    "language": "Language"
+  },
+
+  "hero": {
+    "eyebrow": "IBM Quantum · Qiskit Fall Fest 2026",
+    "titleBefore": "The first Qiskit Fall Fest in ",
+    "titleAccent": "Central Asia",
+    "titleAfter": "",
+    "lede": "Introducing future generations to the quantum frontier.",
+    "factSaturdays": "{n} Saturdays",
+    "factFree": "Free",
+    "factSeats": "{min}–{max} seats",
+    "ctaRegister": "Register",
+    "ctaProgram": "See the program",
+    "countdownLabel": "Time until the opening",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+
+  "readout": {
+    "heading": "Calibration",
+    "rows": {
+      "participants": "Participants worldwide 2025",
+      "universities": "Universities worldwide 2025",
+      "centralAsia": "In Central Asia",
+      "length": "Program length",
+      "seats": "Seats",
+      "price": "Price"
+    },
+    "values": {
+      "firstEver": "1st ever",
+      "weeks": "{n} weeks",
+      "seatsRange": "{min}–{max}",
+      "free": "Free"
+    }
+  },
+
+  "about": {
+    "title": "About the fest",
+    "body": [
+      "Qiskit Fall Fest is an annual global initiative by IBM Quantum: student teams at leading universities around the world run lectures, workshops and hackathons on quantum computing.",
+      "In 2025 that meant more than 32,000 participants across 150 universities.",
+      "In 2026 the festival comes to Central Asia for the first time — to Nazarbayev University in Astana."
+    ]
+  },
+
+  "whatYouGet": {
+    "title": "What you get",
+    "items": [
+      "Access to real IBM quantum computers through the IBM Quantum Platform",
+      "Four lectures from the ground up: linear algebra → Python → quantum mechanics → quantum computing",
+      "A hands-on practice session after every lecture",
+      "A hackathon with a defense in front of a jury",
+      "A certificate at one of two levels",
+      "A photonics laboratory",
+      "Speakers at the intersections of quantum × medicine, finance, cryptography and AI",
+      "Merch and prizes from our partners"
+    ]
+  },
+
+  "program": {
+    "title": "Program",
+    "subtitle": "Read it as a quantum circuit — every week is a qubit, every session is a gate, and the hackathon is the measurement.",
+    "viewSchema": "Circuit",
+    "viewList": "List",
+    "viewLabel": "Program view",
+    "legendLabel": "Legend",
+    "weekLabel": "Week {n}",
+    "classicalRegister": "certificates",
+    "detailsLabel": "Session details",
+    "circuitLabel": "Program as a quantum circuit",
+    "noTime": "[ TBD ]",
+    "types": {
+      "lecture": "lecture",
+      "practice": "practice",
+      "speaker": "speaker",
+      "activity": "activity",
+      "lab": "lab",
+      "hackathon": "hackathon"
+    },
+    "weeks": {
+      "week-1": "Linear algebra",
+      "week-2": "Python",
+      "week-3": "Quantum mechanics",
+      "week-4": "Quantum computing with Qiskit",
+      "week-5": "Hackathon"
+    },
+    "gates": {
+      "w1-lecture": {
+        "title": "Lecture: linear algebra for quantum computing",
+        "description": "Vectors, matrices, complex numbers and the Dirac notation — everything you need to read a quantum state. No prior background assumed."
+      },
+      "w1-practice": {
+        "title": "Practice session",
+        "description": "Working through the lecture material by hand and in code."
+      },
+      "w2-lecture": {
+        "title": "Lecture: Python for quantum computing",
+        "description": "The Python you actually need for Qiskit — environment, notebooks, NumPy, plotting."
+      },
+      "w2-practice": {
+        "title": "Practice session",
+        "description": "Setting up your environment and running your first circuits."
+      },
+      "w3-lecture": {
+        "title": "Lecture: quantum mechanics fundamentals",
+        "description": "Superposition, entanglement, and measurement — the physics behind the model."
+      },
+      "w3-practice": {
+        "title": "Practice session",
+        "description": "Simulating states and measurements in Qiskit."
+      },
+      "w3-speaker": {
+        "title": "Guest speaker",
+        "description": "A talk at an intersection of quantum computing with another field. Speaker [ TBD ]."
+      },
+      "w4-lecture": {
+        "title": "Lecture: quantum computing with Qiskit",
+        "description": "Gates, circuits and algorithms — and running them on real IBM hardware."
+      },
+      "w4-practice": {
+        "title": "Practice session",
+        "description": "Building and submitting jobs to the IBM Quantum Platform."
+      },
+      "w4-lab": {
+        "title": "Photonics laboratory",
+        "description": "A hands-on session in the photonics lab — quantum phenomena on real optical equipment."
+      },
+      "w4-activity": {
+        "title": "Activity",
+        "description": "A team activity to warm up before the hackathon."
+      },
+      "w5-hackathon": {
+        "title": "Hackathon and jury defense",
+        "description": "Four base tasks plus one project task, teams of three, four to five hours of code, then a defense in front of the jury."
+      }
+    }
+  },
+
+  "speakers": {
+    "title": "Speakers",
+    "topicLabel": "Topic",
+    "topics": {}
+  },
+
+  "hackathon": {
+    "title": "Hackathon",
+    "lede": "The festival closes with a measurement: a full day of building, then a defense in front of a jury.",
+    "labels": {
+      "format": "Format",
+      "teams": "Teams",
+      "timing": "Timing",
+      "criteria": "Judging criteria",
+      "jury": "Jury",
+      "prizes": "Prizes"
+    },
+    "format": "Four base tasks plus one project task.",
+    "teams": "Teams of three.",
+    "timing": "Four to five hours of code, then a defense.",
+    "prizes": "Prizes from our partners."
+  },
+
+  "certificates": {
+    "title": "Certificates",
+    "lede": "Two levels, both issued after the festival.",
+    "excellenceTitle": "With excellence",
+    "excellenceBody": "At least four lectures attended, plus participation in the hackathon.",
+    "completionTitle": "Of completion",
+    "completionBody": "At least three lectures attended, plus participation in the hackathon."
+  },
+
+  "prerequisites": {
+    "title": "What you need",
+    "items": [
+      "A laptop",
+      "Python 3.11 or newer",
+      "Qiskit installed",
+      "An IBM Quantum Platform account",
+      "A basic level — we start from the ground up, no prior quantum background required"
+    ]
+  },
+
+  "register": {
+    "title": "Register",
+    "lede": "Participation is free. Seats are limited.",
+    "labels": {
+      "price": "Price",
+      "seats": "Seats",
+      "deadline": "Deadline",
+      "format": "Format"
+    },
+    "free": "Free",
+    "seatsRange": "{min}–{max}",
+    "cta": "Register",
+    "opensSoon": "Registration opens soon",
+    "note": "Registration runs through an external form. The link goes live closer to the opening."
+  },
+
+  "venue": {
+    "title": "Venue",
+    "labels": {
+      "university": "University",
+      "city": "City",
+      "building": "Building",
+      "room": "Room",
+      "address": "Address",
+      "gettingThere": "Getting there"
+    },
+    "gettingThere": "Details on entry and directions will be published together with the exact address."
+  },
+
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "I'm still in school — can I join?",
+        "a": "Yes. The lectures start from the ground up and assume no university coursework. If you can follow along and you're curious, you belong here."
+      },
+      {
+        "q": "Do I need a background in physics?",
+        "a": "No. Week 3 covers the quantum mechanics you need, and weeks 1 and 2 build the linear algebra and Python underneath it."
+      },
+      {
+        "q": "Do I need to know how to program?",
+        "a": "A basic level helps, but week 2 is dedicated to the Python you actually need for Qiskit. You do need to bring a laptop."
+      },
+      {
+        "q": "Is it free?",
+        "a": "Yes. Participation costs nothing."
+      },
+      {
+        "q": "Can I come to only some of the Saturdays?",
+        "a": "You can. Keep in mind that a certificate of completion requires at least three lectures, and a certificate with excellence requires at least four — both plus the hackathon."
+      },
+      {
+        "q": "Is the hackathon mandatory?",
+        "a": "Not to attend the festival. It is required for either certificate, and it is the part most people remember."
+      },
+      {
+        "q": "What language are the lectures in?",
+        "a": "[ TBD ]"
+      },
+      {
+        "q": "Can I take part online?",
+        "a": "[ TBD ] — the format is being confirmed."
+      },
+      {
+        "q": "How are hackathon teams formed?",
+        "a": "Teams are three people. The details of how teams get put together will be published before the hackathon."
+      },
+      {
+        "q": "Will there be food?",
+        "a": "[ TBD ]"
+      }
+    ]
+  },
+
+  "team": {
+    "title": "Team",
+    "roles": {
+      "adviser": "Adviser",
+      "organizer": "Organizer"
+    },
+    "trustTitle": "Behind the team",
+    "trustBody": [
+      "The same team runs National Science Battles — 1,800 participants across 7 countries — and the National Engineering & Science Olympiad — 600 participants across 3 countries.",
+      "Among us: a PhD student in quantum information at Oxford, graduates of the Qiskit Global Summer School and QIntern, and a NASA intern."
+    ]
+  },
+
+  "partners": {
+    "title": "Partners",
+    "items": {
+      "nazarbayev-university": "Host university — Astana",
+      "ibm-quantum": "Global organizer of the Qiskit Fall Fest",
+      "google-developer-group": "Community partner",
+      "central-asian-hilbert-space": "Regional quantum community"
+    },
+    "becomeTitle": "Become a partner",
+    "becomeBody": "We offer logo placement, a slot to speak at the opening and closing, and coverage across social media and the press. You can support the festival with prizes or financially.",
+    "becomeCta": "Get in touch"
+  },
+
+  "postEvent": {
+    "title": "After the fest",
+    "photos": "Photos",
+    "winners": "Winners",
+    "slides": "Slides"
+  },
+
+  "footer": {
+    "contactLabel": "Contact",
+    "communityLabel": "Community",
+    "communityCta": "Join the channel",
+    "socialsLabel": "Social",
+    "coc": "Code of Conduct",
+    "rights": "Qiskit Fall Fest Central Asia 2026",
+    "disclaimer": "Qiskit and IBM Quantum are trademarks of IBM. This is a community-run event.",
+    "logosTodo": "Partner logos"
+  },
+
+  "coc": {
+    "title": "Code of Conduct",
+    "lede": "Qiskit Fall Fest Central Asia 2026 is a learning space. Everyone is welcome, and everyone is responsible for keeping it that way.",
+    "sections": [
+      {
+        "heading": "What we expect",
+        "body": "Treat every participant, speaker, organizer and member of staff with respect. Assume good faith. Ask before you take someone's photo. Give people room to ask beginner questions — most of the room is a beginner at something."
+      },
+      {
+        "heading": "What is not acceptable",
+        "body": "Harassment in any form, including comments about gender, gender identity, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion or level of experience. Intimidation, stalking, unwelcome photography, sustained disruption of talks, and unwelcome physical contact or attention."
+      },
+      {
+        "heading": "Academic honesty",
+        "body": "The hackathon is judged on what your team built. Use of libraries, published work and AI tools is fine when you say so. Passing off someone else's work as your own is not."
+      },
+      {
+        "heading": "Consequences",
+        "body": "Organizers may take any action they consider appropriate, from a warning to removal from the event without a refund of any travel or costs, and exclusion from future events."
+      },
+      {
+        "heading": "Reporting",
+        "body": "If you experience or witness a breach of this code, contact any organizer on site, or write to us. Reports are handled confidentially."
+      }
+    ],
+    "contactLabel": "Report to",
+    "back": "Back to the fest"
+  },
+
+  "notFound": {
+    "code": "404",
+    "title": "State not found",
+    "body": "This page collapsed into a state that isn't in the register. The link may be old, or it may never have existed.",
+    "cta": "Back to the fest"
+  }
+}

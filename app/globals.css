@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #0e1f24;
+  --color-surface: #1f4650;
+  --color-surface-2: #2c5f6c;
+  --color-border: #3e7c8b;
+  --color-text: #f4f4f4;
+  --color-muted: #a8bec4;
+  --color-mint: #9fcfd2;
+  --color-coral: #ef6357;
+
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+  --font-condensed: var(--font-ibm-plex-sans-condensed), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+
+  --container-max: 1512px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-radius: 0 !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.display,
+h1.display {
+  font-family: var(--font-condensed);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(38px, 8vw, 124px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-family: var(--font-condensed);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(30px, 5vw, 64px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* Проверено рендером: IBM Plex Sans Condensed на Google Fonts не отдаёт сабсет
+   `cyrillic` — только latin, latin-ext, vietnamese и cyrillic-ext. Базовая
+   кириллица (U+0410–U+044F) и казахская І (U+0406) в этот диапазон не входят,
+   поэтому в ru и kk заголовки подменялись метрическим фолбэком, а не набирались
+   брендовой гарнитурой. Для ru и kk набираем IBM Plex Sans Bold Italic —
+   там кириллица и казахские глифы покрыты целиком. */
+html[lang="ru"] .display,
+html[lang="ru"] .h2,
+html[lang="kk"] .display,
+html[lang="kk"] .h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+/* Plex Sans шире Condensed, поэтому кегль ниже: так заголовок остаётся
+   в две строки, как в английской версии, и оптически весит так же. */
+html[lang="ru"] .display,
+html[lang="kk"] .display {
+  font-size: clamp(32px, 6.6vw, 100px);
+}
+
+html[lang="ru"] .h2,
+html[lang="kk"] .h2 {
+  font-size: clamp(26px, 4.2vw, 54px);
+}
+
+/* Ширина строки заголовка hero. В ch мерить нельзя — ch зависит от гарнитуры,
+   и одна и та же запись давала ru/kk на 130px более широкую колонку. */
+.hero-title {
+  max-width: min(100%, 1250px);
+}
+
+html[lang="ru"] .hero-title,
+html[lang="kk"] .hero-title {
+  max-width: 100%;
+}
+
+.container-max {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+@media (max-width: 640px) {
+  .container-max {
+    padding-inline: 20px;
+  }
+}
+
+/* видимая сетка — 8 вертикальных линий */
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.grid-lines span {
+  border-left: 1px solid var(--color-border);
+  opacity: 0.13;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .grid-lines {
+    display: none;
+  }
+}
+
+/* зерно поверх всего */
+.grain {
+  position: fixed;
+  inset: 0;
+  /* без явных размеров SVG падает на собственные 300×150 */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+}
+
+/* mono-подписи внутри SVG-схемы */
+.svg-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* гейты схемы: видимый фокус, скрытый до :focus-visible */
+.gate {
+  cursor: pointer;
+  outline: none;
+}
+
+.gate-focus {
+  opacity: 0;
+}
+
+.gate:focus-visible .gate-focus {
+  opacity: 1;
+}
+
+/* ховер: подчёркивание слева направо */
+.underline-sweep {
+  position: relative;
+}
+
+.underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 150ms ease-out;
+}
+
+.underline-sweep:hover::after,
+.underline-sweep:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

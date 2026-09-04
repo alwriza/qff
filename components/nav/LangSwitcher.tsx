@@ -1,0 +1,44 @@
+"use client";
+
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+
+const labels: Record<string, string> = {
+  en: "EN",
+  ru: "RU",
+  kk: "KK",
+};
+
+export default function LangSwitcher() {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function switchLocale(next: string) {
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    router.replace(`${pathname}${hash}`, { locale: next });
+  }
+
+  return (
+    <div className="flex items-center gap-3 mono" aria-label="Language">
+      {routing.locales.map((l, i) => (
+        <span key={l} className="flex items-center gap-3">
+          {i > 0 && <span className="text-muted">/</span>}
+          <button
+            type="button"
+            onClick={() => switchLocale(l)}
+            aria-current={l === locale ? "true" : undefined}
+            className={`transition-colors duration-150 ${
+              l === locale
+                ? "text-coral"
+                : "text-muted hover:text-text"
+            }`}
+          >
+            {labels[l]}
+          </button>
+        </span>
+      ))}
+    </div>
+  );
+}

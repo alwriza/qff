@@ -26,7 +26,7 @@ export default function Footer() {
                 {event.contactEmail}
               </a>
             ) : (
-              <p className="mono mt-2 text-text">{tc("tbd")}</p>
+              <p className="mono mt-2 text-text">{t("communitySoon")}</p>
             )}
           </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
                       rel="noreferrer noopener"
                       className="mono text-text transition-colors duration-150 hover:text-mint"
                     >
-                      {name}
+                      {name === "website" ? "hilbertspace.ca" : name}
                     </a>
                   </li>
                 ))}

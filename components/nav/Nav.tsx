@@ -10,7 +10,6 @@ const links = [
   { href: "#program", key: "program" },
   { href: "#hackathon", key: "hackathon" },
   { href: "#faq", key: "faq" },
-  { href: "#team", key: "team" },
 ] as const;
 
 export default function Nav() {
@@ -24,9 +23,8 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/30 bg-bg/80 backdrop-blur">
       <div className="container-max flex h-16 items-center justify-between gap-4">
-        {/* TODO: replace with official IBM Quantum lockup once the vectors land (§12) */}
-        <Link href="/" className="mono whitespace-nowrap text-text">
-          {event.shortName}
+        <Link href="/" className="flex h-11 items-center" aria-label="Central Asian Hilbert Space">
+          <img src="/logo-white.svg" alt="" className="h-10 w-auto logo-on-light" />
         </Link>
 
         {/* Переключение на lg, а не md: на 768–1000px русские и казахские

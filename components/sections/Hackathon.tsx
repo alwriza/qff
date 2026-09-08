@@ -1,18 +1,13 @@
 import { useTranslations } from "next-intl";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
-import IllustrationSlot from "@/components/ui/IllustrationSlot";
 
 export default function Hackathon() {
   const t = useTranslations("hackathon");
-  const tc = useTranslations("common");
-
   const rows = [
     { key: "format", value: t("format") },
     { key: "teams", value: t("teams") },
-    { key: "timing", value: t("timing") },
-    { key: "criteria", value: tc("tbd") },
-    { key: "jury", value: tc("tbd") },
+    { key: "span", value: t("span") },
     { key: "prizes", value: t("prizes") },
   ];
 
@@ -38,7 +33,6 @@ export default function Hackathon() {
             </dl>
           </div>
 
-          <IllustrationSlot name="smileys" ratio="square" className="self-start" />
         </div>
       </Reveal>
     </Section>

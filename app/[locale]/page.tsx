@@ -10,12 +10,9 @@ import WhatYouGet from "@/components/sections/WhatYouGet";
 import Program from "@/components/sections/Program";
 import Speakers from "@/components/sections/Speakers";
 import Hackathon from "@/components/sections/Hackathon";
-import Certificates from "@/components/sections/Certificates";
-import Prerequisites from "@/components/sections/Prerequisites";
 import Register from "@/components/sections/Register";
 import Venue from "@/components/sections/Venue";
 import Faq from "@/components/sections/Faq";
-import Team from "@/components/sections/Team";
 import Partners from "@/components/sections/Partners";
 import PostEvent from "@/components/sections/PostEvent";
 import Footer from "@/components/sections/Footer";
@@ -55,12 +52,9 @@ export default async function Home({
 
         <Speakers />
         <Hackathon />
-        <Certificates />
-        <Prerequisites />
         <Register />
         <Venue />
         <Faq />
-        <Team />
         <Partners />
         <PostEvent />
       </main>

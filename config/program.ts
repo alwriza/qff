@@ -61,53 +61,46 @@ export const program: ProgramWeek[] = [
   {
     id: "week-1",
     index: 1,
-    date: null,
+    date: "24 October",
     measuresToClassical: false,
     gates: [
       { id: "w1-lecture", type: "lecture", column: 0, time: null },
-      { id: "w1-practice", type: "practice", column: 1, time: null },
     ],
   },
   {
     id: "week-2",
     index: 2,
-    date: null,
+    date: "31 October",
     measuresToClassical: false,
     gates: [
-      { id: "w2-lecture", type: "lecture", column: 0, time: null },
-      { id: "w2-practice", type: "practice", column: 1, time: null },
+      { id: "w2-lecture", type: "lecture", column: 1, time: null },
     ],
   },
   {
     id: "week-3",
     index: 3,
-    date: null,
+    date: "8 November",
     measuresToClassical: false,
     gates: [
-      { id: "w3-lecture", type: "lecture", column: 0, time: null },
-      { id: "w3-practice", type: "practice", column: 1, time: null },
-      { id: "w3-speaker", type: "speaker", column: 3, time: null },
+      { id: "w3-lecture", type: "lecture", column: 2, time: null },
     ],
   },
   {
     id: "week-4",
     index: 4,
-    date: null,
+    date: "14 November",
     measuresToClassical: false,
     gates: [
-      { id: "w4-lecture", type: "lecture", column: 0, time: null },
-      { id: "w4-practice", type: "practice", column: 1, time: null },
-      // лаборатория — CNOT: контроль на проводе недели 3, мишень здесь
-      { id: "w4-lab", type: "lab", column: 2, time: null, controlWire: 2 },
-      { id: "w4-activity", type: "activity", column: 3, time: null },
+      { id: "w4-lecture", type: "lecture", column: 3, time: null },
+      { id: "w4-hackathon-start", type: "hackathon", column: 4, time: null },
     ],
   },
   {
     id: "week-5",
     index: 5,
-    date: null,
+    date: "21 November",
     measuresToClassical: true,
-    gates: [{ id: "w5-hackathon", type: "hackathon", column: 4, time: null }],
+    gates: [{ id: "w5-hackathon-end", type: "hackathon", column: 4, time: null }],
   },
 ];
 

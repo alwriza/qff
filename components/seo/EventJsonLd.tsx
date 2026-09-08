@@ -32,13 +32,6 @@ export default async function EventJsonLd({ locale }: { locale: string }) {
         ...(event.venue.address ? { streetAddress: event.venue.address } : {}),
       },
     },
-    offers: {
-      "@type": "Offer",
-      price: 0,
-      priceCurrency: "KZT",
-      availability: "https://schema.org/InStock",
-      ...(event.registrationUrl ? { url: event.registrationUrl } : {}),
-    },
   };
 
   if (event.startDate) data.startDate = event.startDate;

@@ -9,11 +9,7 @@ export default function Register() {
   const tc = useTranslations("common");
 
   const rows = [
-    { key: "price", value: t("free") },
-    {
-      key: "seats",
-      value: t("seatsRange", { min: event.seats.min, max: event.seats.max }),
-    },
+    { key: "audience", value: t("audience") },
     { key: "deadline", value: event.registrationDeadline ?? tc("tbd") },
     { key: "format", value: event.format ?? tc("tbd") },
   ];

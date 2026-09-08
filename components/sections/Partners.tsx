@@ -19,7 +19,7 @@ export default function Partners() {
               key={partner.id}
               className="grid gap-3 border-b border-border/40 py-6 md:grid-cols-[minmax(0,26ch)_minmax(0,1fr)] md:items-center md:gap-8"
             >
-              <div className="flex items-center">
+              <div className="flex min-h-16 items-center">
                 {partner.logo ? (
                   <img
                     src={partner.logo}
@@ -27,7 +27,7 @@ export default function Partners() {
                     width={200}
                     height={48}
                     loading="lazy"
-                    className="h-10 w-auto object-contain"
+                    className="h-14 max-w-[220px] w-auto object-contain object-left"
                   />
                 ) : (
                   // TODO: replace with the official vector logo once received (§12)

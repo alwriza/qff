@@ -6,21 +6,19 @@ export const event = {
   startDate: null as string | null, // "2026-10-24" — countdown и hero
   endDate: null as string | null,
   saturdays: 5,
-  seats: { min: 70, max: 100 },
-  price: "free",
   registrationUrl: null as string | null, // null → кнопка disabled, "opens soon"
   registrationDeadline: null as string | null,
-  format: null as "in-person" | "hybrid" | null,
+  format: "in-person" as "in-person" | "hybrid" | null,
   venue: {
     building: null as string | null,
     room: null as string | null,
     address: null as string | null,
     mapUrl: null as string | null,
   },
-  contactEmail: null as string | null, // ЛИЧНУЮ ПОЧТУ НЕ СТАВИТЬ
+  contactEmail: "centralasianhilbertspace@gmail.com" as string | null,
   communityUrl: null as string | null,
   socials: {
-    instagram: null as string | null,
+    website: "https://hilbertspace.ca/" as string | null,
     linkedin: null as string | null,
     telegram: null as string | null,
   },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Qiskit Fall Fest Central Asia 2026",
-    "description": "The first Qiskit Fall Fest in Central Asia. Five Saturdays of quantum computing at Nazarbayev University, Astana. Free, 70–100 seats.",
+    "description": "The first Qiskit Fall Fest in Central Asia. Five weeks of quantum computing at Nazarbayev University, Astana, open to university students, high-schoolers and independent researchers.",
     "cocTitle": "Code of Conduct — QFFCA 2026",
     "cocDescription": "The code of conduct for Qiskit Fall Fest Central Asia 2026."
   },
@@ -31,8 +31,7 @@
     "titleAfter": "",
     "lede": "Introducing future generations to the quantum frontier.",
     "factSaturdays": "{n} Saturdays",
-    "factFree": "Free",
-    "factSeats": "{min}–{max} seats",
+    "factAudience": "For everyone",
     "ctaRegister": "Register",
     "ctaProgram": "See the program",
     "countdownLabel": "Time until the opening",
@@ -49,14 +48,12 @@
       "universities": "Universities worldwide 2025",
       "centralAsia": "In Central Asia",
       "length": "Program length",
-      "seats": "Seats",
-      "price": "Price"
+      "audience": "Who it is for"
     },
     "values": {
       "firstEver": "1st ever",
       "weeks": "{n} weeks",
-      "seatsRange": "{min}–{max}",
-      "free": "Free"
+      "everyone": "Students, high-schoolers & independent researchers"
     }
   },
 
@@ -72,14 +69,11 @@
   "whatYouGet": {
     "title": "What you get",
     "items": [
-      "Access to real IBM quantum computers through the IBM Quantum Platform",
-      "Four lectures from the ground up: linear algebra → Python → quantum mechanics → quantum computing",
-      "A hands-on practice session after every lecture",
-      "A hackathon with a defense in front of a jury",
-      "A certificate at one of two levels",
-      "A photonics laboratory",
-      "Speakers at the intersections of quantum × medicine, finance, cryptography and AI",
-      "Merch and prizes from our partners"
+    "Access to real IBM quantum computers through the IBM Quantum Platform",
+    "[ TBD ]",
+    "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
+    "Week-long hackathon with 4 tasks and 1 optional project",
+    "TBD"
     ]
   },
 
@@ -91,7 +85,7 @@
     "viewLabel": "Program view",
     "legendLabel": "Legend",
     "weekLabel": "Week {n}",
-    "classicalRegister": "certificates",
+  "classicalRegister": "complete",
     "detailsLabel": "Session details",
     "circuitLabel": "Program as a quantum circuit",
     "noTime": "[ TBD ]",
@@ -104,32 +98,32 @@
       "hackathon": "hackathon"
     },
     "weeks": {
-      "week-1": "Linear algebra",
-      "week-2": "Python",
-      "week-3": "Quantum mechanics",
-      "week-4": "Quantum computing with Qiskit",
-      "week-5": "Hackathon"
+    "week-1": "24 October",
+    "week-2": "31 October",
+    "week-3": "8 November",
+    "week-4": "14 November",
+    "week-5": "21 November"
     },
     "gates": {
       "w1-lecture": {
-        "title": "Lecture: linear algebra for quantum computing",
-        "description": "Vectors, matrices, complex numbers and the Dirac notation — everything you need to read a quantum state. No prior background assumed."
+      "title": "Lecture + [ TBD ]",
+      "description": "[ TBD ]"
       },
       "w1-practice": {
         "title": "Practice session",
         "description": "Working through the lecture material by hand and in code."
       },
       "w2-lecture": {
-        "title": "Lecture: Python for quantum computing",
-        "description": "The Python you actually need for Qiskit — environment, notebooks, NumPy, plotting."
+      "title": "Lecture + [ TBD ]",
+      "description": "[ TBD ]"
       },
       "w2-practice": {
         "title": "Practice session",
         "description": "Setting up your environment and running your first circuits."
       },
       "w3-lecture": {
-        "title": "Lecture: quantum mechanics fundamentals",
-        "description": "Superposition, entanglement, and measurement — the physics behind the model."
+      "title": "Lecture + [ TBD ]",
+      "description": "[ TBD ]"
       },
       "w3-practice": {
         "title": "Practice session",
@@ -140,8 +134,8 @@
         "description": "A talk at an intersection of quantum computing with another field. Speaker [ TBD ]."
       },
       "w4-lecture": {
-        "title": "Lecture: quantum computing with Qiskit",
-        "description": "Gates, circuits and algorithms — and running them on real IBM hardware."
+      "title": "Lecture + [ TBD ]",
+      "description": "[ TBD ]"
       },
       "w4-practice": {
         "title": "Practice session",
@@ -155,9 +149,13 @@
         "title": "Activity",
         "description": "A team activity to warm up before the hackathon."
       },
-      "w5-hackathon": {
-        "title": "Hackathon and jury defense",
-        "description": "Four base tasks plus one project task, teams of three, four to five hours of code, then a defense in front of the jury."
+    "w4-hackathon-start": {
+      "title": "Hackathon starts",
+      "description": "Week-long hackathon with 4 tasks and 1 optional project."
+    },
+    "w5-hackathon-end": {
+      "title": "Hackathon ends",
+      "description": "[ TBD ]"
       }
     }
   },
@@ -170,19 +168,17 @@
 
   "hackathon": {
     "title": "Hackathon",
-    "lede": "The festival closes with a measurement: a full day of building, then a defense in front of a jury.",
+  "lede": "A week-long hackathon with 4 tasks and 1 optional project.",
     "labels": {
       "format": "Format",
       "teams": "Teams",
-      "timing": "Timing",
-      "criteria": "Judging criteria",
-      "jury": "Jury",
+    "span": "Span",
       "prizes": "Prizes"
     },
-    "format": "Four base tasks plus one project task.",
-    "teams": "Teams of three.",
-    "timing": "Four to five hours of code, then a defense.",
-    "prizes": "Prizes from our partners."
+  "format": "4 tasks and 1 optional project.",
+  "teams": "From 1 to 3 participants.",
+  "span": "Week-long.",
+  "prizes": "TBD"
   },
 
   "certificates": {
@@ -207,15 +203,13 @@
 
   "register": {
     "title": "Register",
-    "lede": "Participation is free. Seats are limited.",
+  "lede": "The fest is for university students, high-schoolers and independent researchers.",
     "labels": {
-      "price": "Price",
-      "seats": "Seats",
+    "audience": "Who it is for",
       "deadline": "Deadline",
       "format": "Format"
     },
-    "free": "Free",
-    "seatsRange": "{min}–{max}",
+  "audience": "University students, high-schoolers and independent researchers",
     "cta": "Register",
     "opensSoon": "Registration opens soon",
     "note": "Registration runs through an external form. The link goes live closer to the opening."
@@ -250,28 +244,20 @@
         "a": "A basic level helps, but week 2 is dedicated to the Python you actually need for Qiskit. You do need to bring a laptop."
       },
       {
-        "q": "Is it free?",
-        "a": "Yes. Participation costs nothing."
-      },
-      {
-        "q": "Can I come to only some of the Saturdays?",
-        "a": "You can. Keep in mind that a certificate of completion requires at least three lectures, and a certificate with excellence requires at least four — both plus the hackathon."
-      },
-      {
-        "q": "Is the hackathon mandatory?",
-        "a": "Not to attend the festival. It is required for either certificate, and it is the part most people remember."
+      "q": "Is the hackathon mandatory?",
+      "a": "No. You can attend the lectures and lab tours without joining the hackathon."
       },
       {
         "q": "What language are the lectures in?",
-        "a": "[ TBD ]"
+      "a": "English."
       },
       {
         "q": "Can I take part online?",
-        "a": "[ TBD ] — the format is being confirmed."
+      "a": "No. The festival is held in person only."
       },
       {
         "q": "How are hackathon teams formed?",
-        "a": "Teams are three people. The details of how teams get put together will be published before the hackathon."
+      "a": "You may participate individually or in a group of up to three people."
       },
       {
         "q": "Will there be food?",
@@ -317,6 +303,7 @@
     "contactLabel": "Contact",
     "communityLabel": "Community",
     "communityCta": "Join the channel",
+    "communitySoon": "Telegram channel coming soon",
     "socialsLabel": "Social",
     "coc": "Code of Conduct",
     "rights": "Qiskit Fall Fest Central Asia 2026",

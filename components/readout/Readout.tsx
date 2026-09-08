@@ -80,12 +80,6 @@ export default function Readout() {
     if (row.valueKey === "weeks") {
       return t("values.weeks", { n: readoutValues.weeks });
     }
-    if (row.valueKey === "seatsRange") {
-      return t("values.seatsRange", {
-        min: readoutValues.seatsMin,
-        max: readoutValues.seatsMax,
-      });
-    }
     return t(`values.${row.valueKey}`);
   }
 

@@ -22,12 +22,9 @@ export const readoutRows: ReadoutRow[] = [
   { id: "universities", count: 150, suffix: "", valueKey: null, bar: 78, accent: false },
   { id: "centralAsia", count: null, suffix: "", valueKey: "firstEver", bar: 100, accent: true },
   { id: "length", count: null, suffix: "", valueKey: "weeks", bar: 62, accent: false },
-  { id: "seats", count: null, suffix: "", valueKey: "seatsRange", bar: 45, accent: false },
-  { id: "price", count: null, suffix: "", valueKey: "free", bar: 100, accent: false },
+  { id: "audience", count: null, suffix: "", valueKey: "everyone", bar: 100, accent: true },
 ];
 
 export const readoutValues = {
   weeks: event.saturdays,
-  seatsMin: event.seats.min,
-  seatsMax: event.seats.max,
 };

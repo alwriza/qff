@@ -21,14 +21,33 @@ export default function Partners() {
             >
               <div className="flex min-h-16 items-center">
                 {partner.logo ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={200}
-                    height={48}
-                    loading="lazy"
-                    className="h-14 max-w-[220px] w-auto object-contain object-left"
-                  />
+                  partner.url ? (
+                    <a
+                      href={partner.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label={partner.name}
+                      className="inline-flex"
+                    >
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={220}
+                        height={56}
+                        loading="lazy"
+                        className="h-14 max-w-[220px] w-auto object-contain object-left"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={220}
+                      height={56}
+                      loading="lazy"
+                      className="h-14 max-w-[220px] w-auto object-contain object-left"
+                    />
+                  )
                 ) : (
                   // TODO: replace with the official vector logo once received (§12)
                   <span className="text-lg text-text">{partner.name}</span>

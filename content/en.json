@@ -7,7 +7,7 @@
   },
 
   "common": {
-    "tbd": "[ TBD ]",
+    "tbd": "To be decided",
     "opensSoon": "opens soon",
     "skipToContent": "Skip to content"
   },
@@ -53,7 +53,7 @@
     "values": {
       "firstEver": "1st ever",
       "weeks": "{n} weeks",
-      "everyone": "Students, high-schoolers & independent researchers"
+      "everyone": "Students, high-schoolers & researchers"
     }
   },
 
@@ -70,10 +70,9 @@
     "title": "What you get",
     "items": [
     "Access to real IBM quantum computers through the IBM Quantum Platform",
-    "[ TBD ]",
     "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
     "Week-long hackathon with 4 tasks and 1 optional project",
-    "TBD"
+    "Rest to be decided"
     ]
   },
 
@@ -88,7 +87,7 @@
   "classicalRegister": "complete",
     "detailsLabel": "Session details",
     "circuitLabel": "Program as a quantum circuit",
-    "noTime": "[ TBD ]",
+    "noTime": "To be decided",
     "types": {
       "lecture": "lecture",
       "practice": "practice",
@@ -106,24 +105,24 @@
     },
     "gates": {
       "w1-lecture": {
-      "title": "Lecture + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Lecture + To be decided",
+        "description": "To be decided"
       },
       "w1-practice": {
         "title": "Practice session",
         "description": "Working through the lecture material by hand and in code."
       },
       "w2-lecture": {
-      "title": "Lecture + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Lecture + To be decided",
+        "description": "To be decided"
       },
       "w2-practice": {
         "title": "Practice session",
         "description": "Setting up your environment and running your first circuits."
       },
       "w3-lecture": {
-      "title": "Lecture + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Lecture + To be decided",
+        "description": "To be decided"
       },
       "w3-practice": {
         "title": "Practice session",
@@ -131,11 +130,11 @@
       },
       "w3-speaker": {
         "title": "Guest speaker",
-        "description": "A talk at an intersection of quantum computing with another field. Speaker [ TBD ]."
+        "description": "A talk at an intersection of quantum computing with another field. Speaker to be decided."
       },
       "w4-lecture": {
-      "title": "Lecture + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Lecture + To be decided",
+        "description": "To be decided"
       },
       "w4-practice": {
         "title": "Practice session",
@@ -155,7 +154,7 @@
     },
     "w5-hackathon-end": {
       "title": "Hackathon ends",
-      "description": "[ TBD ]"
+        "description": "To be decided"
       }
     }
   },
@@ -178,7 +177,7 @@
   "format": "4 tasks and 1 optional project.",
   "teams": "From 1 to 3 participants.",
   "span": "Week-long.",
-  "prizes": "TBD"
+    "prizes": "To be decided"
   },
 
   "certificates": {
@@ -261,7 +260,7 @@
       },
       {
         "q": "Will there be food?",
-        "a": "[ TBD ]"
+        "a": "To be decided"
       }
     ]
   },

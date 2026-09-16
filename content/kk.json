@@ -7,7 +7,7 @@
   },
 
   "common": {
-    "tbd": "[ TBD ]",
+    "tbd": "To be decided",
     "opensSoon": "жақында ашылады",
     "skipToContent": "Мазмұнға өту"
   },
@@ -53,7 +53,7 @@
     "values": {
       "firstEver": "алғаш рет",
       "weeks": "{n} апта",
-      "everyone": "Студенттер, мектеп оқушылары және тәуелсіз зерттеушілер"
+      "everyone": "Студенттер, мектеп оқушылары және зерттеушілер"
     }
   },
 
@@ -69,11 +69,10 @@
   "whatYouGet": {
     "title": "Не аласыз",
     "items": [
-      "IBM Quantum Platform арқылы IBM-нің нақты кванттық компьютерлеріне қолжетімділік",
-    "[ TBD ]",
+    "IBM Quantum Platform арқылы IBM-нің нақты кванттық компьютерлеріне қолжетімділік",
     "Зертхана турлары: Quantum Sensors Lab және Intermediate Physics Lab (Optics)",
     "Бір апталық хакатон: 4 тапсырма және 1 қосымша жоба",
-    "TBD"
+    "Rest to be decided"
     ]
   },
 
@@ -88,7 +87,7 @@
     "classicalRegister": "сертификаттар",
     "detailsLabel": "Сабақ туралы",
     "circuitLabel": "Бағдарлама кванттық схема түрінде",
-    "noTime": "[ TBD ]",
+    "noTime": "To be decided",
     "types": {
       "lecture": "дәріс",
       "practice": "практика",
@@ -106,24 +105,24 @@
     },
     "gates": {
       "w1-lecture": {
-      "title": "Дәріс + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Дәріс + To be decided",
+        "description": "To be decided"
       },
       "w1-practice": {
         "title": "Практикалық сабақ",
         "description": "Дәріс материалын қолмен және кодта талдау."
       },
       "w2-lecture": {
-      "title": "Дәріс + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Дәріс + To be decided",
+        "description": "To be decided"
       },
       "w2-practice": {
         "title": "Практикалық сабақ",
         "description": "Ортаны баптау және алғашқы схемаларды іске қосу."
       },
       "w3-lecture": {
-      "title": "Дәріс + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Дәріс + To be decided",
+        "description": "To be decided"
       },
       "w3-practice": {
         "title": "Практикалық сабақ",
@@ -131,11 +130,11 @@
       },
       "w3-speaker": {
         "title": "Шақырылған спикер",
-        "description": "Кванттық есептеулердің басқа салалармен тоғысындағы баяндама. Спикер [ TBD ]."
+        "description": "Кванттық есептеулердің басқа салалармен тоғысындағы баяндама. Спикер кейінірек анықталады."
       },
       "w4-lecture": {
-      "title": "Дәріс + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Дәріс + To be decided",
+        "description": "To be decided"
       },
       "w4-practice": {
         "title": "Практикалық сабақ",
@@ -155,7 +154,7 @@
     },
     "w5-hackathon-end": {
       "title": "Хакатон аяқталады",
-      "description": "[ TBD ]"
+        "description": "To be decided"
       }
     }
   },
@@ -178,7 +177,7 @@
   "format": "4 тапсырма және 1 қосымша жоба.",
   "teams": "1-ден 3-ке дейін қатысушы.",
   "span": "Бір апта.",
-  "prizes": "TBD"
+    "prizes": "To be decided"
   },
 
   "certificates": {
@@ -261,7 +260,7 @@
       },
       {
         "q": "Тамақ бола ма?",
-        "a": "[ TBD ]"
+        "a": "To be decided"
       }
     ]
   },

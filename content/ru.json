@@ -7,7 +7,7 @@
   },
 
   "common": {
-    "tbd": "[ TBD ]",
+    "tbd": "To be decided",
     "opensSoon": "скоро откроется",
     "skipToContent": "Перейти к содержанию"
   },
@@ -53,7 +53,7 @@
     "values": {
       "firstEver": "впервые",
       "weeks": "{n} недель",
-      "everyone": "Студенты, школьники и независимые исследователи"
+      "everyone": "Студенты, школьники и исследователи"
     }
   },
 
@@ -69,11 +69,10 @@
   "whatYouGet": {
     "title": "Что вы получите",
     "items": [
-      "Доступ к реальным квантовым компьютерам IBM через IBM Quantum Platform",
-    "[ TBD ]",
+    "Доступ к реальным квантовым компьютерам IBM через IBM Quantum Platform",
     "Экскурсии по лабораториям: Quantum Sensors Lab и Intermediate Physics Lab (Optics)",
     "Недельный хакатон: 4 задачи и 1 необязательный проект",
-    "TBD"
+    "Rest to be decided"
     ]
   },
 
@@ -88,7 +87,7 @@
     "classicalRegister": "сертификаты",
     "detailsLabel": "Детали сессии",
     "circuitLabel": "Программа в виде квантовой схемы",
-    "noTime": "[ TBD ]",
+    "noTime": "To be decided",
     "types": {
       "lecture": "лекция",
       "practice": "практика",
@@ -106,24 +105,24 @@
     },
     "gates": {
       "w1-lecture": {
-      "title": "Лекция + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Лекция + To be decided",
+        "description": "To be decided"
       },
       "w1-practice": {
         "title": "Практическая сессия",
         "description": "Разбор материала лекции руками и в коде."
       },
       "w2-lecture": {
-      "title": "Лекция + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Лекция + To be decided",
+        "description": "To be decided"
       },
       "w2-practice": {
         "title": "Практическая сессия",
         "description": "Настройка окружения и первые собственные схемы."
       },
       "w3-lecture": {
-      "title": "Лекция + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Лекция + To be decided",
+        "description": "To be decided"
       },
       "w3-practice": {
         "title": "Практическая сессия",
@@ -131,11 +130,11 @@
       },
       "w3-speaker": {
         "title": "Приглашённый спикер",
-        "description": "Доклад на стыке квантовых вычислений с другой областью. Спикер [ TBD ]."
+        "description": "Доклад на стыке квантовых вычислений с другой областью. Спикер будет определён позднее."
       },
       "w4-lecture": {
-      "title": "Лекция + [ TBD ]",
-      "description": "[ TBD ]"
+        "title": "Лекция + To be decided",
+        "description": "To be decided"
       },
       "w4-practice": {
         "title": "Практическая сессия",
@@ -155,7 +154,7 @@
     },
     "w5-hackathon-end": {
       "title": "Окончание хакатона",
-      "description": "[ TBD ]"
+        "description": "To be decided"
       }
     }
   },
@@ -178,7 +177,7 @@
   "format": "4 задачи и 1 необязательный проект.",
   "teams": "От 1 до 3 участников.",
   "span": "Одна неделя.",
-  "prizes": "TBD"
+    "prizes": "To be decided"
   },
 
   "certificates": {
@@ -261,7 +260,7 @@
       },
       {
         "q": "Будет ли еда?",
-        "a": "[ TBD ]"
+        "a": "To be decided"
       }
     ]
   },

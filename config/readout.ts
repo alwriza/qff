@@ -22,7 +22,7 @@ export const readoutRows: ReadoutRow[] = [
   { id: "universities", count: 150, suffix: "", valueKey: null, bar: 78, accent: false },
   { id: "centralAsia", count: null, suffix: "", valueKey: "firstEver", bar: 100, accent: true },
   { id: "length", count: null, suffix: "", valueKey: "weeks", bar: 62, accent: false },
-  { id: "audience", count: null, suffix: "", valueKey: "everyone", bar: 100, accent: true },
+  { id: "audience", count: null, suffix: "", valueKey: "everyone", bar: 62, accent: true },
 ];
 
 export const readoutValues = {

@@ -90,7 +90,7 @@ export default function Readout() {
           {readoutRows.map((row, i) => (
             <li
               key={row.id}
-              className="grid grid-cols-1 items-center gap-3 border-b border-border/40 py-5 md:grid-cols-[minmax(0,20ch)_minmax(0,1fr)_minmax(0,14ch)] md:gap-8"
+              className="grid grid-cols-1 items-center gap-3 border-b border-border/40 py-5 md:grid-cols-[minmax(0,20ch)_minmax(0,1fr)_minmax(0,32ch)] md:gap-8"
             >
               <span className="mono text-muted">{t(`rows.${row.id}`)}</span>
 
@@ -116,7 +116,11 @@ export default function Readout() {
               {/* Коралловый только на строке «впервые» — и только крупным кеглем:
                   coral на surface даёт 3.22, для body-текста запрещено (§3). */}
               <span
-                className={`font-mono text-2xl leading-none tabular-nums whitespace-nowrap sm:text-3xl md:text-right ${
+                className={`font-mono tabular-nums md:text-right ${
+                  row.id === "audience"
+                    ? "text-xl leading-tight whitespace-normal sm:text-2xl"
+                    : "text-2xl leading-none whitespace-nowrap sm:text-3xl"
+                } ${
                   row.accent ? "text-coral uppercase" : "text-text"
                 }`}
               >

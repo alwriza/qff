@@ -23,7 +23,7 @@ export default function IllustrationSlot({
 }: Props) {
   return (
     <div
-      className={`w-full border border-border/40 bg-surface-2/30 ${
+      className={`w-full rounded-[var(--radius-card)] border border-dashed border-border bg-surface-2/40 ${
         ratio === "wide" ? "aspect-[16/5]" : "aspect-square"
       } flex items-center justify-center ${className}`}
       aria-hidden="true"

@@ -1,10 +1,19 @@
 import type { ReactNode, AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
-type Variant = "primary" | "secondary";
+/**
+ * Кнопки всего сайта. Вид описан классами `.btn*` в globals.css — там же,
+ * где градиент из макета, поэтому шапка, hero, регистрация и футер
+ * не расходятся при правке палитры.
+ *
+ * on-dark / ghost-on-dark — для акцентной и глубокой полос, где основная
+ * пара «розовая заливка / тёмная обводка» теряется на цветном фоне.
+ */
+type Variant = "primary" | "secondary" | "on-dark" | "ghost-on-dark";
 
 type CommonProps = {
   variant?: Variant;
   disabled?: boolean;
+  className?: string;
   children: ReactNode;
 };
 
@@ -16,29 +25,24 @@ type ButtonAsButton = CommonProps &
 
 type ButtonProps = ButtonAsLink | ButtonAsButton;
 
-const base =
-  "inline-flex items-center justify-center gap-2 px-6 py-3 mono text-[12px] font-medium transition-colors duration-150";
-
-const variants: Record<Variant, string> = {
-  primary: "bg-coral text-bg hover:bg-coral/90",
-  secondary:
-    "border border-border text-text hover:border-mint hover:text-mint",
-};
-
 export default function Button({
   variant = "primary",
   disabled,
+  className = "",
   children,
   ...props
 }: ButtonProps) {
-  const classes = `${base} ${variants[variant]} ${
-    disabled ? "opacity-40 pointer-events-none cursor-not-allowed" : ""
-  }`;
+  const classes = `btn btn--${variant} ${className}`.trim();
 
   if ("href" in props && props.href) {
     const { href, ...rest } = props as ButtonAsLink;
     return (
-      <a href={href} className={classes} aria-disabled={disabled} {...rest}>
+      <a
+        href={href}
+        className={classes}
+        aria-disabled={disabled || undefined}
+        {...rest}
+      >
         {children}
       </a>
     );

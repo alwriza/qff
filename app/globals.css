@@ -1,20 +1,56 @@
 @import "tailwindcss";
 
+/* ============================================================
+   ТОКЕНЫ
+
+   Палитра взята из макета hero и распространена на весь сайт:
+   розовый #ff2e8f и сиреневый #be95ff — акцентная пара градиента,
+   фиолетовый #6d2bd9 — тот же оттенок, затемнённый до контраста,
+   пригодного для текста, глубокий #2a1a63 — цвет плашки Quantum,
+   им набран футер.
+   ============================================================ */
+
 @theme {
   --color-bg: #ffffff;
-  --color-surface: #ffffff;
-  --color-surface-2: #f3f6f7;
-  --color-border: #b8c4c8;
-  --color-text: #10242a;
-  --color-muted: #527078;
-  --color-mint: #0a7c7c;
-  --color-coral: #c94a40;
+  --color-surface: #fbf8fe;
+  --color-surface-2: #f2e9fc;
+  --color-border: #cfc0e0;
+  --color-text: #101f24;
+  /* было #5f5573 (7:1) — на фоне с контурным узором текст этим цветом
+     терялся; 9.5:1 держит его читаемым поверх линий */
+  --color-muted: #4a4160;
+
+  /* Акценты. violet — единственный из трёх, допустимый для мелкого текста:
+     6.9:1 на белом. pink даёт 3.5:1 — только крупный кегль и заливки,
+     lilac 2.1:1 — только графика и градиенты. */
+  --color-violet: #6d2bd9;
+  --color-pink: #ff2e8f;
+  --color-lilac: #be95ff;
+  --color-deep: #2a1a63;
+
+  /* Ошибка формы: розовый из палитры, затемнённый до 6:1 на белом —
+     сообщение об ошибке набрано мелким кеглем. */
+  --color-danger: #c0175c;
 
   --font-sans: var(--font-ibm-plex-sans), sans-serif;
-  --font-condensed: var(--font-ibm-plex-sans-condensed), sans-serif;
   --font-mono: var(--font-ibm-plex-mono), monospace;
 
   --container-max: 1512px;
+}
+
+:root {
+  /* Один градиент на весь проект: кнопки, полосы под заголовками,
+     акцентные тексты и полосы читаута берут его отсюда. */
+  --grad-accent: linear-gradient(90deg, #ff2e8f 0%, #be95ff 100%);
+  --grad-cta: linear-gradient(90deg, #ff2e8f 0%, #ff74b6 100%);
+
+  --radius-card: 24px;
+  --radius-sm: 14px;
+
+  --shadow-card: 0 18px 44px -28px rgba(42, 26, 99, 0.42);
+
+  --rule: rgba(42, 26, 99, 0.16);
+  --rule-strong: rgba(42, 26, 99, 0.28);
 }
 
 html,
@@ -25,84 +61,144 @@ body {
   color: var(--color-text);
 }
 
-.logo-on-light { filter: invert(1); }
-
-
-* {
-  border-radius: 0 !important;
-}
-
 body {
   font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 1.55;
+  /* 400, а не 300: тонкое начертание спорило с линиями фона */
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
+.logo-on-light {
+  filter: invert(1);
+}
+
+/* Скругления задаются токенами точечно — карточкам и полям ввода.
+   Кнопки и переключатели остаются прямоугольными, как в макете. */
+button,
+input,
+select,
+textarea {
+  border-radius: 0;
+}
+
+/* ============================================================
+   ТИПОГРАФИКА
+   ============================================================ */
+
+/* Кегли ниже прежних: Plex Sans на 11% шире Condensed, которым заголовки
+   набирались раньше, — при старых значениях строки переставали помещаться.
+   Межсловный пробел расширен, как в макете: слова там стоят заметно реже
+   букв. */
 .display,
 h1.display {
-  font-family: var(--font-condensed);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(38px, 8vw, 124px);
-  line-height: 0.9;
-  letter-spacing: -0.02em;
+  font-size: clamp(34px, 7vw, 104px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  word-spacing: 0.1em;
 }
 
 .h2 {
-  font-family: var(--font-condensed);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(30px, 5vw, 64px);
-  line-height: 0.9;
-  letter-spacing: -0.02em;
+  font-size: clamp(28px, 4.4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  word-spacing: 0.08em;
+}
+
+/* Градиентная засечка над каждым заголовком второго уровня — тот же
+   штрих, что и акцент «CENTRAL ASIA» в hero. Правило одно здесь,
+   чтобы секции не повторяли разметку. */
+.h2::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 6px;
+  margin-bottom: 22px;
+  background: var(--grad-accent);
+}
+
+.h2--bare::before {
+  display: none;
+}
+
+/* В нумерованных полосах роль градиентного штриха играет линейка
+   рядом с номером — две метки подряд перегружали бы начало секции. */
+.has-index .h2::before {
+  display: none;
+}
+
+.section-index {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 34px;
+  color: var(--color-muted);
+}
+
+.section-index-rule {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    var(--color-pink) 0%,
+    var(--color-lilac) 22%,
+    rgba(190, 149, 255, 0) 72%
+  );
+}
+
+.section-accent .section-index,
+.section-deep .section-index {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-accent .section-index-rule,
+.section-deep .section-index-rule {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.5) 30%,
+    rgba(255, 255, 255, 0) 75%
+  );
+}
+
+/* На акцентной и глубокой полосах градиент теряется — засечка белая. */
+.h2--on-dark::before {
+  background: #ffffff;
 }
 
 .mono {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
-/* Проверено рендером: IBM Plex Sans Condensed на Google Fonts не отдаёт сабсет
-   `cyrillic` — только latin, latin-ext, vietnamese и cyrillic-ext. Базовая
-   кириллица (U+0410–U+044F) и казахская І (U+0406) в этот диапазон не входят,
-   поэтому в ru и kk заголовки подменялись метрическим фолбэком, а не набирались
-   брендовой гарнитурой. Для ru и kk набираем IBM Plex Sans Bold Italic —
-   там кириллица и казахские глифы покрыты целиком. */
-html[lang="ru"] .display,
-html[lang="ru"] .h2,
-html[lang="kk"] .display,
-html[lang="kk"] .h2 {
-  font-family: var(--font-sans);
-  font-weight: 700;
+/* Акцентный текст градиентом. Цвет объявлен до background-clip: если
+   браузер не поддерживает клип, текст останется розовым, а не пропадёт. */
+.grad-text {
+  color: var(--color-pink);
+  background: linear-gradient(90deg, #ff4898 32%, #be95ff 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-/* Plex Sans шире Condensed, поэтому кегль ниже: так заголовок остаётся
-   в две строки, как в английской версии, и оптически весит так же. */
-html[lang="ru"] .display,
-html[lang="kk"] .display {
-  font-size: clamp(32px, 6.6vw, 100px);
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .grad-text {
+    color: transparent;
+  }
 }
 
-html[lang="ru"] .h2,
-html[lang="kk"] .h2 {
-  font-size: clamp(26px, 4.2vw, 54px);
-}
-
-/* Ширина строки заголовка hero. В ch мерить нельзя — ch зависит от гарнитуры,
-   и одна и та же запись давала ru/kk на 130px более широкую колонку. */
-.hero-title {
-  max-width: min(100%, 1250px);
-}
-
-html[lang="ru"] .hero-title,
-html[lang="kk"] .hero-title {
-  max-width: 100%;
-}
+/* ============================================================
+   СЕТКА И ФОН СТРАНИЦЫ
+   ============================================================ */
 
 .container-max {
   max-width: var(--container-max);
@@ -129,8 +225,8 @@ html[lang="kk"] .hero-title {
 }
 
 .grid-lines span {
-  border-left: 1px solid var(--color-border);
-  opacity: 0.13;
+  border-left: 1px solid var(--color-violet);
+  opacity: 0.05;
   height: 100%;
 }
 
@@ -138,6 +234,19 @@ html[lang="kk"] .hero-title {
   .grid-lines {
     display: none;
   }
+}
+
+/* Контурное поле: один слой на страницу, поверх заливок секций (z-5),
+   но под контентом (z-10). multiply — чтобы одни и те же линии читались
+   и на белом, и на сиреневом, и на розовом градиенте регистрации. */
+.contour-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 /* зерно поверх всего */
@@ -151,6 +260,466 @@ html[lang="kk"] .hero-title {
   z-index: 50;
   opacity: 0.04;
 }
+
+/* ============================================================
+   ПОЛОСЫ-СЕКЦИИ
+   ============================================================ */
+
+/* Края полосы растушёваны в прозрачность: страница под ней белая,
+   поэтому заливка втекает и вытекает плавно, без видимой границы. */
+.section-tint {
+  background: linear-gradient(
+    180deg,
+    rgba(244, 236, 253, 0) 0%,
+    rgba(244, 236, 253, 0.85) 22%,
+    rgba(244, 236, 253, 0.85) 78%,
+    rgba(244, 236, 253, 0) 100%
+  );
+}
+
+/* Акцентная полоса — второй «hero-момент» страницы (регистрация). */
+.section-accent {
+  position: relative;
+  color: #ffffff;
+  /* отбивка больше обычной: верхние и нижние 120px занимает растушёвка,
+     контент не должен в неё попадать */
+  padding-block: clamp(104px, 11vw, 148px);
+  background:
+    radial-gradient(
+      78% 120% at 16% 26%,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0) 62%
+    ),
+    linear-gradient(104deg, #7a2bd6 0%, #b6339f 48%, #ff2e8c 100%);
+}
+
+.section-deep {
+  background: var(--color-deep);
+  color: #ffffff;
+}
+
+.band-fade::before,
+.band-fade::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+}
+
+.band-fade::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.band-fade::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    var(--color-bg) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* У футера растворяется только верхняя кромка — низ упирается в край окна.
+   Кромка длиннее общей и набрана многими стопами: перепад светлоты между
+   белым и #2a1a63 слишком велик, линейный градиент из двух стопов читался
+   как резкая граница. */
+.band-fade--top-only::after {
+  display: none;
+}
+
+.band-fade--top-only::before {
+  height: 170px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    rgba(255, 255, 255, 0.97) 10%,
+    rgba(255, 255, 255, 0.9) 22%,
+    rgba(255, 255, 255, 0.76) 36%,
+    rgba(255, 255, 255, 0.56) 50%,
+    rgba(255, 255, 255, 0.35) 64%,
+    rgba(255, 255, 255, 0.18) 78%,
+    rgba(255, 255, 255, 0.06) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .band-fade--top-only::before {
+    height: 270px;
+  }
+}
+
+/* ============================================================
+   ШАПКА
+   ============================================================ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  /* высота потока постоянна в обоих состояниях: иначе страница дёргалась бы
+     в момент, когда шапка собирается в капсулу */
+  height: 76px;
+}
+
+.nav-shell {
+  position: relative;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  transition:
+    max-width 260ms ease,
+    height 260ms ease,
+    margin 260ms ease,
+    border-radius 260ms ease,
+    box-shadow 260ms ease,
+    background-color 260ms ease;
+}
+
+/* градиентная волосяная линия вместо серой границы — как под заголовками */
+.nav-shell::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--grad-accent);
+  opacity: 0.55;
+  transition: opacity 200ms ease;
+}
+
+.nav-inner {
+  display: flex;
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-inline: 32px;
+  transition: padding 260ms ease;
+}
+
+.nav--floating .nav-shell {
+  height: 60px;
+  margin: 8px auto 0;
+  max-width: min(calc(var(--container-max) - 48px), calc(100% - 32px));
+  border-radius: 999px;
+  /* плотнее и с более сильным размытием, чем полоса наверху: под капсулой
+     проезжает контент, и при 0.82 заголовки просвечивали читаемым пятном */
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px -22px rgba(42, 26, 99, 0.5);
+}
+
+.nav--floating .nav-shell::after {
+  opacity: 0;
+}
+
+.nav--floating .nav-inner {
+  padding-inline: 26px;
+}
+
+/* В плавающем состоянии прямоугольная кнопка внутри капсулы читалась как
+   чужая деталь. Наверху, где полоса прямая, кнопки остаются прямыми —
+   как в макете. */
+.nav-shell .btn,
+.nav-shell .lang-chip {
+  transition:
+    border-radius 260ms ease,
+    background 150ms ease-out,
+    color 150ms ease-out,
+    border-color 150ms ease-out;
+}
+
+.nav--floating .btn,
+.nav--floating .lang-chip {
+  border-radius: 999px;
+}
+
+.nav--floating .btn {
+  min-height: 38px;
+  padding-inline: 22px;
+}
+
+@media (max-width: 640px) {
+  .nav-inner {
+    padding-inline: 20px;
+  }
+
+  .nav--floating .nav-inner {
+    padding-inline: 18px;
+  }
+}
+
+/* ============================================================
+   ПОВЕРХНОСТИ
+   ============================================================ */
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.card-sm {
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+}
+
+/* Карточка внутри акцентной полосы: стекло, а не белый прямоугольник. */
+.card-glass {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(6px);
+}
+
+/* ============================================================
+   КНОПКИ
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding-inline: 26px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-align: center;
+  transition:
+    background 150ms ease-out,
+    color 150ms ease-out,
+    border-color 150ms ease-out,
+    filter 150ms ease-out;
+}
+
+.btn--primary {
+  background: var(--grad-cta);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.07);
+}
+
+.btn--secondary {
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-text);
+  color: #ffffff;
+}
+
+/* На акцентной и глубокой полосе инверсия: белая заливка на цветном фоне. */
+.btn--on-dark {
+  background: #ffffff;
+  color: var(--color-deep);
+}
+
+.btn--on-dark:hover {
+  background: var(--color-lilac);
+  color: var(--color-deep);
+}
+
+.btn--ghost-on-dark {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn--ghost-on-dark:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #ffffff;
+}
+
+.btn[aria-disabled="true"],
+.btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   ПОЛЯ ФОРМЫ
+   ============================================================ */
+
+.field {
+  margin-top: 8px;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  padding: 12px 16px;
+  color: var(--color-text);
+  outline: none;
+  transition:
+    border-color 150ms ease-out,
+    box-shadow 150ms ease-out;
+}
+
+.field::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 60%, transparent);
+}
+
+.field:focus {
+  border-color: var(--color-violet);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-violet) 22%, transparent);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  background:
+    /* маджента в правом верхнем углу — поверх белого ядра */
+    radial-gradient(
+      52% 72% at 100% 2%,
+      rgba(255, 42, 138, 0.94) 0%,
+      rgba(255, 60, 150, 0.5) 42%,
+      rgba(255, 72, 152, 0) 74%
+    ),
+    /* засветка левого верхнего угла */
+    radial-gradient(
+      62% 58% at 4% 16%,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    /* белое ядро под заголовком */
+    radial-gradient(
+      108% 72% at 36% 38%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.99) 36%,
+      rgba(255, 255, 255, 0) 86%
+    ),
+    /* цветовое поле: сирень слева, маджента справа */
+    linear-gradient(
+      102deg,
+      #c9a2f2 0%,
+      #e6c6f4 30%,
+      #f79ecb 58%,
+      #ff3d93 84%,
+      #ff2e8c 100%
+    );
+}
+
+/* Жёсткая линия на стыке с полосой ниже заменена растворением: цветовое
+   поле hero сходит в белый, и переход к читауту перестаёт быть швом. */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 170px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    var(--color-bg) 100%
+  );
+  pointer-events: none;
+}
+
+/* линейка над обратным отсчётом — во всю ширину, как в макете */
+.hero-rule {
+  position: relative;
+  z-index: 10;
+  height: 1px;
+  background: var(--rule-strong);
+}
+
+.hero-eyebrow {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+/* Кегль и интерлиньяж заголовка hero отличаются от остальных .display:
+   две строки на всю ширину экрана с воздухом между ними. */
+.hero .hero-title {
+  /* 6.7vw = 96px на 1440 — кегль макета: там строка «THE FIRST QISKIT FALL
+     FEST» занимает 1309px, Plex Sans даёт ровно столько при 96px с добавленным
+     межсловным пробелом. Интерлиньяж 1.28 — 126px между строками в макете. */
+  font-size: clamp(34px, 6.7vw, 100px);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  word-spacing: 0.1em;
+  max-width: min(100%, 1400px);
+}
+
+/* Кириллица в Plex Sans шире латиницы: на 1280–1440px вторая строка
+   заголовка в ru и kk доставала до карточки-иллюстрации. 6.1vw — крайний
+   кегль, при котором она заканчивается левее карточки. */
+html[lang="ru"] .hero .hero-title,
+html[lang="kk"] .hero .hero-title {
+  font-size: clamp(30px, 5.6vw, 84px);
+}
+
+.hero-lede {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(15px, 1.45vw, 20px);
+  line-height: 1.5;
+  color: var(--color-text);
+  max-width: min(100%, 62ch);
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 18px;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.hero-facts li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-facts-sep {
+  color: rgba(16, 31, 36, 0.35);
+}
+
+.hero-countdown-label {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.hero-countdown-value {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+/* ============================================================
+   ПРОЧЕЕ
+   ============================================================ */
 
 /* mono-подписи внутри SVG-схемы */
 .svg-mono {
@@ -173,7 +742,22 @@ html[lang="kk"] .hero-title {
   opacity: 1;
 }
 
-/* ховер: подчёркивание слева направо */
+@keyframes program-detail-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.program-detail-reveal {
+  animation: program-detail-reveal 240ms ease-out both;
+}
+
+/* ховер: подчёркивание слева направо, тем же градиентом */
 .underline-sweep {
   position: relative;
 }
@@ -183,9 +767,9 @@ html[lang="kk"] .hero-title {
   position: absolute;
   left: 0;
   bottom: -4px;
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background: currentColor;
+  background: var(--grad-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 150ms ease-out;

@@ -37,15 +37,17 @@ export default function MobileMenu({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
-        className="mono border border-border px-3 py-2 text-text transition-colors duration-150 hover:border-mint hover:text-mint"
+        className="mono border border-text px-3 py-2 text-text transition-colors duration-150 hover:bg-text hover:text-bg"
       >
         {open ? "✕" : menuLabel}
       </button>
 
+      {/* top-full, а не фиксированные пиксели: оболочка шапки меняет высоту
+          при прокрутке, и панель должна следовать за её нижним краем */}
       <div
         id={panelId}
         hidden={!open}
-        className="absolute left-0 right-0 top-16 border-b border-border/30 bg-bg"
+        className="absolute left-0 right-0 top-full mt-2 rounded-[var(--radius-card)] bg-bg shadow-[0_24px_48px_-28px_rgba(42,26,99,0.45)]"
       >
         <nav className="container-max flex flex-col py-2">
           {links.map((link) => (
@@ -53,18 +55,17 @@ export default function MobileMenu({
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="mono border-b border-border/20 py-4 text-muted transition-colors duration-150 hover:text-text"
+              className="mono border-b py-4 text-text transition-colors duration-150 hover:text-violet"
+              style={{ borderColor: "var(--rule)" }}
             >
               {link.label}
             </a>
           ))}
           <a
             href={registerHref}
-            aria-disabled={registerDisabled}
+            aria-disabled={registerDisabled || undefined}
             onClick={() => setOpen(false)}
-            className={`mono mt-4 mb-4 bg-coral px-6 py-3 text-center text-bg ${
-              registerDisabled ? "pointer-events-none opacity-40" : ""
-            }`}
+            className="btn btn--primary mt-5 mb-4"
           >
             {registerLabel}
           </a>

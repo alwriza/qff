@@ -24,12 +24,12 @@ export default function RootNotFound() {
         <Grain />
         <main className="relative z-10 flex flex-1 items-center">
           <div className="container-max py-24">
-            <p className="mono text-coral">{t.code}</p>
+            <p className="mono text-violet">{t.code}</p>
             <h1 className="display mt-6">{t.title}</h1>
             <p className="mt-8 max-w-[52ch] text-xl text-muted">{t.body}</p>
             <Link
               href={`/${routing.defaultLocale}`}
-              className="mono mt-10 inline-block border border-border px-6 py-3 text-text transition-colors duration-150 hover:border-mint hover:text-mint"
+              className="btn btn--secondary mt-10"
             >
               ← {t.cta}
             </Link>

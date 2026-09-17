@@ -55,30 +55,16 @@ export default function Countdown() {
 
   return (
     <div
-      // на 360px четыре колонки сетки вместо флекса с разделителями —
+      // на 360px четыре колонки сетки вместо флекса с большим гэпом —
       // иначе английские подписи выталкивают строку за экран
-      className="grid grid-cols-4 gap-3 sm:flex sm:items-start sm:gap-10"
+      className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:flex lg:gap-[clamp(48px,7vw,104px)]"
       role="timer"
       aria-label={t("countdownLabel")}
     >
-      {units.map((unit, i) => (
-        <div key={unit.key} className="flex items-start sm:gap-10">
-          {i > 0 && (
-            <span
-              className="mono hidden pt-1 text-2xl leading-none text-border sm:inline"
-              aria-hidden="true"
-            >
-              :
-            </span>
-          )}
-          <div>
-            <div className="font-mono text-2xl leading-none tabular-nums text-mint sm:text-4xl">
-              {unit.value}
-            </div>
-            <div className="mono mt-2 text-[11px] text-muted">
-              {t(unit.key)}
-            </div>
-          </div>
+      {units.map((unit) => (
+        <div key={unit.key}>
+          <div className="hero-countdown-label mono">{t(unit.key)}</div>
+          <div className="hero-countdown-value">{unit.value}</div>
         </div>
       ))}
     </div>

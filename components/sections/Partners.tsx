@@ -9,7 +9,7 @@ export default function Partners() {
   const t = useTranslations("partners");
 
   return (
-    <Section id="partners" bg="surface">
+    <Section id="partners" bg="bg" index="08">
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
 
@@ -53,13 +53,13 @@ export default function Partners() {
                   <span className="text-lg text-text">{partner.name}</span>
                 )}
               </div>
-              <p className="text-muted">{t(`items.${partner.id}`)}</p>
+              <p className="text-text">{t(`items.${partner.id}`)}</p>
             </li>
           ))}
         </ul>
 
-        <div className="mt-12 border border-border p-6 md:p-8">
-          <p className="mono text-mint">{t("becomeTitle")}</p>
+        <div className="card mt-12 p-6 md:p-8">
+          <p className="mono text-violet">{t("becomeTitle")}</p>
           <p className="mt-4 max-w-[62ch] text-text">{t("becomeBody")}</p>
           <div className="mt-6">
             <Button

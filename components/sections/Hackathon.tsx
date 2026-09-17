@@ -12,19 +12,20 @@ export default function Hackathon() {
   ];
 
   return (
-    <Section id="hackathon" bg="surface">
+    <Section id="hackathon" bg="tint" index="04">
       <Reveal>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
           <div>
-            {/* Коралловый на surface даёт 3.22 — допустим только крупным кеглем (§3). */}
-            <h2 className="h2 text-coral">{t("title")}</h2>
+            {/* Градиентный акцент — только на крупном кегле: розовый даёт 3.5:1. */}
+            <h2 className="h2"><span className="grad-text">{t("title")}</span></h2>
             <p className="mt-6 max-w-[58ch] text-text">{t("lede")}</p>
 
-            <dl className="mt-10 border-t border-border/40">
+            <dl className="card mt-10 px-6 md:px-8">
               {rows.map((row) => (
                 <div
                   key={row.key}
-                  className="grid gap-2 border-b border-border/40 py-5 md:grid-cols-[minmax(0,18ch)_minmax(0,1fr)] md:gap-8"
+                  className="grid gap-2 border-b py-5 last:border-b-0 md:grid-cols-[minmax(0,18ch)_minmax(0,1fr)] md:gap-8"
+                  style={{ borderColor: "var(--rule)" }}
                 >
                   <dt className="mono text-muted">{t(`labels.${row.key}`)}</dt>
                   <dd className="text-text">{row.value}</dd>

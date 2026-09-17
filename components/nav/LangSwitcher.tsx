@@ -21,17 +21,21 @@ export default function LangSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-3 mono" aria-label="Language">
+    <div className="flex items-center gap-2 mono" aria-label="Language">
       {routing.locales.map((l, i) => (
-        <span key={l} className="flex items-center gap-3">
-          {i > 0 && <span className="text-muted">/</span>}
+        <span key={l} className="flex items-center gap-2">
+          {i > 0 && (
+            <span className="text-muted/60" aria-hidden="true">
+              /
+            </span>
+          )}
           <button
             type="button"
             onClick={() => switchLocale(l)}
             aria-current={l === locale ? "true" : undefined}
-            className={`transition-colors duration-150 ${
+            className={`lang-chip border border-transparent px-2 py-1 transition-colors duration-150 ${
               l === locale
-                ? "text-coral"
+                ? "border border-text text-text"
                 : "text-muted hover:text-text"
             }`}
           >

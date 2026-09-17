@@ -90,7 +90,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main"
-            className="mono sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-mint focus:bg-bg focus:px-4 focus:py-2 focus:text-mint"
+            className="mono sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-violet focus:bg-bg focus:px-4 focus:py-2 focus:text-violet"
           >
             {t("skipToContent")}
           </a>

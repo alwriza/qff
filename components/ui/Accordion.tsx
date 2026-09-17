@@ -18,14 +18,14 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
   }
 
   return (
-    <div className="border-t border-border/40">
+    <div className="card overflow-hidden px-6 md:px-8">
       {items.map((item, i) => {
         const isOpen = open.includes(i);
         const btnId = `${baseId}-btn-${i}`;
         const panelId = `${baseId}-panel-${i}`;
 
         return (
-          <div key={item.q} className="border-b border-border/40">
+          <div key={item.q} className="border-b last:border-b-0" style={{ borderColor: "var(--rule)" }}>
             <h3>
               <button
                 type="button"
@@ -33,11 +33,11 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggle(i)}
-                className="flex w-full items-start justify-between gap-6 py-5 text-left transition-colors duration-150 hover:text-mint"
+                className="flex w-full items-start justify-between gap-6 py-6 text-left transition-colors duration-150 hover:text-violet"
               >
                 <span className="text-lg">{item.q}</span>
                 <span
-                  className="mono mt-1 shrink-0 text-mint"
+                  className="shrink-0 font-mono text-2xl leading-none text-violet"
                   aria-hidden="true"
                 >
                   {isOpen ? "−" : "+"}
@@ -51,7 +51,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
               hidden={!isOpen}
               className="pb-6"
             >
-              <p className="max-w-[70ch] text-muted">{item.a}</p>
+              <p className="max-w-[70ch] text-text">{item.a}</p>
             </div>
           </div>
         );

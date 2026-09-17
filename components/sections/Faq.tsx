@@ -8,7 +8,7 @@ export default function Faq() {
   const items = t.raw("items") as AccordionItem[];
 
   return (
-    <Section id="faq" bg="bg">
+    <Section id="faq" bg="tint" index="07">
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
         <div className="mt-10">

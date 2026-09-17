@@ -84,8 +84,11 @@ export default function Readout() {
   }
 
   return (
-    <section className="w-full bg-surface" aria-label={t("heading")}>
-      <div className="container-max py-16 md:py-20" ref={ref}>
+    <section
+      className="relative w-full overflow-hidden bg-bg"
+      aria-label={t("heading")}
+    >
+      <div className="container-max relative z-10 py-16 md:py-20" ref={ref}>
         <ul className="border-t border-border/40">
           {readoutRows.map((row, i) => (
             <li
@@ -96,15 +99,15 @@ export default function Readout() {
 
               {/* полоса-индикатор */}
               <span
-                className="hidden h-px w-full bg-border/30 md:block"
+                className="hidden h-[3px] w-full bg-border/40 md:block"
                 aria-hidden="true"
               >
                 <span
-                  className="block h-px origin-left transition-transform ease-out"
+                  className="block h-[3px] origin-left transition-transform ease-out"
                   style={{
                     background: row.accent
-                      ? "var(--color-coral)"
-                      : "var(--color-mint)",
+                      ? "var(--grad-cta)"
+                      : "var(--grad-accent)",
                     width: `${row.bar}%`,
                     transform: `scaleX(${active ? 1 : 0})`,
                     transitionDuration: `${BAR_MS}ms`,
@@ -113,15 +116,15 @@ export default function Readout() {
                 />
               </span>
 
-              {/* Коралловый только на строке «впервые» — и только крупным кеглем:
-                  coral на surface даёт 3.22, для body-текста запрещено (§3). */}
+              {/* Розовый только на строке «впервые» и только крупным кеглем:
+                  на светлом фоне он даёт 3.5:1, для body-текста запрещён (§3). */}
               <span
                 className={`font-mono tabular-nums md:text-right ${
                   row.id === "audience"
                     ? "text-xl leading-tight whitespace-normal sm:text-2xl"
                     : "text-2xl leading-none whitespace-nowrap sm:text-3xl"
                 } ${
-                  row.accent ? "text-coral uppercase" : "text-text"
+                  row.accent ? "text-pink uppercase" : "text-text"
                 }`}
               >
                 {valueFor(row)}

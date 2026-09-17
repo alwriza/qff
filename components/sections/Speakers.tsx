@@ -11,12 +11,12 @@ export default function Speakers() {
   if (speakers.length === 0) return null;
 
   return (
-    <Section id="speakers" bg="surface">
+    <Section id="speakers" bg="bg">
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
         <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {speakers.map((speaker) => (
-            <li key={speaker.id}>
+            <li key={speaker.id} className="card overflow-hidden pb-6">
               {/* фото спикеров — квадратные */}
               <div className="aspect-square w-full bg-surface-2">
                 {speaker.photo && (
@@ -30,9 +30,9 @@ export default function Speakers() {
                   />
                 )}
               </div>
-              <p className="mt-4 text-lg text-text">{speaker.name}</p>
-              <p className="mono mt-1 text-text">{speaker.affiliation}</p>
-              <p className="mono mt-3 text-text">
+              <p className="mt-5 px-6 text-lg text-text">{speaker.name}</p>
+              <p className="mono mt-1 px-6 text-muted">{speaker.affiliation}</p>
+              <p className="mono mt-3 px-6 text-text">
                 {t("topicLabel")}:{" "}
                 {speaker.topicKey
                   ? t(`topics.${speaker.topicKey}`)
@@ -43,7 +43,7 @@ export default function Speakers() {
                   href={speaker.linkedin}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="mono mt-3 inline-block text-mint transition-colors duration-150 hover:text-text"
+                  className="mono mt-3 ml-6 inline-block text-violet underline-sweep transition-colors duration-150 hover:text-text"
                 >
                   LinkedIn ↗
                 </a>

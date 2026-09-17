@@ -1,12 +1,19 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { event } from "@/config/event";
 
+/**
+ * Второй акцентный экран страницы: та же розово-фиолетовая заливка и те же
+ * контуры, что в hero. Текст здесь белый, поэтому кнопка — инверсная,
+ * а таблица фактов лежит на полупрозрачном стекле, а не на белой карточке.
+ */
 export default function Register() {
   const t = useTranslations("register");
   const tc = useTranslations("common");
+  const locale = useLocale();
+  const registrationHref = event.registrationUrl ?? `/${locale}/register`;
 
   const rows = [
     { key: "audience", value: t("audience") },
@@ -15,41 +22,35 @@ export default function Register() {
   ];
 
   return (
-    <Section id="register" bg="surface">
+    <Section id="register" bg="accent" index="05">
       <Reveal>
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="h2">{t("title")}</h2>
-            <p className="mt-6 max-w-[46ch] text-text">{t("lede")}</p>
-            <p className="mt-4 max-w-[46ch] text-muted">{t("note")}</p>
+            <h2 className="h2 h2--on-dark">{t("title")}</h2>
+            <p className="mt-7 max-w-[46ch] text-xl text-white">{t("lede")}</p>
+            <p className="mt-4 max-w-[46ch] text-white/75">{t("note")}</p>
+
+            <div className="mt-10">
+              <Button href={registrationHref} variant="on-dark">
+                {t("cta")}
+              </Button>
+            </div>
           </div>
 
-          <div>
-            <dl className="border-t border-border/40">
-              {rows.map((row) => (
+          <div className="card-glass p-6 md:p-8">
+            <dl>
+              {rows.map((row, i) => (
                 <div
                   key={row.key}
-                  className="flex items-baseline justify-between gap-6 border-b border-border/40 py-4"
+                  className={`flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-4 ${
+                    i > 0 ? "border-t border-white/20" : "pt-0"
+                  }`}
                 >
-                  <dt className="mono text-muted">{t(`labels.${row.key}`)}</dt>
-                  <dd className="mono text-text">{row.value}</dd>
+                  <dt className="mono text-white/85">{t(`labels.${row.key}`)}</dt>
+                  <dd className="mono text-white">{row.value}</dd>
                 </div>
               ))}
             </dl>
-
-            <div className="mt-8">
-              {/* registrationUrl === null → кнопка disabled с подписью «opens soon» */}
-              <Button
-                href={event.registrationUrl ?? "#register"}
-                disabled={!event.registrationUrl}
-                variant="primary"
-              >
-                {t("cta")}
-              </Button>
-              {!event.registrationUrl && (
-                <p className="mono mt-3 text-muted">{t("opensSoon")}</p>
-              )}
-            </div>
           </div>
         </div>
       </Reveal>

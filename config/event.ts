@@ -6,7 +6,7 @@ export const event = {
   startDate: null as string | null, // "2026-10-24" — countdown и hero
   endDate: null as string | null,
   saturdays: 5,
-  registrationUrl: null as string | null, // null → кнопка disabled, "opens soon"
+  registrationUrl: null as string | null, // null → встроенная форма /[locale]/register
   registrationDeadline: null as string | null,
   format: "in-person" as "in-person" | "hybrid" | null,
   venue: {

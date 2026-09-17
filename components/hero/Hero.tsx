@@ -1,57 +1,77 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { event } from "@/config/event";
-import Button from "@/components/ui/Button";
+import Countdown from "@/components/hero/Countdown";
+import HeroArtCard from "@/components/hero/HeroArtCard";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
+  const registrationHref = event.registrationUrl ?? `/${locale}/register`;
 
   const facts = [
     `${event.university} · ${event.city}`,
     t("factSaturdays", { n: event.saturdays }),
-    t("factAudience"),
+    t("factFree"),
+    t("factSeats"),
   ];
 
   return (
-    <section className="w-full border-b border-border/30">
-      <div className="container-max pt-20 pb-16 md:pt-28 md:pb-24">
-        <p className="mono flex items-center gap-3 text-muted">
-          <span className="inline-block w-8 h-px bg-coral" aria-hidden="true" />
-          {t("eyebrow")}
-        </p>
+    <section className="hero relative w-full overflow-hidden">
+      <div className="container-max relative z-10 pt-20 pb-12 md:pt-[136px] md:pb-16">
+        <p className="hero-eyebrow mono">{t("eyebrow")}</p>
 
-        <h1 className="display hero-title mt-8">
-          {t("titleBefore")}<span className="text-coral">{t("titleAccent")}</span>{t("titleAfter")}
+        <h1 className="display hero-title mt-2 md:mt-3">
+          {t("titleBefore")}
+          <span className="grad-text">{t("titleAccent")}</span>
+          {t("titleAfter")}
         </h1>
 
-        <p className="mt-8 max-w-[46ch] text-xl text-muted">{t("lede")}</p>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,499px)] lg:items-start lg:gap-10">
+          <div>
+            <p className="hero-lede mt-3 md:mt-2">{t("lede")}</p>
 
-        <ul className="mono mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-muted sm:gap-x-4">
-          {facts.map((fact, i) => (
-            <li key={fact} className="flex items-center gap-4">
-              {/* при переносе строк разделитель повисал бы в начале строки */}
-              {i > 0 && (
-                <span className="hidden text-border sm:inline" aria-hidden="true">
-                  │
-                </span>
-              )}
-              {fact}
-            </li>
-          ))}
-        </ul>
+            <ul className="hero-facts mono mt-10">
+              {facts.map((fact, i) => (
+                <li key={fact}>
+                  {/* разделитель живёт внутри <li>: при переносе строки
+                      он уезжает вместе со своим пунктом, а не повисает в начале */}
+                  {i > 0 && (
+                    <span className="hero-facts-sep" aria-hidden="true">
+                      |
+                    </span>
+                  )}
+                  {fact}
+                </li>
+              ))}
+            </ul>
 
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button
-            href={event.registrationUrl ?? "#register"}
-            disabled={!event.registrationUrl}
-            variant="primary"
-          >
-            {t("ctaRegister")}
-          </Button>
-          <Button href="#program" variant="secondary">
-            {t("ctaProgram")} ↓
-          </Button>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a href={registrationHref} className="btn btn--primary">
+                {t("ctaRegister")}
+              </a>
+              <a href="#program" className="btn btn--secondary">
+                {t("ctaProgram")} ↓
+              </a>
+            </div>
+          </div>
+
+          {/* Карточка поднимается в строку со второй строкой заголовка —
+              как в макете. Отрицательный отступ задан в vw, чтобы совпадать
+              с кеглем h1, который тоже растёт от ширины окна.
+
+              Подъём включается только с xl: на 1024–1279px вторая строка
+              заголовка в ru и kk ещё длиннее свободного места слева
+              от карточки и заезжала бы под неё. */}
+          <div className="xl:-mt-[clamp(48px,6.1vw,88px)] flex justify-start lg:justify-end lg:pr-[46px]">
+            <HeroArtCard className="w-full max-w-[441px]" />
+          </div>
         </div>
+      </div>
 
+      <div className="hero-rule" aria-hidden="true" />
+
+      <div className="container-max relative z-10 py-12 md:pt-[100px] md:pb-16">
+        <Countdown />
       </div>
     </section>
   );

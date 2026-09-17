@@ -28,7 +28,7 @@ export default function ProgramList() {
                   className="grid grid-cols-[3rem_minmax(0,1fr)] gap-4"
                 >
                   <span
-                    className="mono flex h-10 w-10 items-center justify-center border border-border text-mint"
+                    className="mono card-sm flex h-10 w-10 items-center justify-center text-violet"
                     aria-hidden="true"
                   >
                     {gateSymbols[gate.type]}

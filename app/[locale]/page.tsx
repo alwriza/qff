@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { speakers } from "@/config/speakers";
 
+import ContourField from "@/components/ui/ContourField";
 import Nav from "@/components/nav/Nav";
 import Hero from "@/components/hero/Hero";
 import Readout from "@/components/readout/Readout";
@@ -35,8 +36,14 @@ export default async function Home({
     <>
       <EventJsonLd locale={locale} />
       <Nav />
-      <main id="main" className="flex-1">
-        <Hero />
+      {/* Одно контурное поле на всю страницу, включая футер: линия проходит
+          сквозь границы секций, не начинаясь в каждой заново, и не обрывается
+          на кромке футера. На тёмном она гаснет сама — multiply по тёмному
+          фону ничего не даёт, — поэтому исчезает вместе с растушёвкой. */}
+      <div className="relative flex flex-1 flex-col">
+        <ContourField />
+        <main id="main" className="flex-1">
+          <Hero />
         <Readout />
         <About />
         <WhatYouGet />
@@ -57,8 +64,9 @@ export default async function Home({
         <Faq />
         <Partners />
         <PostEvent />
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

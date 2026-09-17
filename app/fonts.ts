@@ -1,30 +1,24 @@
-import {
-  IBM_Plex_Sans,
-  IBM_Plex_Sans_Condensed,
-  IBM_Plex_Mono,
-} from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 
+/**
+ * Две гарнитуры на весь сайт.
+ *
+ * IBM Plex Sans Bold Italic — заголовки. Проверено измерением по макету:
+ * при высоте прописной 70px строка «The first Qiskit Fall Fest» занимает
+ * 1309px в макете, 1335px в Plex Sans, 1201px в Plex Sans Condensed
+ * и 1560px в Plex Mono. То есть в макете именно Plex Sans, а не Condensed,
+ * которым заголовки набирались раньше.
+ *
+ * Побочный выигрыш: Condensed на Google Fonts не отдаёт сабсет `cyrillic`
+ * (только `cyrillic-ext`), из-за чего русские и казахские заголовки
+ * подменялись метрическим фолбэком и требовали отдельной компенсации кегля.
+ * У Plex Sans кириллица покрыта целиком — правила для ru и kk больше не нужны.
+ */
 export const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
   subsets: ["latin", "cyrillic", "cyrillic-ext"],
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "600", "700"],
   style: ["normal", "italic"],
-});
-
-/**
- * ⚠️ Condensed не отдаёт сабсет `cyrillic` — только `cyrillic-ext`.
- * Проверено рендером: диапазон cyrillic-ext (U+0460–052F и далее) покрывает
- * ә ғ қ ң ө ұ ү һ, но НЕ покрывает ни базовую кириллицу U+0410–U+044F,
- * ни казахскую І (U+0406). То есть в Condensed набирается только латиница,
- * а весь русский и почти весь казахский текст подменяется фолбэком.
- * Поэтому заголовки ru и kk набираются IBM Plex Sans Bold Italic —
- * правило и компенсация кегля в globals.css.
- */
-export const ibmPlexSansCondensed = IBM_Plex_Sans_Condensed({
-  variable: "--font-ibm-plex-sans-condensed",
-  subsets: ["latin", "cyrillic-ext"],
-  weight: ["700"],
-  style: ["italic"],
 });
 
 export const ibmPlexMono = IBM_Plex_Mono({
@@ -33,4 +27,4 @@ export const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-export const fontVariables = `${ibmPlexSans.variable} ${ibmPlexSansCondensed.variable} ${ibmPlexMono.variable}`;
+export const fontVariables = `${ibmPlexSans.variable} ${ibmPlexMono.variable}`;

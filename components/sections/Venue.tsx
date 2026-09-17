@@ -16,15 +16,16 @@ export default function Venue() {
   ];
 
   return (
-    <Section id="venue" bg="bg">
+    <Section id="venue" bg="bg" index="06">
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
 
-        <dl className="mt-10 border-t border-border/40">
+        <dl className="card mt-10 px-6 md:px-8">
           {rows.map((row) => (
             <div
               key={row.key}
-              className="grid gap-2 border-b border-border/40 py-4 md:grid-cols-[minmax(0,18ch)_minmax(0,1fr)] md:gap-8"
+              className="grid gap-2 border-b py-4 last:border-b-0 md:grid-cols-[minmax(0,18ch)_minmax(0,1fr)] md:gap-8"
+              style={{ borderColor: "var(--rule)" }}
             >
               <dt className="mono text-muted">{t(`labels.${row.key}`)}</dt>
               <dd className="text-text">{row.value}</dd>
@@ -32,7 +33,7 @@ export default function Venue() {
           ))}
         </dl>
 
-        <p className="mt-6 max-w-[58ch] text-muted">{t("gettingThere")}</p>
+        <p className="mt-6 max-w-[58ch] text-text">{t("gettingThere")}</p>
 
         {/* Карту не вставляем, пока нет точного адреса (§7). */}
         {event.venue.address && event.venue.mapUrl && (
@@ -40,7 +41,7 @@ export default function Venue() {
             href={event.venue.mapUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="mono mt-6 inline-block text-mint transition-colors duration-150 hover:text-text"
+            className="mono underline-sweep mt-6 inline-block text-violet transition-colors duration-150 hover:text-text"
           >
             {t("labels.gettingThere")} ↗
           </a>

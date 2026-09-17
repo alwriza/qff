@@ -57,7 +57,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
     const x = colX(gate.column);
     const y = wireY(program.indexOf(week));
     const selected = gate.id === selectedId;
-    const stroke = selected ? "var(--color-mint)" : "var(--color-border)";
+    const stroke = selected ? "var(--color-violet)" : "var(--color-border)";
     const fill = selected ? "var(--color-surface-2)" : "var(--color-surface)";
 
     const label = `${t("weekLabel", { n: week.index })} — ${t(
@@ -121,7 +121,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
             <path
               d={`M ${x - 14} ${y + 9} A 14 14 0 0 1 ${x + 14} ${y + 9}`}
               fill="none"
-              stroke={selected ? "var(--color-mint)" : "var(--color-text)"}
+              stroke={selected ? "var(--color-violet)" : "var(--color-text)"}
               strokeWidth={1.5}
             />
             <line
@@ -129,7 +129,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
               y1={y + 9}
               x2={x + 10}
               y2={y - 7}
-              stroke={selected ? "var(--color-mint)" : "var(--color-text)"}
+              stroke={selected ? "var(--color-violet)" : "var(--color-text)"}
               strokeWidth={1.5}
             />
           </>
@@ -154,7 +154,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
               dominantBaseline="central"
               fontSize={15}
               className="svg-mono"
-              fill={selected ? "var(--color-mint)" : "var(--color-text)"}
+              fill={selected ? "var(--color-violet)" : "var(--color-text)"}
             >
               {gateSymbols[gate.type]}
             </text>
@@ -169,7 +169,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
           width={GATE + 12}
           height={GATE + 12}
           fill="none"
-          stroke="var(--color-mint)"
+          stroke="var(--color-violet)"
           strokeWidth={1.5}
           strokeDasharray="3 3"
         />
@@ -278,7 +278,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         textAnchor="end"
         fontSize={11}
         className="svg-mono"
-        fill="var(--color-mint)"
+        fill="var(--color-violet)"
       >
         {t("classicalRegister")}
       </text>

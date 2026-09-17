@@ -32,6 +32,8 @@
     "lede": "Introducing future generations to the quantum frontier.",
     "factSaturdays": "{n} Saturdays",
     "factAudience": "For everyone",
+    "factFree": "Free",
+    "factSeats": "70–100 seats",
     "ctaRegister": "Register",
     "ctaProgram": "See the program",
     "countdownLabel": "Time until the opening",
@@ -211,7 +213,7 @@
   "audience": "University students, high-schoolers and independent researchers",
     "cta": "Register",
     "opensSoon": "Registration opens soon",
-    "note": "Registration runs through an external form. The link goes live closer to the opening."
+    "note": "The application takes about 3–5 minutes. Your answers are sent directly to the organizing team."
   },
 
   "venue": {

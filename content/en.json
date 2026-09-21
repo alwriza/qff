@@ -71,6 +71,7 @@
   "whatYouGet": {
     "title": "What you get",
     "items": [
+    "Lecture with introduction to quantum mechanics, linear algebra, and quantum information.",
     "Access to real IBM quantum computers through the IBM Quantum Platform",
     "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
     "Week-long hackathon with 4 tasks and 1 optional project",

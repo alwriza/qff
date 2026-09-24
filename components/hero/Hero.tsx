@@ -12,7 +12,6 @@ export default function Hero() {
     `${event.university} · ${event.city}`,
     t("factSaturdays", { n: event.saturdays }),
     t("factFree"),
-    t("factSeats"),
   ];
 
   return (

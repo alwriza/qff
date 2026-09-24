@@ -33,7 +33,6 @@
     "factSaturdays": "{n} Saturdays",
     "factAudience": "For everyone",
     "factFree": "Free",
-    "factSeats": "70–100 seats",
     "ctaRegister": "Register",
     "ctaProgram": "See the program",
     "countdownLabel": "Time until the opening",
@@ -43,38 +42,21 @@
     "seconds": "Seconds"
   },
 
-  "readout": {
-    "heading": "Calibration",
-    "rows": {
-      "participants": "Participants worldwide 2025",
-      "universities": "Universities worldwide 2025",
-      "centralAsia": "In Central Asia",
-      "length": "Program length",
-      "audience": "Who it is for"
-    },
-    "values": {
-      "firstEver": "1st ever",
-      "weeks": "{n} weeks",
-      "everyone": "Students, high-schoolers & researchers"
-    }
-  },
-
   "about": {
     "title": "About the fest",
     "body": [
-      "Qiskit Fall Fest is an annual global initiative by IBM Quantum: student teams at leading universities around the world run lectures, workshops and hackathons on quantum computing.",
-      "In 2025 that meant more than 32,000 participants across 150 universities.",
-      "In 2026 the festival comes to Central Asia for the first time — to Nazarbayev University in Astana."
+      "IBM Qiskit Fall Fest is an annual initiative that brings together thousands of quantum enthusiasts.",
+      "This year, it will for the first time happen in Astana, Kazakhstan. There, you'll be able to dive into quantum computing, learn about its significant potential, and challenge your skills at QFFCA'26 Hackathon."
     ]
   },
 
   "whatYouGet": {
     "title": "What you get",
     "items": [
-    "Lecture with introduction to quantum mechanics, linear algebra, and quantum information.",
+    "Lectures with introduction to quantum mechanics, quantum algorithms, and qiskit.",
     "Access to real IBM quantum computers through the IBM Quantum Platform",
     "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
-    "Week-long hackathon with 4 tasks and 1 optional project",
+    "A week-long hackathon: challenging participants to turn what they've learned about quantum computing into working projects with Qiskit.",
     "Rest to be decided"
     ]
   },

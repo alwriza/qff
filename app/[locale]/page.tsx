@@ -5,7 +5,6 @@ import { speakers } from "@/config/speakers";
 import ContourField from "@/components/ui/ContourField";
 import Nav from "@/components/nav/Nav";
 import Hero from "@/components/hero/Hero";
-import Readout from "@/components/readout/Readout";
 import About from "@/components/sections/About";
 import WhatYouGet from "@/components/sections/WhatYouGet";
 import Program from "@/components/sections/Program";
@@ -44,7 +43,6 @@ export default async function Home({
         <ContourField />
         <main id="main" className="flex-1">
           <Hero />
-        <Readout />
         <About />
         <WhatYouGet />
         <Program />

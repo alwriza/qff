@@ -13,13 +13,13 @@ export default function Partners() {
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
 
-        <ul className="mt-10 border-t border-border/40">
+        <ul className="mt-10 grid grid-cols-2 border-t border-border/40 lg:grid-cols-4">
           {partners.map((partner) => (
             <li
               key={partner.id}
-              className="grid gap-3 border-b border-border/40 py-6 md:grid-cols-[minmax(0,26ch)_minmax(0,1fr)] md:items-center md:gap-8"
+              className="min-w-0 border-b border-border/40 px-3 py-6 text-center"
             >
-              <div className="flex min-h-16 items-center">
+              <div className="mx-auto flex h-20 w-full max-w-[220px] items-center justify-center">
                 {partner.logo ? (
                   partner.url ? (
                     <a
@@ -27,7 +27,7 @@ export default function Partners() {
                       target="_blank"
                       rel="noreferrer noopener"
                       aria-label={partner.name}
-                      className="inline-flex"
+                      className="flex h-full w-full items-center justify-center"
                     >
                       <img
                         src={partner.logo}
@@ -35,7 +35,7 @@ export default function Partners() {
                         width={220}
                         height={56}
                         loading="lazy"
-                        className="h-12 w-[200px] object-contain object-left"
+                        className="max-h-14 max-w-full object-contain object-center"
                       />
                     </a>
                   ) : (
@@ -45,7 +45,7 @@ export default function Partners() {
                       width={220}
                       height={56}
                       loading="lazy"
-                      className="h-12 w-[200px] object-contain object-left"
+                      className="max-h-14 max-w-full object-contain object-center"
                     />
                   )
                 ) : (
@@ -53,7 +53,9 @@ export default function Partners() {
                   <span className="text-lg text-text">{partner.name}</span>
                 )}
               </div>
-              <p className="text-text">{t(`items.${partner.id}`)}</p>
+              <p className="mt-3 text-sm leading-snug text-muted">
+                {t(`items.${partner.id}`)}
+              </p>
             </li>
           ))}
         </ul>

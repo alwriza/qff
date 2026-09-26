@@ -67,7 +67,7 @@
     "classicalRegister": "сертификаттар",
     "detailsLabel": "Сабақ туралы",
     "circuitLabel": "Бағдарлама кванттық схема түрінде",
-    "noTime": "To be decided",
+    "noTime": "TBD",
     "types": {
       "lecture": "дәріс",
       "practice": "практика",
@@ -75,7 +75,8 @@
       "activity": "белсенділік",
       "lab": "зертхана",
       "hackathon": "хакатон",
-      "cnot": "CNOT"
+      "cnot": "CNOT",
+      "speedDating": "Speed Dating"
     },
     "weeks": {
       "week-1": "Сызықтық алгебра",
@@ -86,36 +87,36 @@
     },
     "gates": {
       "w1-lecture": {
-        "title": "Дәріс + To be decided",
-        "description": "To be decided"
+        "title": "Quantum Computing: State-of-Art",
+        "description": "1st lecture by Salizhan K."
       },
       "w1-practice": {
         "title": "Практикалық сабақ",
         "description": "Дәріс материалын қолмен және кодта талдау."
       },
       "w2-lecture": {
-        "title": "Дәріс + To be decided",
-        "description": "To be decided"
+        "title": "Introduction to Quantum Mechanics",
+        "description": "2nd lecture by Salizhan K."
       },
       "w2-practice": {
-        "title": "Практикалық сабақ",
-        "description": "Ортаны баптау және алғашқы схемаларды іске қосу."
+        "title": "1st Practicum: Quantum Mechanics",
+        "description": "Quantum mechanics practicum."
       },
       "w3-lecture": {
-        "title": "Дәріс + To be decided",
-        "description": "To be decided"
+        "title": "Introduction to Quantum Information",
+        "description": "3rd lecture. Speaker to be announced."
       },
       "w3-practice": {
         "title": "Практикалық сабақ",
         "description": "Qiskit-те күйлер мен өлшеулерді модельдеу."
       },
       "w3-speaker": {
-        "title": "Шақырылған спикер",
-        "description": "Кванттық есептеулердің басқа салалармен тоғысындағы баяндама. Спикер кейінірек анықталады."
+        "title": "Speed Dating: ...",
+        "description": "Topic and speaker to be announced."
       },
       "w4-lecture": {
-        "title": "Дәріс + To be decided",
-        "description": "To be decided"
+        "title": "Qiskit 101",
+        "description": "4th lecture by Irma V."
       },
       "w4-practice": {
         "title": "Практикалық сабақ",
@@ -130,24 +131,24 @@
         "description": "The final X gate before the hackathon measurement."
       },
       "w4-hackathon-start": {
-        "title": "Хакатон басталады",
-        "description": "Бір апталық хакатон: 4 тапсырма және 1 қосымша жоба."
+        "title": "Hackathon: Opening Ceremony",
+        "description": "Hackathon kickoff."
       },
       "w5-hackathon-end": {
-        "title": "Хакатон аяқталады",
-        "description": "To be decided"
+        "title": "Hackathon: Closing Ceremony",
+        "description": "Hackathon conclusion."
       },
       "w1-cnot": {
-        "title": "CNOT gate",
-        "description": "Connects the two program lines."
+        "title": "1st Lab: Quantum Sensors Lab",
+        "description": "Laboratory session."
       },
       "w2-speaker": {
-        "title": "T gate",
-        "description": "T gate."
+        "title": "Speed Dating: Quantum Chemistry",
+        "description": "Speaker to be announced."
       },
       "w3-cnot": {
-        "title": "CNOT gate",
-        "description": "Connects the two program lines."
+        "title": "2nd Lab: Intermediate Physics Lab",
+        "description": "Laboratory session."
       }
     },
     "finishLabel": "Finish!"
@@ -279,6 +280,7 @@
   },
   "footer": {
     "contactLabel": "Байланыс",
+    "websiteLabel": "Сайт",
     "communityLabel": "Қоғамдастық",
     "communityCta": "Арнаға қосылу",
     "communitySoon": "Telegram арнасы жақында ашылады",

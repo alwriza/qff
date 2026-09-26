@@ -76,7 +76,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
           </>
         )}
 
-        {gate.type === "hackathon" && (
+        {gate.type === "hackathon" && gate.symbol === undefined && (
           <>
             <rect x={x - GATE / 2} y={y - GATE / 2} width={GATE} height={GATE} fill={fill} stroke={stroke} strokeWidth={1.8} />
             <path d={"M " + (x - 14) + " " + (y + 9) + " A 14 14 0 0 1 " + (x + 14) + " " + (y + 9)} fill="none" stroke={stroke} strokeWidth={1.8} />
@@ -84,11 +84,11 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
           </>
         )}
 
-        {gate.controlWire === undefined && gate.type !== "hackathon" && (
+        {gate.controlWire === undefined && (gate.type !== "hackathon" || gate.symbol !== undefined) && (
           <>
             <rect x={x - GATE / 2} y={y - GATE / 2} width={GATE} height={GATE} fill={fill} stroke={stroke} strokeWidth={1.8} />
             <text x={x} y={y} textAnchor="middle" dominantBaseline="central" fontSize={15} className="svg-mono" fill={stroke}>
-              {gateSymbols[gate.type]}
+              {gate.symbol ?? gateSymbols[gate.type]}
             </text>
           </>
         )}
@@ -107,15 +107,26 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
       aria-label={t("circuitLabel")}
     >
       <defs>
-        <marker id="circuit-down-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-          <path d="M 1 1 L 4 7 L 7 1" fill="none" stroke="var(--color-pink)" strokeWidth="1.2" />
+        <marker
+          id="circuit-down-arrow"
+          markerWidth="10"
+          markerHeight="8"
+          refX="9"
+          refY="4"
+          orient="auto"
+          markerUnits="userSpaceOnUse"
+        >
+          <path d="M 1 1 L 9 4 L 1 7" fill="none" stroke="var(--color-pink)" strokeWidth="1.5" />
         </marker>
       </defs>
 
       {program.map((week, i) => (
         <g key={week.id} aria-hidden="true">
-          <text x={LABEL_W - 18} y={wireY(i) + 5} textAnchor="end" fontSize={13} className="svg-mono" fill="var(--color-text)">
+          <text x={LABEL_W - 18} y={wireY(i) - 5} textAnchor="end" fontSize={12} className="svg-mono" fill="var(--color-text)">
             W{week.index}
+          </text>
+          <text x={LABEL_W - 18} y={wireY(i) + 13} textAnchor="end" fontSize={9} className="svg-mono" fill="var(--color-muted)">
+            {week.date ?? t("noTime")}
           </text>
         </g>
       ))}
@@ -134,7 +145,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
             x1={x}
             y1={wireY(i) + GATE / 2 + 4}
             x2={x}
-            y2={CLASSICAL_Y - 4}
+            y2={CLASSICAL_Y - 3}
             stroke="var(--color-pink)"
             strokeWidth={1.5}
             markerEnd="url(#circuit-down-arrow)"

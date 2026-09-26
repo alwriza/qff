@@ -67,7 +67,7 @@
     "classicalRegister": "сертификаты",
     "detailsLabel": "Детали сессии",
     "circuitLabel": "Программа в виде квантовой схемы",
-    "noTime": "To be decided",
+    "noTime": "TBD",
     "types": {
       "lecture": "лекция",
       "practice": "практика",
@@ -75,7 +75,8 @@
       "activity": "активность",
       "lab": "лаборатория",
       "hackathon": "хакатон",
-      "cnot": "CNOT"
+      "cnot": "CNOT",
+      "speedDating": "Speed Dating"
     },
     "weeks": {
       "week-1": "Линейная алгебра",
@@ -86,36 +87,36 @@
     },
     "gates": {
       "w1-lecture": {
-        "title": "Лекция + To be decided",
-        "description": "To be decided"
+        "title": "Quantum Computing: State-of-Art",
+        "description": "1st lecture by Salizhan K."
       },
       "w1-practice": {
         "title": "Практическая сессия",
         "description": "Разбор материала лекции руками и в коде."
       },
       "w2-lecture": {
-        "title": "Лекция + To be decided",
-        "description": "To be decided"
+        "title": "Introduction to Quantum Mechanics",
+        "description": "2nd lecture by Salizhan K."
       },
       "w2-practice": {
-        "title": "Практическая сессия",
-        "description": "Настройка окружения и первые собственные схемы."
+        "title": "1st Practicum: Quantum Mechanics",
+        "description": "Quantum mechanics practicum."
       },
       "w3-lecture": {
-        "title": "Лекция + To be decided",
-        "description": "To be decided"
+        "title": "Introduction to Quantum Information",
+        "description": "3rd lecture. Speaker to be announced."
       },
       "w3-practice": {
         "title": "Практическая сессия",
         "description": "Симуляция состояний и измерений в Qiskit."
       },
       "w3-speaker": {
-        "title": "Приглашённый спикер",
-        "description": "Доклад на стыке квантовых вычислений с другой областью. Спикер будет определён позднее."
+        "title": "Speed Dating: ...",
+        "description": "Topic and speaker to be announced."
       },
       "w4-lecture": {
-        "title": "Лекция + To be decided",
-        "description": "To be decided"
+        "title": "Qiskit 101",
+        "description": "4th lecture by Irma V."
       },
       "w4-practice": {
         "title": "Практическая сессия",
@@ -130,24 +131,24 @@
         "description": "The final X gate before the hackathon measurement."
       },
       "w4-hackathon-start": {
-        "title": "Начало хакатона",
-        "description": "Недельный хакатон: 4 задачи и 1 необязательный проект."
+        "title": "Hackathon: Opening Ceremony",
+        "description": "Hackathon kickoff."
       },
       "w5-hackathon-end": {
-        "title": "Окончание хакатона",
-        "description": "To be decided"
+        "title": "Hackathon: Closing Ceremony",
+        "description": "Hackathon conclusion."
       },
       "w1-cnot": {
-        "title": "CNOT gate",
-        "description": "Connects the two program lines."
+        "title": "1st Lab: Quantum Sensors Lab",
+        "description": "Laboratory session."
       },
       "w2-speaker": {
-        "title": "T gate",
-        "description": "T gate."
+        "title": "Speed Dating: Quantum Chemistry",
+        "description": "Speaker to be announced."
       },
       "w3-cnot": {
-        "title": "CNOT gate",
-        "description": "Connects the two program lines."
+        "title": "2nd Lab: Intermediate Physics Lab",
+        "description": "Laboratory session."
       }
     },
     "finishLabel": "Finish!"
@@ -279,6 +280,7 @@
   },
   "footer": {
     "contactLabel": "Контакты",
+    "websiteLabel": "Сайт",
     "communityLabel": "Сообщество",
     "communityCta": "Вступить в канал",
     "communitySoon": "Telegram-канал скоро появится",

@@ -12,9 +12,7 @@ export default function Footer() {
   const t = useTranslations("footer");
   const tc = useTranslations("common");
 
-  const socials = (
-    Object.entries(event.socials) as [string, string | null][]
-  ).filter(([, url]) => url);
+  const instagram = event.socials.instagram;
 
   const linkClass =
     "mt-2 inline-block text-white transition-colors duration-150 hover:text-lilac";
@@ -25,7 +23,7 @@ export default function Footer() {
           а теперь верхняя кромка футера растворяется в странице. Отбивка
           сверху увеличена, чтобы текст не попадал в растушёвку. */}
       <div className="container-max relative z-10 pb-16 pt-48 md:pt-[300px]">
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-10 md:grid-cols-3">
           <div>
             <p className="mono text-lilac">{t("contactLabel")}</p>
             {/* ЛИЧНУЮ ПОЧТУ НЕ СТАВИТЬ — только адрес команды из event.ts */}
@@ -39,22 +37,22 @@ export default function Footer() {
           </div>
 
           <div>
+            <p className="mono text-lilac">{t("websiteLabel")}</p>
+            {event.socials.website ? (
+              <a href={event.socials.website} target="_blank" rel="noreferrer noopener" className={linkClass}>
+                hilbertspace.ca
+              </a>
+            ) : (
+              <p className="mono mt-2 text-white">{tc("tbd")}</p>
+            )}
+          </div>
+
+          <div>
             <p className="mono text-lilac">{t("socialsLabel")}</p>
-            {socials.length > 0 ? (
-              <ul className="mt-2 flex flex-wrap gap-4">
-                {socials.map(([name, url]) => (
-                  <li key={name}>
-                    <a
-                      href={url!}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="mono text-white transition-colors duration-150 hover:text-lilac"
-                    >
-                      {name === "website" ? "hilbertspace.ca" : name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            {instagram ? (
+              <a href={instagram} target="_blank" rel="noreferrer noopener" className={linkClass}>
+                Instagram
+              </a>
             ) : (
               <p className="mono mt-2 text-white">{tc("tbd")}</p>
             )}

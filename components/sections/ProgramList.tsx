@@ -31,11 +31,11 @@ export default function ProgramList() {
                     className="mono card-sm flex h-10 w-10 items-center justify-center text-violet"
                     aria-hidden="true"
                   >
-                    {gateSymbols[gate.type]}
+                    {gate.symbol ?? gateSymbols[gate.type]}
                   </span>
                   <div>
                     <p className="mono text-muted">
-                      {t(`types.${gate.type}`)} · {gate.time ?? t("noTime")}
+                      {t(`types.${gate.displayType ?? gate.type}`)} · {gate.time ?? t("noTime")}
                     </p>
                     <p className="mt-1 text-text">
                       {t(`gates.${gate.id}.title`)}

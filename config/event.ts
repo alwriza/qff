@@ -18,7 +18,7 @@ export const event = {
   contactEmail: "centralasianhilbertspace@gmail.com" as string | null,
   communityUrl: null as string | null,
   socials: {
-    website: null as string | null,
+    website: "https://hilbertspace.ca/" as string | null,
     instagram: null as string | null,
     linkedin: null as string | null,
     telegram: null as string | null,

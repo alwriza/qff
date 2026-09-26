@@ -48,7 +48,7 @@ export default function Program() {
           {selected.week.date ?? t("noTime")}
         </p>
         <p className="mono mt-3 border-t border-border/40 pt-3 text-muted">
-          {t(`types.${selected.gate.type}`)} ·{" "}
+          {t(`types.${selected.gate.displayType ?? selected.gate.type}`)} ·{" "}
           {selected.gate.time ?? t("noTime")}
         </p>
         <p className="mt-5 text-lg leading-snug text-text">

@@ -12,7 +12,6 @@ import Program from "@/components/sections/Program";
 import Speakers from "@/components/sections/Speakers";
 import Hackathon from "@/components/sections/Hackathon";
 import Register from "@/components/sections/Register";
-import Venue from "@/components/sections/Venue";
 import Faq from "@/components/sections/Faq";
 import Partners from "@/components/sections/Partners";
 import PostEvent from "@/components/sections/PostEvent";
@@ -60,7 +59,6 @@ export default async function Home({
         <Speakers />
         <Hackathon />
         <Register />
-        <Venue />
         <Faq />
         <Partners />
         <PostEvent />

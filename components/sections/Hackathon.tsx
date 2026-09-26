@@ -8,7 +8,6 @@ export default function Hackathon() {
     { key: "format", value: t("format") },
     { key: "teams", value: t("teams") },
     { key: "span", value: t("span") },
-    { key: "prizes", value: t("prizes") },
   ];
 
   return (

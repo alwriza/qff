@@ -25,7 +25,7 @@ export default function Footer() {
           а теперь верхняя кромка футера растворяется в странице. Отбивка
           сверху увеличена, чтобы текст не попадал в растушёвку. */}
       <div className="container-max relative z-10 pb-16 pt-48 md:pt-[300px]">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2">
           <div>
             <p className="mono text-lilac">{t("contactLabel")}</p>
             {/* ЛИЧНУЮ ПОЧТУ НЕ СТАВИТЬ — только адрес команды из event.ts */}
@@ -35,22 +35,6 @@ export default function Footer() {
               </a>
             ) : (
               <p className="mono mt-2 text-white">{t("communitySoon")}</p>
-            )}
-          </div>
-
-          <div>
-            <p className="mono text-lilac">{t("communityLabel")}</p>
-            {event.communityUrl ? (
-              <a
-                href={event.communityUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className={linkClass}
-              >
-                {t("communityCta")} ↗
-              </a>
-            ) : (
-              <p className="mono mt-2 text-white">{tc("tbd")}</p>
             )}
           </div>
 

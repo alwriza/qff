@@ -77,7 +77,6 @@ const sharedOptions = {
   social: "Social media",
   community: "Community / Telegram channel",
   friend: "Friend or colleague",
-  search: "Search",
   sourceOther: "Other",
 };
 
@@ -86,9 +85,9 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Registration — QFFCA 2026",
     metaDescription: "Apply to Qiskit Fall Fest Central Asia 2026 in Astana.",
     eyebrow: "Participant application · QFFCA 2026",
-    title: "Join the quantum cohort",
+    title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Five Saturday sessions and a hackathon in Astana. No quantum-computing background is required — we start from the foundations.",
+      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
     back: "Back to the festival",
     required: "Required fields are marked with *",
     sections: {
@@ -136,9 +135,9 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Регистрация — QFFCA 2026",
     metaDescription: "Регистрация на Qiskit Fall Fest Central Asia 2026 в Астане.",
     eyebrow: "Заявка участника · QFFCA 2026",
-    title: "Станьте частью квантового сообщества",
+    title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Пять субботних сессий и хакатон в Астане. Опыт в квантовых вычислениях не обязателен — начинаем с основ.",
+      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
     back: "Вернуться к фестивалю",
     required: "Обязательные поля отмечены *",
     sections: {
@@ -200,7 +199,6 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       social: "Социальные сети",
       community: "Сообщество / Telegram-канал",
       friend: "Друг или коллега",
-      search: "Поиск",
       sourceOther: "Другое",
     },
     submit: "Отправить заявку",
@@ -215,9 +213,9 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Тіркелу — QFFCA 2026",
     metaDescription: "Астанадағы Qiskit Fall Fest Central Asia 2026 фестиваліне тіркелу.",
     eyebrow: "Қатысушы өтінімі · QFFCA 2026",
-    title: "Кванттық қауымдастыққа қосылыңыз",
+    title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Астанада бес сенбілік сессия және хакатон өтеді. Кванттық есептеулер бойынша тәжірибе міндетті емес — негіздерден бастаймыз.",
+      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
     back: "Фестивальге оралу",
     required: "Міндетті өрістер * белгісімен көрсетілген",
     sections: {
@@ -279,7 +277,6 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       social: "Әлеуметтік желі",
       community: "Қауымдастық / Telegram арнасы",
       friend: "Дос немесе әріптес",
-      search: "Іздеу жүйесі",
       sourceOther: "Басқа",
     },
     submit: "Өтінімді жіберу",

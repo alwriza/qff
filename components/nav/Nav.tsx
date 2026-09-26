@@ -30,10 +30,9 @@ export default function Nav() {
         className="flex h-11 items-center gap-3"
         aria-label="Central Asian Hilbert Space"
       >
-        <span className="mono hidden text-text sm:inline">
+        <span className="mono text-text">
           {event.shortName}
         </span>
-        <img src="/logo-white.svg" alt="" className="h-9 w-auto logo-on-light" />
       </Link>
 
       {/* Переключение на lg, а не md: на 768–1000px русские и казахские

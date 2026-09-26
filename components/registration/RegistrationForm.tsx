@@ -163,8 +163,7 @@ export default function RegistrationForm({ copy, locale }: Props) {
         ]} />
         <SelectField label={copy.fields.heardFrom} name="heardFrom" placeholder={copy.placeholders.select} options={[
           { value: "university", label: o.university }, { value: "social", label: o.social },
-          { value: "community", label: o.community }, { value: "friend", label: o.friend },
-          { value: "search", label: o.search }, { value: "other", label: o.sourceOther },
+          { value: "community", label: o.community }, { value: "friend", label: o.friend }, { value: "other", label: o.sourceOther },
         ]} />
         <label className={`${labelClass} md:col-span-2`}>
           {copy.fields.comments}

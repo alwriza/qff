@@ -1,17 +1,15 @@
 {
   "meta": {
     "title": "Qiskit Fall Fest Central Asia 2026",
-    "description": "The first Qiskit Fall Fest in Central Asia. Five weeks of quantum computing at Nazarbayev University, Astana, open to university students, high-schoolers and independent researchers.",
+    "description": "Qiskit Fall Fest Central Asia 2026: five Saturdays, 4 lectures and a hackathon at Nazarbayev University in Astana. Free and open to everyone.",
     "cocTitle": "Code of Conduct — QFFCA 2026",
     "cocDescription": "The code of conduct for Qiskit Fall Fest Central Asia 2026."
   },
-
   "common": {
     "tbd": "To be decided",
     "opensSoon": "opens soon",
     "skipToContent": "Skip to content"
   },
-
   "nav": {
     "about": "About",
     "program": "Program",
@@ -23,26 +21,25 @@
     "primary": "Primary navigation",
     "language": "Language"
   },
-
   "hero": {
     "eyebrow": "IBM Quantum · Qiskit Fall Fest 2026",
     "titleBefore": "The first Qiskit Fall Fest in ",
     "titleAccent": "Central Asia",
     "titleAfter": "",
-    "lede": "Introducing future generations to the quantum frontier.",
+    "lede": "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
     "factSaturdays": "{n} Saturdays",
     "factAudience": "For everyone",
     "factFree": "Free",
-    "factSeats": "70–100 seats",
     "ctaRegister": "Register",
-    "ctaProgram": "See the program",
+    "ctaProgram": "Learn more",
     "countdownLabel": "Time until the opening",
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
-    "seconds": "Seconds"
+    "seconds": "Seconds",
+    "factCity": "Astana, Kazakhstan",
+    "factDates": "24 October - 21 November"
   },
-
   "readout": {
     "heading": "Calibration",
     "rows": {
@@ -58,26 +55,21 @@
       "everyone": "Students, high-schoolers & researchers"
     }
   },
-
   "about": {
     "title": "About the fest",
     "body": [
-      "Qiskit Fall Fest is an annual global initiative by IBM Quantum: student teams at leading universities around the world run lectures, workshops and hackathons on quantum computing.",
-      "In 2025 that meant more than 32,000 participants across 150 universities.",
-      "In 2026 the festival comes to Central Asia for the first time — to Nazarbayev University in Astana."
+      "IBM Qiskit Fall Fest is an annual initiative that brings together thousands of quantum enthusiasts.",
+      "This year, it will happen in Astana, Kazakhstan for the first time. Dive into quantum computing, learn about its significant potential, and challenge your skills at the QFFCA’26 Hackathon."
     ]
   },
-
   "whatYouGet": {
     "title": "What you get",
     "items": [
-    "Access to real IBM quantum computers through the IBM Quantum Platform",
-    "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
-    "Week-long hackathon with 4 tasks and 1 optional project",
-    "Rest to be decided"
+      "Lectures with an introduction to quantum computing and Qiskit",
+      "Access to real IBM quantum computers through the IBM Quantum Platform",
+      "A week-long hackathon where you can turn what you learn into working projects with Qiskit"
     ]
   },
-
   "program": {
     "title": "Program",
     "subtitle": "Read it as a quantum circuit — every week is a qubit, every session is a gate, and the hackathon is the measurement.",
@@ -86,7 +78,7 @@
     "viewLabel": "Program view",
     "legendLabel": "Legend",
     "weekLabel": "Week {n}",
-  "classicalRegister": "complete",
+    "classicalRegister": "complete",
     "detailsLabel": "Session details",
     "circuitLabel": "Program as a quantum circuit",
     "noTime": "To be decided",
@@ -99,11 +91,11 @@
       "hackathon": "hackathon"
     },
     "weeks": {
-    "week-1": "24 October",
-    "week-2": "31 October",
-    "week-3": "8 November",
-    "week-4": "14 November",
-    "week-5": "21 November"
+      "week-1": "24 October",
+      "week-2": "31 October",
+      "week-3": "8 November",
+      "week-4": "14 November",
+      "week-5": "21 November"
     },
     "gates": {
       "w1-lecture": {
@@ -150,38 +142,33 @@
         "title": "Activity",
         "description": "A team activity to warm up before the hackathon."
       },
-    "w4-hackathon-start": {
-      "title": "Hackathon starts",
-      "description": "Week-long hackathon with 4 tasks and 1 optional project."
-    },
-    "w5-hackathon-end": {
-      "title": "Hackathon ends",
+      "w4-hackathon-start": {
+        "title": "Hackathon starts",
+        "description": "Week-long hackathon with 4 tasks and 1 optional project."
+      },
+      "w5-hackathon-end": {
+        "title": "Hackathon ends",
         "description": "To be decided"
       }
     }
   },
-
   "speakers": {
     "title": "Speakers",
     "topicLabel": "Topic",
     "topics": {}
   },
-
   "hackathon": {
     "title": "Hackathon",
-  "lede": "A week-long hackathon with 4 tasks and 1 optional project.",
+    "lede": "A week-long hackathon with 4 tasks and 1 optional project.",
     "labels": {
       "format": "Format",
       "teams": "Teams",
-    "span": "Span",
-      "prizes": "Prizes"
+      "span": "Span"
     },
-  "format": "4 tasks and 1 optional project.",
-  "teams": "From 1 to 3 participants.",
-  "span": "Week-long.",
-    "prizes": "To be decided"
+    "format": "4 tasks and 1 optional project.",
+    "teams": "From 1 to 3 participants.",
+    "span": "Week-long; 14 November - 21 November"
   },
-
   "certificates": {
     "title": "Certificates",
     "lede": "Two levels, both issued after the festival.",
@@ -190,7 +177,6 @@
     "completionTitle": "Of completion",
     "completionBody": "At least three lectures attended, plus participation in the hackathon."
   },
-
   "prerequisites": {
     "title": "What you need",
     "items": [
@@ -201,21 +187,21 @@
       "A basic level — we start from the ground up, no prior quantum background required"
     ]
   },
-
   "register": {
     "title": "Register",
-  "lede": "The fest is for university students, high-schoolers and independent researchers.",
+    "lede": "The fest is for university students, high-schoolers and independent researchers.",
     "labels": {
-    "audience": "Who it is for",
+      "audience": "Who it is for",
       "deadline": "Deadline",
       "format": "Format"
     },
-  "audience": "University students, high-schoolers and independent researchers",
+    "hybrid": "Hybrid",
+    "inPerson": "In person",
+    "audience": "University students, high-schoolers and independent researchers",
     "cta": "Register",
     "opensSoon": "Registration opens soon",
     "note": "The application takes about 3–5 minutes. Your answers are sent directly to the organizing team."
   },
-
   "venue": {
     "title": "Venue",
     "labels": {
@@ -228,7 +214,6 @@
     },
     "gettingThere": "Details on entry and directions will be published together with the exact address."
   },
-
   "faq": {
     "title": "FAQ",
     "items": [
@@ -238,35 +223,30 @@
       },
       {
         "q": "Do I need a background in physics?",
-        "a": "No. Week 3 covers the quantum mechanics you need, and weeks 1 and 2 build the linear algebra and Python underneath it."
+        "a": "Yes. To better understand the material: (a) review linear algebra on Khan Academy; (b) watch ?A Beginner?s Guide to Quantum Computing? by Shohini Ghose on YouTube."
       },
       {
         "q": "Do I need to know how to program?",
-        "a": "A basic level helps, but week 2 is dedicated to the Python you actually need for Qiskit. You do need to bring a laptop."
+        "a": "A basic level helps. Week 3 is dedicated to a beginner-friendly guide to programming with Qiskit."
       },
       {
-      "q": "Is the hackathon mandatory?",
-      "a": "No. You can attend the lectures and lab tours without joining the hackathon."
+        "q": "Is the hackathon mandatory?",
+        "a": "No. You can attend the lectures and lab tours without joining the hackathon."
       },
       {
         "q": "What language are the lectures in?",
-      "a": "English."
+        "a": "English."
       },
       {
         "q": "Can I take part online?",
-      "a": "No. The festival is held in person only."
+        "a": "No. The festival is held in person only."
       },
       {
         "q": "How are hackathon teams formed?",
-      "a": "You may participate individually or in a group of up to three people."
-      },
-      {
-        "q": "Will there be food?",
-        "a": "To be decided"
+        "a": "You may participate individually or in a group of up to three people."
       }
     ]
   },
-
   "team": {
     "title": "Team",
     "roles": {
@@ -279,7 +259,6 @@
       "Among us: a PhD student in quantum information at Oxford, graduates of the Qiskit Global Summer School and QIntern, and a NASA intern."
     ]
   },
-
   "partners": {
     "title": "Partners",
     "items": {
@@ -292,26 +271,23 @@
     "becomeBody": "We offer logo placement, a slot to speak at the opening and closing, and coverage across social media and the press. You can support the festival with prizes or financially.",
     "becomeCta": "Get in touch"
   },
-
   "postEvent": {
     "title": "After the fest",
     "photos": "Photos",
     "winners": "Winners",
     "slides": "Slides"
   },
-
   "footer": {
     "contactLabel": "Contact",
     "communityLabel": "Community",
     "communityCta": "Join the channel",
     "communitySoon": "Telegram channel coming soon",
-    "socialsLabel": "Social",
+    "socialsLabel": "Instagram channel",
     "coc": "Code of Conduct",
     "rights": "Qiskit Fall Fest Central Asia 2026",
     "disclaimer": "Qiskit and IBM Quantum are trademarks of IBM. This is a community-run event.",
     "logosTodo": "Partner logos"
   },
-
   "coc": {
     "title": "Code of Conduct",
     "lede": "Qiskit Fall Fest Central Asia 2026 is a learning space. Everyone is welcome, and everyone is responsible for keeping it that way.",
@@ -340,11 +316,12 @@
     "contactLabel": "Report to",
     "back": "Back to the fest"
   },
-
   "notFound": {
     "code": "404",
     "title": "State not found",
     "body": "This page collapsed into a state that isn't in the register. The link may be old, or it may never have existed.",
     "cta": "Back to the fest"
-  }
+  },
+  "registrationTitle": "Join Qiskit Fall Fest Central Asia!",
+  "registrationLede": "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed."
 }

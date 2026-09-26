@@ -9,10 +9,10 @@ export default function Hero() {
   const registrationHref = event.registrationUrl ?? `/${locale}/register`;
 
   const facts = [
-    `${event.university} · ${event.city}`,
+    `${event.university} · ${t("factCity")}`,
     t("factSaturdays", { n: event.saturdays }),
+    t("factDates"),
     t("factFree"),
-    t("factSeats"),
   ];
 
   return (

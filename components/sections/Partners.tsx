@@ -35,7 +35,7 @@ export default function Partners() {
                         width={220}
                         height={56}
                         loading="lazy"
-                        className="h-14 max-w-[220px] w-auto object-contain object-left"
+                        className="h-12 w-[200px] object-contain object-left"
                       />
                     </a>
                   ) : (
@@ -45,7 +45,7 @@ export default function Partners() {
                       width={220}
                       height={56}
                       loading="lazy"
-                      className="h-14 max-w-[220px] w-auto object-contain object-left"
+                      className="h-12 w-[200px] object-contain object-left"
                     />
                   )
                 ) : (

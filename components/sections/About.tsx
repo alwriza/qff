@@ -10,21 +10,12 @@ export default function About() {
     <Section id="about" bg="tint" index="01">
       <Reveal>
         <h2 className="h2">{t("title")}</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="space-y-5">
-            {body.slice(0, 2).map((p) => (
-              <p key={p} className="max-w-[60ch] text-text">
-                {p}
-              </p>
-            ))}
-          </div>
-          <div className="space-y-5">
-            {body.slice(2).map((p) => (
-              <p key={p} className="max-w-[60ch] text-text">
-                {p}
-              </p>
-            ))}
-          </div>
+        <div className="mt-8 max-w-[78ch] space-y-5">
+          {body.map((p) => (
+            <p key={p} className="text-lg leading-relaxed text-text md:text-xl">
+              {p}
+            </p>
+          ))}
         </div>
       </Reveal>
     </Section>

@@ -6,6 +6,7 @@ import { gateLegend, gateSymbols, flatGates, program } from "@/config/program";
 import Section from "@/components/ui/Section";
 import CircuitDiagram from "./CircuitDiagram";
 import ProgramList from "./ProgramList";
+import MeasurementIcon from "@/components/ui/MeasurementIcon";
 
 type View = "schema" | "list";
 
@@ -104,8 +105,8 @@ export default function Program() {
                       ·
                     </span>
                   )}
-                  <span>
-                    <span className="text-violet">{gateSymbols[type]}</span> —{" "}
+                  <span className="flex items-center gap-2">
+                    <span className="text-violet">{type === "hackathon" ? <MeasurementIcon /> : gateSymbols[type]}</span> —{" "}
                     {t(`types.${type}`)}
                   </span>
                 </li>

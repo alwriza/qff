@@ -101,7 +101,7 @@ export const program: ProgramWeek[] = [
     measuresToClassical: false,
     gates: [
       { id: "w4-lecture", type: "lecture", column: 10, time: null },
-      { id: "w4-hackathon-start", type: "hackathon", symbol: "M", column: 12, time: null },
+      { id: "w4-hackathon-start", type: "hackathon", column: 12, time: null },
     ],
   },
   {

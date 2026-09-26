@@ -224,7 +224,7 @@
       },
       {
         "q": "Do I need a background in physics?",
-        "a": "Yes. To better understand the material: (a) review linear algebra on Khan Academy; (b) watch ?A Beginner?s Guide to Quantum Computing? by Shohini Ghose on YouTube."
+        "a": "Yes. To better understand the material: (a) review linear algebra on Khan Academy; (b) watch “A Beginner’s Guide to Quantum Computing” by Shohini Ghose on YouTube."
       },
       {
         "q": "Do I need to know how to program?",
@@ -280,7 +280,6 @@
   },
   "footer": {
     "contactLabel": "Contact",
-    "websiteLabel": "Website",
     "communityLabel": "Community",
     "communityCta": "Join the channel",
     "communitySoon": "Telegram channel coming soon",

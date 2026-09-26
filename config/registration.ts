@@ -51,7 +51,7 @@ export type RegistrationCopy = {
 };
 
 const sharedOptions = {
-  school: "School",
+  school: "High-school",
   bachelor: "Bachelor's",
   graduate: "Master's / PhD",
   other: "Other",
@@ -173,7 +173,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       select: "Выберите вариант",
     },
     options: {
-      school: "Школа",
+      school: "Старшие классы школы",
       bachelor: "Бакалавриат",
       graduate: "Магистратура / PhD",
       other: "Другое",
@@ -251,7 +251,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       select: "Нұсқаны таңдаңыз",
     },
     options: {
-      school: "Мектеп",
+      school: "Мектептің жоғары сыныптары",
       bachelor: "Бакалавриат",
       graduate: "Магистратура / PhD",
       other: "Басқа",

@@ -52,7 +52,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
     const selected = gate.id === selectedId;
     const stroke = selected ? "var(--color-violet)" : "var(--color-text)";
     const fill = selected ? "var(--color-surface-2)" : "#ffffff";
-    const label = t("weekLabel", { n: week.index }) + " ? " + t("gates." + gate.id + ".title");
+    const label = t("weekLabel", { n: week.index }) + " · " + t("gates." + gate.id + ".title");
 
     return (
       <g

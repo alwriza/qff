@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { program, gateSymbols } from "@/config/program";
+import MeasurementIcon from "@/components/ui/MeasurementIcon";
 
 export default function ProgramList() {
   const t = useTranslations("program");
@@ -31,7 +32,7 @@ export default function ProgramList() {
                     className="mono card-sm flex h-10 w-10 items-center justify-center text-violet"
                     aria-hidden="true"
                   >
-                    {gate.symbol ?? gateSymbols[gate.type]}
+                    {gate.type === "hackathon" ? <MeasurementIcon className="h-8 w-8" /> : gate.symbol ?? gateSymbols[gate.type]}
                   </span>
                   <div>
                     <p className="mono text-muted">

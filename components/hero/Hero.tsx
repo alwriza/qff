@@ -28,8 +28,6 @@ export default function Hero() {
 
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,499px)] lg:items-start lg:gap-10">
           <div>
-            <p className="hero-lede mt-3 md:mt-2">{t("lede")}</p>
-
             <ul className="hero-facts mono mt-10">
               {facts.map((fact, i) => (
                 <li key={fact}>

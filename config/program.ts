@@ -10,6 +10,7 @@ export type GateType =
   | "lecture" // H
   | "practice" // RY
   | "speaker" // T
+  | "cnot"
   | "activity" // X
   | "lab" // ⊕
   | "hackathon"; // ⟨M⟩
@@ -18,17 +19,18 @@ export const gateSymbols: Record<GateType, string> = {
   lecture: "H",
   practice: "RY",
   speaker: "T",
+  cnot: "\u2295",
   activity: "X",
-  lab: "⊕",
-  hackathon: "⟨M⟩",
+  lab: "\u2295",
+  hackathon: "M",
 };
 
 export const gateLegend: GateType[] = [
   "lecture",
   "practice",
   "speaker",
+  "cnot",
   "activity",
-  "lab",
   "hackathon",
 ];
 
@@ -65,6 +67,7 @@ export const program: ProgramWeek[] = [
     measuresToClassical: false,
     gates: [
       { id: "w1-lecture", type: "lecture", column: 0, time: null },
+      { id: "w1-cnot", type: "cnot", column: 1, time: null, controlWire: 1 },
     ],
   },
   {
@@ -73,16 +76,21 @@ export const program: ProgramWeek[] = [
     date: "31 October",
     measuresToClassical: false,
     gates: [
-      { id: "w2-lecture", type: "lecture", column: 1, time: null },
+      { id: "w2-lecture", type: "lecture", column: 2, time: null },
+      { id: "w2-speaker", type: "speaker", column: 3, time: null },
+      { id: "w2-practice", type: "practice", column: 4, time: null },
     ],
   },
   {
     id: "week-3",
     index: 3,
-    date: "8 November",
+    date: "7 November",
     measuresToClassical: false,
     gates: [
-      { id: "w3-lecture", type: "lecture", column: 2, time: null },
+      { id: "w3-lecture", type: "lecture", column: 6, time: null },
+      { id: "w3-speaker", type: "speaker", column: 7, time: null },
+      { id: "w3-practice", type: "practice", column: 8, time: null },
+      { id: "w3-cnot", type: "cnot", column: 9, time: null, controlWire: 3 },
     ],
   },
   {
@@ -91,8 +99,8 @@ export const program: ProgramWeek[] = [
     date: "14 November",
     measuresToClassical: false,
     gates: [
-      { id: "w4-lecture", type: "lecture", column: 3, time: null },
-      { id: "w4-hackathon-start", type: "hackathon", column: 4, time: null },
+      { id: "w4-lecture", type: "lecture", column: 10, time: null },
+      { id: "w4-activity", type: "activity", column: 12, time: null },
     ],
   },
   {
@@ -100,7 +108,7 @@ export const program: ProgramWeek[] = [
     index: 5,
     date: "21 November",
     measuresToClassical: true,
-    gates: [{ id: "w5-hackathon-end", type: "hackathon", column: 4, time: null }],
+    gates: [{ id: "w5-hackathon-end", type: "hackathon", column: 13, time: null }],
   },
 ];
 

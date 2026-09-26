@@ -74,12 +74,13 @@
       "speaker": "спикер",
       "activity": "белсенділік",
       "lab": "зертхана",
-      "hackathon": "хакатон"
+      "hackathon": "хакатон",
+      "cnot": "CNOT"
     },
     "weeks": {
       "week-1": "Сызықтық алгебра",
       "week-2": "Python",
-      "week-3": "Кванттық механика",
+      "week-3": "7 November",
       "week-4": "Qiskit-те кванттық есептеулер",
       "week-5": "Хакатон"
     },
@@ -125,8 +126,8 @@
         "description": "Фотоника зертханасындағы практика — нақты оптикалық жабдықтағы кванттық құбылыстар."
       },
       "w4-activity": {
-        "title": "Белсенділік",
-        "description": "Хакатон алдындағы командалық қыздыру сабағы."
+        "title": "X gate",
+        "description": "The final X gate before the hackathon measurement."
       },
       "w4-hackathon-start": {
         "title": "Хакатон басталады",
@@ -135,8 +136,21 @@
       "w5-hackathon-end": {
         "title": "Хакатон аяқталады",
         "description": "To be decided"
+      },
+      "w1-cnot": {
+        "title": "CNOT gate",
+        "description": "Connects the two program lines."
+      },
+      "w2-speaker": {
+        "title": "T gate",
+        "description": "T gate."
+      },
+      "w3-cnot": {
+        "title": "CNOT gate",
+        "description": "Connects the two program lines."
       }
-    }
+    },
+    "finishLabel": "Finish!"
   },
   "speakers": {
     "title": "Спикерлер",

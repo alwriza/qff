@@ -1,32 +1,24 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import {
-  program,
-  gateSymbols,
-  flatGates,
-  columnCount,
-  type Gate,
-  type ProgramWeek,
-} from "@/config/program";
+import { program, gateSymbols, flatGates, columnCount, type Gate, type ProgramWeek } from "@/config/program";
 
-/* Геометрия. Время идёт слева направо. */
-const LABEL_W = 210;
-const COL_W = 96;
+const LABEL_W = 88;
+const COL_W = 74;
 const GATE = 48;
-const ROW_H = 74;
-const TOP = 44;
+const ROW_H = 84;
+const TOP = 38;
 const RIGHT_PAD = 90;
+const BARRIER_COLUMN = 11;
 
 const WIDTH = LABEL_W + columnCount * COL_W + RIGHT_PAD;
 const wireY = (i: number) => TOP + i * ROW_H;
 const CLASSICAL_Y = wireY(program.length - 1) + ROW_H;
-const HEIGHT = CLASSICAL_Y + 56;
+const HEIGHT = CLASSICAL_Y + 52;
 const colX = (c: number) => LABEL_W + c * COL_W + COL_W / 2;
 const WIRE_X1 = LABEL_W;
 const WIRE_X2 = WIDTH - 50;
-/** барьер — вертикальный пунктир между колонками, перед измерением */
-const BARRIER_X = LABEL_W + (columnCount - 1) * COL_W;
+const BARRIER_X = colX(BARRIER_COLUMN);
 
 type Props = {
   selectedId: string;
@@ -50,24 +42,22 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
     if (next === null) return;
     e.preventDefault();
     const clamped = Math.max(0, Math.min(flatGates.length - 1, next));
-    document.getElementById(`gate-${flatGates[clamped].gate.id}`)?.focus();
+    document.getElementById("gate-" + flatGates[clamped].gate.id)?.focus();
   }
 
   function renderGate(week: ProgramWeek, gate: Gate, index: number) {
     const x = colX(gate.column);
-    const y = wireY(program.indexOf(week));
+    const row = program.indexOf(week);
+    const y = wireY(row);
     const selected = gate.id === selectedId;
-    const stroke = selected ? "var(--color-violet)" : "var(--color-border)";
-    const fill = selected ? "var(--color-surface-2)" : "var(--color-surface)";
-
-    const label = `${t("weekLabel", { n: week.index })} — ${t(
-      `gates.${gate.id}.title`
-    )}`;
+    const stroke = selected ? "var(--color-violet)" : "var(--color-text)";
+    const fill = selected ? "var(--color-surface-2)" : "#ffffff";
+    const label = t("weekLabel", { n: week.index }) + " ? " + t("gates." + gate.id + ".title");
 
     return (
       <g
         key={gate.id}
-        id={`gate-${gate.id}`}
+        id={"gate-" + gate.id}
         className="gate"
         role="button"
         tabIndex={0}
@@ -76,214 +66,89 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         onClick={() => onSelect(gate.id)}
         onKeyDown={(e) => handleKeyDown(e, index)}
       >
-        {/* CNOT: закрашенная точка на контроле, вертикаль, ⊕ на мишени */}
         {gate.controlWire !== undefined && (
           <>
-            <line
-              x1={x}
-              y1={wireY(gate.controlWire)}
-              x2={x}
-              y2={y}
-              stroke={stroke}
-              strokeWidth={1.5}
-            />
-            <circle
-              cx={x}
-              cy={wireY(gate.controlWire)}
-              r={5}
-              fill={stroke}
-            />
-            <circle
-              cx={x}
-              cy={y}
-              r={17}
-              fill={fill}
-              stroke={stroke}
-              strokeWidth={1.5}
-            />
-            <line x1={x - 17} y1={y} x2={x + 17} y2={y} stroke={stroke} strokeWidth={1.5} />
-            <line x1={x} y1={y - 17} x2={x} y2={y + 17} stroke={stroke} strokeWidth={1.5} />
+            <line x1={x} y1={wireY(gate.controlWire)} x2={x} y2={y} stroke={stroke} strokeWidth={1.8} />
+            <circle cx={x} cy={wireY(gate.controlWire)} r={5} fill={stroke} />
+            <circle cx={x} cy={y} r={17} fill={fill} stroke={stroke} strokeWidth={1.8} />
+            <line x1={x - 17} y1={y} x2={x + 17} y2={y} stroke={stroke} strokeWidth={1.8} />
+            <line x1={x} y1={y - 17} x2={x} y2={y + 17} stroke={stroke} strokeWidth={1.8} />
           </>
         )}
 
-        {/* измерение — бокс с дугой и стрелкой прибора */}
         {gate.type === "hackathon" && (
           <>
-            <rect
-              x={x - GATE / 2}
-              y={y - GATE / 2}
-              width={GATE}
-              height={GATE}
-              fill={fill}
-              stroke={stroke}
-              strokeWidth={1.5}
-            />
-            <path
-              d={`M ${x - 14} ${y + 9} A 14 14 0 0 1 ${x + 14} ${y + 9}`}
-              fill="none"
-              stroke={selected ? "var(--color-violet)" : "var(--color-text)"}
-              strokeWidth={1.5}
-            />
-            <line
-              x1={x}
-              y1={y + 9}
-              x2={x + 10}
-              y2={y - 7}
-              stroke={selected ? "var(--color-violet)" : "var(--color-text)"}
-              strokeWidth={1.5}
-            />
+            <rect x={x - GATE / 2} y={y - GATE / 2} width={GATE} height={GATE} fill={fill} stroke={stroke} strokeWidth={1.8} />
+            <path d={"M " + (x - 14) + " " + (y + 9) + " A 14 14 0 0 1 " + (x + 14) + " " + (y + 9)} fill="none" stroke={stroke} strokeWidth={1.8} />
+            <line x1={x} y1={y + 9} x2={x + 10} y2={y - 7} stroke={stroke} strokeWidth={1.8} />
           </>
         )}
 
-        {/* однокубитный гейт — квадрат с буквой внутри */}
         {gate.controlWire === undefined && gate.type !== "hackathon" && (
           <>
-            <rect
-              x={x - GATE / 2}
-              y={y - GATE / 2}
-              width={GATE}
-              height={GATE}
-              fill={fill}
-              stroke={stroke}
-              strokeWidth={1.5}
-            />
-            <text
-              x={x}
-              y={y}
-              textAnchor="middle"
-              dominantBaseline="central"
-              fontSize={15}
-              className="svg-mono"
-              fill={selected ? "var(--color-violet)" : "var(--color-text)"}
-            >
+            <rect x={x - GATE / 2} y={y - GATE / 2} width={GATE} height={GATE} fill={fill} stroke={stroke} strokeWidth={1.8} />
+            <text x={x} y={y} textAnchor="middle" dominantBaseline="central" fontSize={15} className="svg-mono" fill={stroke}>
               {gateSymbols[gate.type]}
             </text>
           </>
         )}
 
-        {/* видимый фокус */}
-        <rect
-          className="gate-focus"
-          x={x - GATE / 2 - 6}
-          y={y - GATE / 2 - 6}
-          width={GATE + 12}
-          height={GATE + 12}
-          fill="none"
-          stroke="var(--color-violet)"
-          strokeWidth={1.5}
-          strokeDasharray="3 3"
-        />
+        <rect className="gate-focus" x={x - GATE / 2 - 6} y={y - GATE / 2 - 6} width={GATE + 12} height={GATE + 12} fill="none" stroke="var(--color-violet)" strokeWidth={1.5} strokeDasharray="3 3" />
       </g>
     );
   }
 
   return (
     <svg
-      viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-      className="w-full h-auto"
+      viewBox={"0 0 " + WIDTH + " " + HEIGHT}
+      className="h-auto w-full"
       preserveAspectRatio="xMidYMid meet"
       role="group"
       aria-label={t("circuitLabel")}
     >
-      {/* подписи недель с датами слева от каждого провода */}
+      <defs>
+        <marker id="circuit-down-arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M 1 1 L 4 7 L 7 1" fill="none" stroke="var(--color-pink)" strokeWidth="1.2" />
+        </marker>
+      </defs>
+
       {program.map((week, i) => (
         <g key={week.id} aria-hidden="true">
-          <text
-            x={LABEL_W - 18}
-            y={wireY(i) - 5}
-            textAnchor="end"
-            fontSize={11}
-            className="svg-mono"
-            fill="var(--color-text)"
-          >
-            {t("weekLabel", { n: week.index })}
-          </text>
-          <text
-            x={LABEL_W - 18}
-            y={wireY(i) + 12}
-            textAnchor="end"
-            fontSize={11}
-            className="svg-mono"
-            fill="var(--color-muted)"
-          >
-            {week.date ?? t("noTime")}
+          <text x={LABEL_W - 18} y={wireY(i) + 5} textAnchor="end" fontSize={13} className="svg-mono" fill="var(--color-text)">
+            W{week.index}
           </text>
         </g>
       ))}
 
-      {/* провода-кубиты */}
       {program.map((week, i) => (
-        <line
-          key={`wire-${week.id}`}
-          x1={WIRE_X1}
-          y1={wireY(i)}
-          x2={WIRE_X2}
-          y2={wireY(i)}
-          stroke="var(--color-border)"
-          strokeWidth={1}
-        />
+        <line key={"wire-" + week.id} x1={WIRE_X1} y1={wireY(i)} x2={WIRE_X2} y2={wireY(i)} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
       ))}
 
-      {/* барьер */}
-      <line
-        x1={BARRIER_X}
-        y1={12}
-        x2={BARRIER_X}
-        y2={wireY(program.length - 1) + 30}
-        stroke="var(--color-border)"
-        strokeWidth={1}
-        strokeDasharray="4 5"
-        opacity={0.8}
-      />
+      <line x1={BARRIER_X} y1={wireY(0) - 34} x2={BARRIER_X} y2={wireY(3) + 34} stroke="var(--color-pink)" strokeWidth={1.5} strokeDasharray="6 7" />
 
-      {/* классический регистр — двойная линия */}
-      <line x1={WIRE_X1} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-border)" strokeWidth={1} />
-      <line x1={WIRE_X1} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-border)" strokeWidth={1} />
-      <text
-        x={LABEL_W - 18}
-        y={CLASSICAL_Y + 4}
-        textAnchor="end"
-        fontSize={11}
-        className="svg-mono"
-        fill="var(--color-muted)"
-      >
-        c₅
+      {program.map((week, i) => week.measuresToClassical && week.gates.map((gate) => {
+        const x = colX(gate.column);
+        return (
+          <line
+            key={"measurement-" + gate.id}
+            x1={x}
+            y1={wireY(i) + GATE / 2 + 4}
+            x2={x}
+            y2={CLASSICAL_Y - 4}
+            stroke="var(--color-pink)"
+            strokeWidth={1.5}
+            markerEnd="url(#circuit-down-arrow)"
+            aria-hidden="true"
+          />
+        );
+      }))}
+
+      <line x1={colX(10)} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <line x1={colX(10)} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <text x={WIRE_X2} y={CLASSICAL_Y + 28} textAnchor="end" fontSize={13} className="svg-mono" fill="var(--color-pink)">
+        {t("finishLabel")}
       </text>
 
-      {/* двойная линия от измерения в классический регистр */}
-      {program.map((week, i) =>
-        week.measuresToClassical
-          ? week.gates.map((gate) => {
-              const x = colX(gate.column);
-              const from = wireY(i) + GATE / 2;
-              return (
-                <g key={`meas-${gate.id}`} aria-hidden="true">
-                  <line x1={x - 2} y1={from} x2={x - 2} y2={CLASSICAL_Y - 4} stroke="var(--color-border)" strokeWidth={1} />
-                  <line x1={x + 2} y1={from} x2={x + 2} y2={CLASSICAL_Y - 4} stroke="var(--color-border)" strokeWidth={1} />
-                  <path
-                    d={`M ${x - 5} ${CLASSICAL_Y - 11} L ${x} ${CLASSICAL_Y - 4} L ${x + 5} ${CLASSICAL_Y - 11}`}
-                    fill="none"
-                    stroke="var(--color-border)"
-                    strokeWidth={1}
-                  />
-                </g>
-              );
-            })
-          : null
-      )}
-
-      <text
-        x={WIRE_X2}
-        y={CLASSICAL_Y + 22}
-        textAnchor="end"
-        fontSize={11}
-        className="svg-mono"
-        fill="var(--color-violet)"
-      >
-        {t("classicalRegister")}
-      </text>
-
-      {/* гейты поверх проводов */}
       {flatGates.map(({ week, gate }, i) => renderGate(week, gate, i))}
     </svg>
   );

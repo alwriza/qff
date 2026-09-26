@@ -40,21 +40,6 @@
     "factCity": "Astana, Kazakhstan",
     "factDates": "24 October - 21 November"
   },
-  "readout": {
-    "heading": "Calibration",
-    "rows": {
-      "participants": "Participants worldwide 2025",
-      "universities": "Universities worldwide 2025",
-      "centralAsia": "In Central Asia",
-      "length": "Program length",
-      "audience": "Who it is for"
-    },
-    "values": {
-      "firstEver": "1st ever",
-      "weeks": "{n} weeks",
-      "everyone": "Students, high-schoolers & researchers"
-    }
-  },
   "about": {
     "title": "About the fest",
     "body": [
@@ -67,6 +52,7 @@
     "items": [
       "Lectures with an introduction to quantum computing and Qiskit",
       "Access to real IBM quantum computers through the IBM Quantum Platform",
+      "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
       "A week-long hackathon where you can turn what you learn into working projects with Qiskit"
     ]
   },
@@ -321,7 +307,5 @@
     "title": "State not found",
     "body": "This page collapsed into a state that isn't in the register. The link may be old, or it may never have existed.",
     "cta": "Back to the fest"
-  },
-  "registrationTitle": "Join Qiskit Fall Fest Central Asia!",
-  "registrationLede": "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed."
+  }
 }

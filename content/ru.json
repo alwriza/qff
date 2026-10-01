@@ -87,7 +87,7 @@
     },
     "gates": {
       "w1-lecture": {
-        "title": "Quantum Computing: State-of-Art",
+        "title": "Quantum Computing: State-of-the-Art",
         "description": "1st lecture by Salizhan K."
       },
       "w1-practice": {
@@ -237,10 +237,6 @@
       {
         "q": "На каком языке лекции?",
         "a": "Английский."
-      },
-      {
-        "q": "Можно ли участвовать онлайн?",
-        "a": "Нет. Фестиваль проходит только очно."
       },
       {
         "q": "Как формируются команды на хакатоне?",

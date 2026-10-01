@@ -87,7 +87,7 @@
     },
     "gates": {
       "w1-lecture": {
-        "title": "Quantum Computing: State-of-Art",
+        "title": "Quantum Computing: State-of-the-Art",
         "description": "1st lecture by Salizhan K."
       },
       "w1-practice": {
@@ -237,10 +237,6 @@
       {
         "q": "What language are the lectures in?",
         "a": "English."
-      },
-      {
-        "q": "Can I take part online?",
-        "a": "No. The festival is held in person only."
       },
       {
         "q": "How are hackathon teams formed?",

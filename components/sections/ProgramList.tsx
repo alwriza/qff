@@ -17,9 +17,8 @@ export default function ProgramList() {
                 {t("weekLabel", { n: week.index })}
               </p>
               <p className="mono mt-1 text-muted">
-                {week.date ?? t("noTime")}
+                {week.date ? t(`weeks.${week.id}`) : t("noTime")}
               </p>
-              <p className="mt-3 text-muted">{t(`weeks.${week.id}`)}</p>
             </div>
 
             <ul className="space-y-5">

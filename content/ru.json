@@ -26,8 +26,8 @@
     "titleBefore": "Первый Qiskit Fall Fest в ",
     "titleAccent": "Центральной Азии",
     "titleAfter": "",
-    "lede": "Пять суббот, 4 лекции и 1 хакатон. Бесплатно. Предыдущий опыт не нужен.",
-    "factSaturdays": "{n} суббот",
+    "lede": "Пять дней встреч, лекции, лабораторные занятия и хакатон. Бесплатно. Предыдущий опыт не нужен.",
+    "factSaturdays": "{n} дней встреч",
     "factAudience": "Для всех",
     "factFree": "Бесплатно",
     "ctaRegister": "Регистрация",
@@ -76,79 +76,105 @@
       "lab": "лаборатория",
       "hackathon": "хакатон",
       "cnot": "CNOT",
-      "speedDating": "Speed Dating"
+      "registration": "регистрация",
+      "ceremony": "церемония",
+      "break": "перерыв"
     },
     "weeks": {
-      "week-1": "Линейная алгебра",
-      "week-2": "Python",
-      "week-3": "7 November",
-      "week-4": "Квантовые вычисления на Qiskit",
-      "week-5": "Хакатон"
+      "week-1": "24 октября",
+      "week-2": "31 октября",
+      "week-3": "8 ноября",
+      "week-4": "14 ноября",
+      "week-5": "21 ноября"
     },
     "gates": {
-      "w1-lecture": {
-        "title": "Quantum Computing: State-of-the-Art",
-        "description": "1st lecture by Salizhan K."
+      "w1-registration": {
+        "title": "Регистрация",
+        "description": "Регистрация участников."
       },
-      "w1-practice": {
-        "title": "Практическая сессия",
-        "description": "Разбор материала лекции руками и в коде."
+      "w1-opening": {
+        "title": "Церемония открытия",
+        "description": "Церемония открытия фестиваля."
+      },
+      "w1-lecture": {
+        "title": "Квантовые вычисления: современное состояние",
+        "description": "Лекция Salizhan K."
+      },
+      "w1-chemistry": {
+        "title": "Вводная лекция: квантовая химия",
+        "description": "Лекция профессора Yonsei University."
+      },
+      "w1-coffee": {
+        "title": "Кофе-брейк",
+        "description": "Перерыв на кофе."
+      },
+      "w1-cnot": {
+        "title": "Сессия в Quantum Sensors Lab",
+        "description": "Занятие в лаборатории квантовых сенсоров."
+      },
+      "w2-registration": {
+        "title": "Регистрация",
+        "description": "Регистрация участников."
       },
       "w2-lecture": {
-        "title": "Introduction to Quantum Mechanics",
-        "description": "2nd lecture by Salizhan K."
+        "title": "Введение в квантовую механику и информацию",
+        "description": "Лекция Salizhan K."
       },
-      "w2-practice": {
-        "title": "1st Practicum: Quantum Mechanics",
-        "description": "Quantum mechanics practicum."
+      "w2-session-1": {
+        "title": "Сессия уточняется",
+        "description": "Тема и спикер будут объявлены позже."
+      },
+      "w2-session-2": {
+        "title": "Сессия уточняется",
+        "description": "Тема и спикер будут объявлены позже."
+      },
+      "w3-registration": {
+        "title": "Регистрация",
+        "description": "Регистрация участников."
       },
       "w3-lecture": {
-        "title": "Introduction to Quantum Information",
-        "description": "3rd lecture. Speaker to be announced."
+        "title": "Введение в SQD",
+        "description": "Лекция Alain Chancé."
       },
-      "w3-practice": {
-        "title": "Практическая сессия",
-        "description": "Симуляция состояний и измерений в Qiskit."
+      "w3-error-correction": {
+        "title": "Вводная лекция: квантовая коррекция ошибок",
+        "description": "Спикер будет объявлен позже."
       },
-      "w3-speaker": {
-        "title": "Speed Dating: ...",
-        "description": "Topic and speaker to be announced."
+      "w3-cnot": {
+        "title": "Сессия в Intermediate Physics Lab",
+        "description": "Занятие в Intermediate Physics Lab."
+      },
+      "w4-registration-lecture": {
+        "title": "Регистрация слушателей лекции",
+        "description": "Регистрация слушателей Qiskit 101."
       },
       "w4-lecture": {
         "title": "Qiskit 101",
-        "description": "4th lecture by Irma V."
+        "description": "Лекция Irma V."
       },
-      "w4-practice": {
-        "title": "Практическая сессия",
-        "description": "Сборка задач и отправка их на IBM Quantum Platform."
-      },
-      "w4-lab": {
-        "title": "Лаборатория фотоники",
-        "description": "Практика в лаборатории фотоники — квантовые явления на реальном оптическом оборудовании."
-      },
-      "w4-activity": {
-        "title": "X gate",
-        "description": "The final X gate before the hackathon measurement."
+      "w4-registration-hackathon": {
+        "title": "Регистрация участников хакатона",
+        "description": "Регистрация участников хакатона."
       },
       "w4-hackathon-start": {
-        "title": "Hackathon: Opening Ceremony",
-        "description": "Hackathon kickoff."
+        "title": "Церемония открытия хакатона",
+        "description": "Начало хакатона."
+      },
+      "w4-coffee": {
+        "title": "Кофе-брейк",
+        "description": "Перерыв на кофе."
+      },
+      "w5-registration": {
+        "title": "Регистрация",
+        "description": "Регистрация участников."
       },
       "w5-hackathon-end": {
-        "title": "Hackathon: Closing Ceremony",
-        "description": "Hackathon conclusion."
+        "title": "Церемония закрытия хакатона",
+        "description": "Завершение хакатона."
       },
-      "w1-cnot": {
-        "title": "1st Lab: Quantum Sensors Lab",
-        "description": "Laboratory session."
-      },
-      "w2-speaker": {
-        "title": "Speed Dating: Quantum Chemistry",
-        "description": "Speaker to be announced."
-      },
-      "w3-cnot": {
-        "title": "2nd Lab: Intermediate Physics Lab",
-        "description": "Laboratory session."
+      "w5-pizza": {
+        "title": "Время пиццы",
+        "description": "Пицца после церемонии закрытия."
       }
     },
     "finishLabel": "Finish!"
@@ -228,7 +254,7 @@
       },
       {
         "q": "Нужно ли уметь программировать?",
-        "a": "Базовых знаний достаточно. На третьей неделе будет доступное руководство по программированию на Qiskit."
+        "a": "Базовый уровень поможет. Лекция Qiskit 101 14 ноября знакомит с программированием на Qiskit."
       },
       {
         "q": "Обязателен ли хакатон?",

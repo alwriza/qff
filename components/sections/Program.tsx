@@ -46,7 +46,7 @@ export default function Program() {
       <div key={selected.gate.id} className="program-detail-reveal">
         <p className="mono text-violet">
           {t("weekLabel", { n: selected.week.index })} ·{" "}
-          {selected.week.date ?? t("noTime")}
+          {selected.week.date ? t(`weeks.${selected.week.id}`) : t("noTime")}
         </p>
         <p className="mono mt-3 border-t border-border/40 pt-3 text-muted">
           {t(`types.${selected.gate.displayType ?? selected.gate.type}`)} ·{" "}

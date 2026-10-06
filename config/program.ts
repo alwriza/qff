@@ -7,6 +7,9 @@
  */
 
 export type GateType =
+  | "registration"
+  | "ceremony"
+  | "break"
   | "lecture" // H
   | "practice" // RY
   | "speaker" // T
@@ -16,6 +19,9 @@ export type GateType =
   | "hackathon"; // ⟨M⟩
 
 export const gateSymbols: Record<GateType, string> = {
+  registration: "R",
+  ceremony: "O",
+  break: "B",
   lecture: "H",
   practice: "RY",
   speaker: "T",
@@ -26,10 +32,12 @@ export const gateSymbols: Record<GateType, string> = {
 };
 
 export const gateLegend: GateType[] = [
+  "registration",
+  "ceremony",
   "lecture",
-  "practice",
-  "speaker",
-  "cnot",
+  "activity",
+  "break",
+  "lab",
   "hackathon",
 ];
 
@@ -67,8 +75,12 @@ export const program: ProgramWeek[] = [
     date: "24 October",
     measuresToClassical: false,
     gates: [
-      { id: "w1-lecture", type: "lecture", column: 0, time: null },
-      { id: "w1-cnot", type: "cnot", displayType: "lab", column: 1, time: null, controlWire: 1 },
+      { id: "w1-registration", type: "registration", column: 0, time: "09:00–09:50" },
+      { id: "w1-opening", type: "ceremony", column: 1, time: "10:00–11:00" },
+      { id: "w1-lecture", type: "lecture", column: 2, time: "11:10–11:40" },
+      { id: "w1-chemistry", type: "lecture", column: 3, time: "11:50–12:10" },
+      { id: "w1-coffee", type: "break", column: 4, time: "12:10–13:10" },
+      { id: "w1-cnot", type: "cnot", displayType: "lab", column: 5, time: "13:10–14:40", controlWire: 1 },
     ],
   },
   {
@@ -77,21 +89,19 @@ export const program: ProgramWeek[] = [
     date: "31 October",
     measuresToClassical: false,
     gates: [
-      { id: "w2-lecture", type: "lecture", column: 2, time: null },
-      { id: "w2-speaker", type: "speaker", displayType: "speedDating", column: 3, time: null },
-      { id: "w2-practice", type: "practice", column: 4, time: null },
+      { id: "w2-registration", type: "registration", column: 0, time: "10:00–10:50" },
+      { id: "w2-lecture", type: "lecture", column: 1, time: "11:00–12:00" },
     ],
   },
   {
     id: "week-3",
     index: 3,
-    date: "7 November",
+    date: "8 November",
     measuresToClassical: false,
     gates: [
-      { id: "w3-lecture", type: "lecture", column: 6, time: null },
-      { id: "w3-speaker", type: "speaker", displayType: "speedDating", column: 7, time: null },
-      { id: "w3-practice", type: "practice", column: 8, time: null },
-      { id: "w3-cnot", type: "cnot", displayType: "lab", column: 9, time: null, controlWire: 3 },
+      { id: "w3-registration", type: "registration", column: 0, time: "10:00–10:50" },
+      { id: "w3-lecture", type: "lecture", column: 1, time: "11:00–12:00" },
+      { id: "w3-cnot", type: "cnot", displayType: "lab", column: 5, time: "13:00–14:30", controlWire: 3 },
     ],
   },
   {
@@ -100,8 +110,10 @@ export const program: ProgramWeek[] = [
     date: "14 November",
     measuresToClassical: false,
     gates: [
-      { id: "w4-lecture", type: "lecture", column: 10, time: null },
-      { id: "w4-hackathon-start", type: "hackathon", column: 12, time: null },
+      { id: "w4-registration-lecture", type: "registration", column: 0, time: "07:00–07:50" },
+      { id: "w4-lecture", type: "lecture", column: 1, time: "08:00–09:30" },
+      { id: "w4-registration-hackathon", type: "registration", column: 2, time: "09:00–09:50" },
+      { id: "w4-hackathon-start", type: "hackathon", column: 1, time: "10:00–11:00" },
     ],
   },
   {
@@ -109,7 +121,10 @@ export const program: ProgramWeek[] = [
     index: 5,
     date: "21 November",
     measuresToClassical: true,
-    gates: [{ id: "w5-hackathon-end", type: "hackathon", column: 13, time: null }],
+    gates: [
+      { id: "w5-registration", type: "registration", column: 0, time: "09:00–09:50" },
+      { id: "w5-hackathon-end", type: "hackathon", column: 1, time: "10:00–11:00" },
+    ],
   },
 ];
 

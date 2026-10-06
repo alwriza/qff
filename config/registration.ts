@@ -87,7 +87,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     eyebrow: "Participant application · QFFCA 2026",
     title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
+      "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Back to the festival",
     required: "Required fields are marked with *",
     sections: {
@@ -105,7 +105,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       englishLevel: "English level",
       quantumLevel: "Quantum computing experience",
       pythonLevel: "Python level",
-      attendanceCommitment: "Availability for all 5 Saturday sessions and the hackathon",
+      attendanceCommitment: "Availability for all 5 event days and the hackathon",
       city: "Current city",
       travelReadiness: "Travel to Astana",
       heardFrom: "How did you hear about the event?",
@@ -137,7 +137,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     eyebrow: "Заявка участника · QFFCA 2026",
     title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
+      "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Вернуться к фестивалю",
     required: "Обязательные поля отмечены *",
     sections: {
@@ -155,7 +155,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       englishLevel: "Уровень английского",
       quantumLevel: "Знания по квантовым вычислениям",
       pythonLevel: "Уровень Python",
-      attendanceCommitment: "Готовность посетить все 5 субботних сессий и хакатон",
+      attendanceCommitment: "Готовность посетить все 5 дней встреч и хакатон",
       city: "Ваш город",
       travelReadiness: "Готовность приехать в Астану",
       heardFrom: "Как вы узнали о мероприятии?",
@@ -215,7 +215,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     eyebrow: "Қатысушы өтінімі · QFFCA 2026",
     title: "Join Qiskit Fall Fest Central Asia!",
     lede:
-      "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
+      "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Фестивальге оралу",
     required: "Міндетті өрістер * белгісімен көрсетілген",
     sections: {
@@ -233,7 +233,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       englishLevel: "Ағылшын тілі деңгейі",
       quantumLevel: "Кванттық есептеулер бойынша білім",
       pythonLevel: "Python деңгейі",
-      attendanceCommitment: "Барлық 5 сенбілік сессияға және хакатонға қатысу мүмкіндігі",
+      attendanceCommitment: "Барлық 5 кездесу күніне және хакатонға қатысу мүмкіндігі",
       city: "Қалаңыз",
       travelReadiness: "Астанаға келу мүмкіндігі",
       heardFrom: "Іс-шара туралы қайдан білдіңіз?",

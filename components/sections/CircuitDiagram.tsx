@@ -3,13 +3,14 @@
 import { useTranslations } from "next-intl";
 import { program, gateSymbols, flatGates, columnCount, type Gate, type ProgramWeek } from "@/config/program";
 
-const LABEL_W = 88;
+const LABEL_W = 104;
 const COL_W = 74;
 const GATE = 48;
 const ROW_H = 84;
 const TOP = 38;
 const RIGHT_PAD = 90;
-const BARRIER_COLUMN = 11;
+const hackathonStart = flatGates.find(({ gate }) => gate.id === "w4-hackathon-start")!;
+const BARRIER_COLUMN = hackathonStart.gate.column - 0.5;
 
 const WIDTH = LABEL_W + columnCount * COL_W + RIGHT_PAD;
 const wireY = (i: number) => TOP + i * ROW_H;
@@ -52,7 +53,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
     const selected = gate.id === selectedId;
     const stroke = selected ? "var(--color-violet)" : "var(--color-text)";
     const fill = selected ? "var(--color-surface-2)" : "#ffffff";
-    const label = t("weekLabel", { n: week.index }) + " · " + t("gates." + gate.id + ".title");
+    const label = t("weekLabel", { n: week.index }) + " · " + t(`weeks.${week.id}`) + " · " + (gate.time ?? t("noTime")) + " · " + t("gates." + gate.id + ".title");
 
     return (
       <g
@@ -126,7 +127,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
             W{week.index}
           </text>
           <text x={LABEL_W - 18} y={wireY(i) + 13} textAnchor="end" fontSize={9} className="svg-mono" fill="var(--color-muted)">
-            {week.date ?? t("noTime")}
+            {week.date ? t(`weeks.${week.id}`) : t("noTime")}
           </text>
         </g>
       ))}
@@ -135,9 +136,9 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         <line key={"wire-" + week.id} x1={WIRE_X1} y1={wireY(i)} x2={WIRE_X2} y2={wireY(i)} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
       ))}
 
-      <line x1={BARRIER_X} y1={wireY(0) - 34} x2={BARRIER_X} y2={wireY(3) + 34} stroke="var(--color-pink)" strokeWidth={1.5} strokeDasharray="6 7" />
+      <line x1={BARRIER_X} y1={wireY(hackathonStart.week.index - 1) - 34} x2={BARRIER_X} y2={wireY(hackathonStart.week.index - 1) + 34} stroke="var(--color-pink)" strokeWidth={1.5} strokeDasharray="6 7" />
 
-      {program.map((week, i) => week.measuresToClassical && week.gates.map((gate) => {
+      {program.map((week, i) => week.measuresToClassical && week.gates.filter((gate) => gate.type === "hackathon").map((gate) => {
         const x = colX(gate.column);
         return (
           <line
@@ -154,8 +155,8 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         );
       }))}
 
-      <line x1={colX(10)} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
-      <line x1={colX(10)} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <line x1={WIRE_X1} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <line x1={WIRE_X1} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
       <text x={WIRE_X2} y={CLASSICAL_Y + 28} textAnchor="end" fontSize={13} className="svg-mono" fill="var(--color-pink)">
         {t("finishLabel")}
       </text>

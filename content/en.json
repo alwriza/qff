@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Qiskit Fall Fest Central Asia 2026",
-    "description": "Qiskit Fall Fest Central Asia 2026: five Saturdays, 4 lectures and a hackathon at Nazarbayev University in Astana. Free and open to everyone.",
+    "description": "Qiskit Fall Fest Central Asia 2026: five event days with lectures, lab sessions and a hackathon at Nazarbayev University in Astana. Free and open to everyone.",
     "cocTitle": "Code of Conduct — QFFCA 2026",
     "cocDescription": "The code of conduct for Qiskit Fall Fest Central Asia 2026."
   },
@@ -26,8 +26,8 @@
     "titleBefore": "The first Qiskit Fall Fest in ",
     "titleAccent": "Central Asia",
     "titleAfter": "",
-    "lede": "Five Saturdays, 4 lectures, 1 hackathon. Free of charge. No previous experience needed.",
-    "factSaturdays": "{n} Saturdays",
+    "lede": "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
+    "factSaturdays": "{n} event days",
     "factAudience": "For everyone",
     "factFree": "Free",
     "ctaRegister": "Register",
@@ -76,79 +76,105 @@
       "lab": "lab",
       "hackathon": "hackathon",
       "cnot": "CNOT",
-      "speedDating": "Speed Dating"
+      "registration": "registration",
+      "ceremony": "ceremony",
+      "break": "break"
     },
     "weeks": {
       "week-1": "24 October",
       "week-2": "31 October",
-      "week-3": "7 November",
+      "week-3": "8 November",
       "week-4": "14 November",
       "week-5": "21 November"
     },
     "gates": {
+      "w1-registration": {
+        "title": "Registration",
+        "description": "Participant registration."
+      },
+      "w1-opening": {
+        "title": "Opening Ceremony",
+        "description": "Festival opening ceremony."
+      },
       "w1-lecture": {
         "title": "Quantum Computing: State-of-the-Art",
-        "description": "1st lecture by Salizhan K."
+        "description": "Lecture by Salizhan K."
       },
-      "w1-practice": {
-        "title": "Practice session",
-        "description": "Working through the lecture material by hand and in code."
+      "w1-chemistry": {
+        "title": "Primer Lecture: Quantum Chemistry",
+        "description": "Lecture by a professor from Yonsei University."
       },
-      "w2-lecture": {
-        "title": "Introduction to Quantum Mechanics",
-        "description": "2nd lecture by Salizhan K."
-      },
-      "w2-practice": {
-        "title": "1st Practicum: Quantum Mechanics",
-        "description": "Quantum mechanics practicum."
-      },
-      "w3-lecture": {
-        "title": "Introduction to Quantum Information",
-        "description": "3rd lecture. Speaker to be announced."
-      },
-      "w3-practice": {
-        "title": "Practice session",
-        "description": "Simulating states and measurements in Qiskit."
-      },
-      "w3-speaker": {
-        "title": "Speed Dating: ...",
-        "description": "Topic and speaker to be announced."
-      },
-      "w4-lecture": {
-        "title": "Qiskit 101",
-        "description": "4th lecture by Irma V."
-      },
-      "w4-practice": {
-        "title": "Practice session",
-        "description": "Building and submitting jobs to the IBM Quantum Platform."
-      },
-      "w4-lab": {
-        "title": "Photonics laboratory",
-        "description": "A hands-on session in the photonics lab — quantum phenomena on real optical equipment."
-      },
-      "w4-activity": {
-        "title": "X gate",
-        "description": "The final X gate before the hackathon measurement."
-      },
-      "w4-hackathon-start": {
-        "title": "Hackathon: Opening Ceremony",
-        "description": "Hackathon kickoff."
-      },
-      "w5-hackathon-end": {
-        "title": "Hackathon: Closing Ceremony",
-        "description": "Hackathon conclusion."
+      "w1-coffee": {
+        "title": "Coffee break",
+        "description": "Coffee break."
       },
       "w1-cnot": {
-        "title": "1st Lab: Quantum Sensors Lab",
-        "description": "Laboratory session."
+        "title": "Quantum Sensors Lab session",
+        "description": "Laboratory session in the Quantum Sensors Lab."
       },
-      "w2-speaker": {
-        "title": "Speed Dating: Quantum Chemistry",
+      "w2-registration": {
+        "title": "Registration",
+        "description": "Participant registration."
+      },
+      "w2-lecture": {
+        "title": "Introduction to Quantum Mechanics & Information",
+        "description": "Lecture by Salizhan K."
+      },
+      "w2-session-1": {
+        "title": "Session to be announced",
+        "description": "Topic and speaker to be announced."
+      },
+      "w2-session-2": {
+        "title": "Session to be announced",
+        "description": "Topic and speaker to be announced."
+      },
+      "w3-registration": {
+        "title": "Registration",
+        "description": "Participant registration."
+      },
+      "w3-lecture": {
+        "title": "Introduction to SQD",
+        "description": "Lecture by Alain Chancé."
+      },
+      "w3-error-correction": {
+        "title": "Primer Lecture: Quantum Error Correction",
         "description": "Speaker to be announced."
       },
       "w3-cnot": {
-        "title": "2nd Lab: Intermediate Physics Lab",
-        "description": "Laboratory session."
+        "title": "Intermediate Physics Lab session",
+        "description": "Laboratory session in the Intermediate Physics Lab."
+      },
+      "w4-registration-lecture": {
+        "title": "Registration (lecture attendees)",
+        "description": "Registration for Qiskit 101 attendees."
+      },
+      "w4-lecture": {
+        "title": "Qiskit 101",
+        "description": "Lecture by Irma V."
+      },
+      "w4-registration-hackathon": {
+        "title": "Registration (hackathon participants)",
+        "description": "Hackathon participant registration."
+      },
+      "w4-hackathon-start": {
+        "title": "Hackathon Opening Ceremony",
+        "description": "Hackathon kickoff."
+      },
+      "w4-coffee": {
+        "title": "Coffee break",
+        "description": "Coffee break."
+      },
+      "w5-registration": {
+        "title": "Registration",
+        "description": "Participant registration."
+      },
+      "w5-hackathon-end": {
+        "title": "Hackathon Closing Ceremony",
+        "description": "Hackathon conclusion."
+      },
+      "w5-pizza": {
+        "title": "Pizza Time",
+        "description": "Pizza after the closing ceremony."
       }
     },
     "finishLabel": "Finish!"
@@ -228,7 +254,7 @@
       },
       {
         "q": "Do I need to know how to program?",
-        "a": "A basic level helps. Week 3 is dedicated to a beginner-friendly guide to programming with Qiskit."
+        "a": "A basic level helps. The Qiskit 101 lecture on 14 November introduces programming with Qiskit."
       },
       {
         "q": "Is the hackathon mandatory?",

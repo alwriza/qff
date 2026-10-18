@@ -53,14 +53,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Карточка поднимается в строку со второй строкой заголовка —
-              как в макете. Отрицательный отступ задан в vw, чтобы совпадать
-              с кеглем h1, который тоже растёт от ширины окна.
-
-              Подъём включается только с xl: на 1024–1279px вторая строка
-              заголовка в ru и kk ещё длиннее свободного места слева
-              от карточки и заезжала бы под неё. */}
-          <div className="xl:-mt-[clamp(48px,6.1vw,88px)] flex justify-start lg:justify-end lg:pr-[46px]">
+          <div className="flex justify-start lg:justify-end lg:pr-[46px]">
             <HeroArtCard className="w-full max-w-[441px]" />
           </div>
         </div>

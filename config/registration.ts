@@ -62,7 +62,7 @@ const sharedOptions = {
   quantumNone: "Starting from zero",
   quantumHeard: "I have heard about qubits",
   quantumCourse: "I have taken a course",
-  quantumQiskit: "I have worked with Qiskit",
+  quantumProgramming: "I have experience with quantum programming",
   pythonNone: "Starting from zero",
   pythonBasic: "Basic syntax",
   pythonIntermediate: "I can write small programs",
@@ -82,10 +82,10 @@ const sharedOptions = {
 
 export const registrationCopy: Record<Locale, RegistrationCopy> = {
   en: {
-    metaTitle: "Registration — QFFCA 2026",
-    metaDescription: "Apply to Qiskit Fall Fest Central Asia 2026 in Astana.",
-    eyebrow: "Participant application · QFFCA 2026",
-    title: "Join Qiskit Fall Fest Central Asia!",
+    metaTitle: "Registration — Hilbert Space Quantum Fest 2026",
+    metaDescription: "Apply to Hilbert Space Quantum Fest 2026 in Astana.",
+    eyebrow: "Participant application · Hilbert Space Quantum Fest 2026",
+    title: "Join Hilbert Space Quantum Fest 2026!",
     lede:
       "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Back to the festival",
@@ -110,7 +110,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       travelReadiness: "Travel to Astana",
       heardFrom: "How did you hear about the event?",
       comments: "Comments for the organizers",
-      consent: "I agree that the organizers may process these details for event registration and contact me about QFFCA 2026.",
+      consent: "I agree that the organizers may process these details for event registration and contact me about Hilbert Space Quantum Fest 2026.",
     },
     placeholders: {
       fullName: "First and last name",
@@ -132,10 +132,10 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     duplicate: "An application with this email has already been submitted.",
   },
   ru: {
-    metaTitle: "Регистрация — QFFCA 2026",
-    metaDescription: "Регистрация на Qiskit Fall Fest Central Asia 2026 в Астане.",
-    eyebrow: "Заявка участника · QFFCA 2026",
-    title: "Join Qiskit Fall Fest Central Asia!",
+    metaTitle: "Регистрация — Hilbert Space Quantum Fest 2026",
+    metaDescription: "Регистрация на Hilbert Space Quantum Fest 2026 в Астане.",
+    eyebrow: "Заявка участника · Hilbert Space Quantum Fest 2026",
+    title: "Join Hilbert Space Quantum Fest 2026!",
     lede:
       "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Вернуться к фестивалю",
@@ -160,7 +160,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       travelReadiness: "Готовность приехать в Астану",
       heardFrom: "Как вы узнали о мероприятии?",
       comments: "Комментарии для организаторов",
-      consent: "Я согласен(-на) на обработку этих данных для регистрации и получение сообщений о QFFCA 2026.",
+      consent: "Я согласен(-на) на обработку этих данных для регистрации и получение сообщений о Hilbert Space Quantum Fest 2026.",
     },
     placeholders: {
       fullName: "Имя и фамилия",
@@ -184,7 +184,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       quantumNone: "Начинаю с нуля",
       quantumHeard: "Слышал(-а) про кубиты",
       quantumCourse: "Проходил(-а) курс",
-      quantumQiskit: "Работал(-а) с Qiskit",
+      quantumProgramming: "Есть опыт квантового программирования",
       pythonNone: "Начинаю с нуля",
       pythonBasic: "Знаю базовый синтаксис",
       pythonIntermediate: "Пишу небольшие программы",
@@ -210,10 +210,10 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     duplicate: "Заявка с таким email уже была отправлена.",
   },
   kk: {
-    metaTitle: "Тіркелу — QFFCA 2026",
-    metaDescription: "Астанадағы Qiskit Fall Fest Central Asia 2026 фестиваліне тіркелу.",
-    eyebrow: "Қатысушы өтінімі · QFFCA 2026",
-    title: "Join Qiskit Fall Fest Central Asia!",
+    metaTitle: "Тіркелу — Hilbert Space Quantum Fest 2026",
+    metaDescription: "Астанадағы Hilbert Space Quantum Fest 2026 фестиваліне тіркелу.",
+    eyebrow: "Қатысушы өтінімі · Hilbert Space Quantum Fest 2026",
+    title: "Join Hilbert Space Quantum Fest 2026!",
     lede:
       "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     back: "Фестивальге оралу",
@@ -238,7 +238,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       travelReadiness: "Астанаға келу мүмкіндігі",
       heardFrom: "Іс-шара туралы қайдан білдіңіз?",
       comments: "Ұйымдастырушыларға пікір",
-      consent: "Осы деректерді тіркелу үшін өңдеуге және QFFCA 2026 туралы хабарласуға келісемін.",
+      consent: "Осы деректерді тіркелу үшін өңдеуге және Hilbert Space Quantum Fest 2026 туралы хабарласуға келісемін.",
     },
     placeholders: {
       fullName: "Аты-жөні",
@@ -262,7 +262,7 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
       quantumNone: "Нөлден бастаймын",
       quantumHeard: "Кубиттер туралы естідім",
       quantumCourse: "Курс оқыдым",
-      quantumQiskit: "Qiskit-пен жұмыс істедім",
+      quantumProgramming: "Кванттық бағдарламалау тәжірибем бар",
       pythonNone: "Нөлден бастаймын",
       pythonBasic: "Негізгі синтаксисті білемін",
       pythonIntermediate: "Шағын бағдарламалар жаза аламын",

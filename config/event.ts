@@ -1,6 +1,6 @@
 export const event = {
-  name: "Qiskit Fall Fest Central Asia 2026",
-  shortName: "QFFCA'26",
+  name: "Hilbert Space Quantum Fest 2026",
+  shortName: "HSQF’26",
   university: "Nazarbayev University",
   city: "Astana",
   startDate: "2026-10-24T09:00:00+05:00" as string | null,

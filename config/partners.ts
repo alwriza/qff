@@ -20,15 +20,6 @@ export const partners: Partner[] = [
     logoViewBox: "54 50 1585 363",
   },
   {
-    id: "ibm-quantum",
-    name: "IBM Quantum",
-    logo: "/IBM_Quantum_logotype_pos_RGB.png",
-    url: "https://www.ibm.com/quantum",
-    logoWidth: 3904,
-    logoHeight: 1500,
-    logoViewBox: "600 594 2702 386",
-  },
-  {
     id: "google-developer-group",
     name: "Google Developer Group",
     logo: "/googledevelopers.png",

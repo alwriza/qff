@@ -1,5 +1,5 @@
 /**
- * Иллюстрация hero-блока: карточка-«открытка» Qiskit Fall Fest.
+ * Иллюстрация hero-блока: карточка-«открытка» Hilbert Space Quantum Fest.
  *
  * Рисуем инлайновым SVG, а не <img>: карточка тянется по ширине колонки
  * без ступенек на ретине, а готового ассета в public/illustrations нет.
@@ -45,7 +45,7 @@ export default function HeroArtCard({ className = "" }: { className?: string }) 
       className={className}
       viewBox="0 0 444 268"
       role="img"
-      aria-label="Qiskit Fall Fest 2026"
+      aria-label="Hilbert Space Quantum Fest 2026"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -92,18 +92,18 @@ export default function HeroArtCard({ className = "" }: { className?: string }) 
           <g
             className="svg-mono"
             fill={NAVY}
-            fontSize="13"
+            fontSize="11"
             fontWeight="500"
-            letterSpacing="1.6"
+            letterSpacing="0.8"
           >
             <text textAnchor="middle">
               <textPath href="#hero-badge-top" startOffset="50%">
-                Qiskit
+                Hilbert Space
               </textPath>
             </text>
             <text textAnchor="middle">
               <textPath href="#hero-badge-bottom" startOffset="50%">
-                Fall Fest
+                Quantum Fest
               </textPath>
             </text>
             <text x="78" y="150" fontSize="10" letterSpacing="0.6">

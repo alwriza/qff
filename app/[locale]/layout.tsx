@@ -48,7 +48,7 @@ export async function generateMetadata({
         .filter((l) => l !== locale)
         .map((l) => ogLocale[l]),
       // TODO: положить реальные PNG 1200×630 в public/og перед анонсом —
-      // ссылку постят в LinkedIn IBM Quantum, битое превью увидят десятки тысяч.
+      // изображение используется при публикации ссылки в соцсетях.
       images: [
         {
           url: `/og/og-${locale}.png`,

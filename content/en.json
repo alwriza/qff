@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Qiskit Fall Fest Central Asia 2026",
-    "description": "Qiskit Fall Fest Central Asia 2026: five event days with lectures, lab sessions and a hackathon at Nazarbayev University in Astana. Free and open to everyone.",
-    "cocTitle": "Code of Conduct — QFFCA 2026",
-    "cocDescription": "The code of conduct for Qiskit Fall Fest Central Asia 2026."
+    "title": "Hilbert Space Quantum Fest 2026",
+    "description": "Hilbert Space Quantum Fest 2026: five event days with lectures, lab sessions and a hackathon at Nazarbayev University in Astana. Free and open to everyone.",
+    "cocTitle": "Code of Conduct — Hilbert Space Quantum Fest 2026",
+    "cocDescription": "The code of conduct for Hilbert Space Quantum Fest 2026."
   },
   "common": {
     "tbd": "To be decided",
@@ -22,10 +22,10 @@
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "IBM Quantum · Qiskit Fall Fest 2026",
-    "titleBefore": "The first Qiskit Fall Fest in ",
-    "titleAccent": "Central Asia",
-    "titleAfter": "",
+    "eyebrow": "Hilbert Space Quantum Fest 2026",
+    "titleBefore": "Hilbert Space ",
+    "titleAccent": "Quantum Fest",
+    "titleAfter": " 2026",
     "lede": "Five event days, lectures, lab sessions and a hackathon. Free of charge. No previous experience needed.",
     "factSaturdays": "{n} event days",
     "factAudience": "For everyone",
@@ -43,17 +43,17 @@
   "about": {
     "title": "About the fest",
     "body": [
-      "IBM Qiskit Fall Fest is an annual initiative that brings together thousands of quantum enthusiasts.",
-      "This year, it will happen in Astana, Kazakhstan for the first time. Dive into quantum computing, learn about its significant potential, and challenge your skills at the QFFCA’26 Hackathon."
+      "Hilbert Space Quantum Fest brings together quantum technology enthusiasts to learn, explore and build projects together.",
+      "This year, it will happen in Astana, Kazakhstan for the first time. Dive into quantum computing, learn about its significant potential, and challenge your skills at the Hilbert Space Quantum Fest Hackathon."
     ]
   },
   "whatYouGet": {
     "title": "What you get",
     "items": [
-      "Lectures with an introduction to quantum computing and Qiskit",
-      "Access to real IBM quantum computers through the IBM Quantum Platform",
+      "Lectures introducing quantum computing and quantum programming",
+      "Hands-on quantum computing sessions",
       "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
-      "A week-long hackathon where you can turn what you learn into working projects with Qiskit"
+      "A week-long hackathon where you can turn what you learn into working quantum computing projects"
     ]
   },
   "program": {
@@ -100,10 +100,6 @@
         "title": "Quantum Computing: State-of-the-Art",
         "description": "Lecture by Salizhan K."
       },
-      "w1-chemistry": {
-        "title": "Primer Lecture: Quantum Chemistry",
-        "description": "Lecture by a professor from Yonsei University."
-      },
       "w1-coffee": {
         "title": "Coffee break",
         "description": "Coffee break."
@@ -117,40 +113,24 @@
         "description": "Participant registration."
       },
       "w2-lecture": {
-        "title": "Introduction to Quantum Mechanics & Information",
+        "title": "Intro to Quantum Mechanics & Information",
         "description": "Lecture by Salizhan K."
-      },
-      "w2-session-1": {
-        "title": "Session to be announced",
-        "description": "Topic and speaker to be announced."
-      },
-      "w2-session-2": {
-        "title": "Session to be announced",
-        "description": "Topic and speaker to be announced."
       },
       "w3-registration": {
         "title": "Registration",
         "description": "Participant registration."
       },
       "w3-lecture": {
-        "title": "Introduction to SQD",
-        "description": "Lecture by Alain Chancé."
-      },
-      "w3-error-correction": {
-        "title": "Primer Lecture: Quantum Error Correction",
-        "description": "Speaker to be announced."
+        "title": "Qiskit 101",
+        "description": "Lecture by Salizhan K."
       },
       "w3-cnot": {
         "title": "Intermediate Physics Lab session",
         "description": "Laboratory session in the Intermediate Physics Lab."
       },
-      "w4-registration-lecture": {
-        "title": "Registration (lecture attendees)",
-        "description": "Registration for Qiskit 101 attendees."
-      },
       "w4-lecture": {
-        "title": "Qiskit 101",
-        "description": "Lecture by Irma V."
+        "title": "Intro to SQD",
+        "description": "Lecture by Alain Chancé."
       },
       "w4-registration-hackathon": {
         "title": "Registration (hackathon participants)",
@@ -209,8 +189,6 @@
     "items": [
       "A laptop",
       "Python 3.11 or newer",
-      "Qiskit installed",
-      "An IBM Quantum Platform account",
       "A basic level — we start from the ground up, no prior quantum background required"
     ]
   },
@@ -254,7 +232,7 @@
       },
       {
         "q": "Do I need to know how to program?",
-        "a": "A basic level helps. The Qiskit 101 lecture on 14 November introduces programming with Qiskit."
+        "a": "A basic level helps. The Qiskit 101 lecture on 8 November introduces quantum programming."
       },
       {
         "q": "Is the hackathon mandatory?",
@@ -279,14 +257,13 @@
     "trustTitle": "Behind the team",
     "trustBody": [
       "The same team runs National Science Battles — 1,800 participants across 7 countries — and the National Engineering & Science Olympiad — 600 participants across 3 countries.",
-      "Among us: a PhD student in quantum information at Oxford, graduates of the Qiskit Global Summer School and QIntern, and a NASA intern."
+      "Among us: a PhD student in quantum information at Oxford, graduates of quantum computing schools and research internships, and a NASA intern."
     ]
   },
   "partners": {
     "title": "Partners",
     "items": {
       "nazarbayev-university": "Host university — Astana",
-      "ibm-quantum": "Global organizer of the Qiskit Fall Fest",
       "google-developer-group": "Community partner",
       "central-asian-hilbert-space": "Regional quantum community"
     },
@@ -307,13 +284,13 @@
     "communitySoon": "Telegram channel coming soon",
     "socialsLabel": "Instagram channel",
     "coc": "Code of Conduct",
-    "rights": "Qiskit Fall Fest Central Asia 2026",
-    "disclaimer": "Qiskit and IBM Quantum are trademarks of IBM. This is a community-run event.",
+    "rights": "Hilbert Space Quantum Fest 2026",
+    "disclaimer": "This is a community-run event.",
     "logosTodo": "Partner logos"
   },
   "coc": {
     "title": "Code of Conduct",
-    "lede": "Qiskit Fall Fest Central Asia 2026 is a learning space. Everyone is welcome, and everyone is responsible for keeping it that way.",
+    "lede": "Hilbert Space Quantum Fest 2026 is a learning space. Everyone is welcome, and everyone is responsible for keeping it that way.",
     "sections": [
       {
         "heading": "What we expect",

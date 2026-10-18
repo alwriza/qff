@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 const allowed = {
   educationLevel: ["school", "bachelor", "graduate", "other"],
   englishLevel: ["a1a2", "b1b2", "c1c2", "not_sure"],
-  quantumLevel: ["none", "heard", "course", "qiskit"],
+  quantumLevel: ["none", "heard", "course", "programming"],
   pythonLevel: ["none", "basic", "intermediate", "advanced"],
   attendanceCommitment: ["all", "most", "unsure"],
   travelReadiness: ["in_astana", "can_travel", "unconfirmed"],

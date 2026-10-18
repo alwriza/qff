@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Qiskit Fall Fest Central Asia 2026",
-    "description": "Первый Qiskit Fall Fest в Центральной Азии: пять недель квантовых вычислений в Nazarbayev University, Астана, для студентов, школьников и независимых исследователей.",
-    "cocTitle": "Кодекс поведения — QFFCA 2026",
-    "cocDescription": "Кодекс поведения Qiskit Fall Fest Central Asia 2026."
+    "title": "Hilbert Space Quantum Fest 2026",
+    "description": "Hilbert Space Quantum Fest 2026 — пять дней лекций, лабораторных занятий и хакатон в Nazarbayev University, Астана, для студентов, школьников и независимых исследователей.",
+    "cocTitle": "Кодекс поведения — Hilbert Space Quantum Fest 2026",
+    "cocDescription": "Кодекс поведения Hilbert Space Quantum Fest 2026."
   },
   "common": {
     "tbd": "To be decided",
@@ -22,10 +22,10 @@
     "language": "Язык"
   },
   "hero": {
-    "eyebrow": "IBM Quantum · Qiskit Fall Fest 2026",
-    "titleBefore": "Первый Qiskit Fall Fest в ",
-    "titleAccent": "Центральной Азии",
-    "titleAfter": "",
+    "eyebrow": "Hilbert Space Quantum Fest 2026",
+    "titleBefore": "Hilbert Space ",
+    "titleAccent": "Quantum Fest",
+    "titleAfter": " 2026",
     "lede": "Пять дней встреч, лекции, лабораторные занятия и хакатон. Бесплатно. Предыдущий опыт не нужен.",
     "factSaturdays": "{n} дней встреч",
     "factAudience": "Для всех",
@@ -43,17 +43,17 @@
   "about": {
     "title": "О фестивале",
     "body": [
-      "IBM Qiskit Fall Fest — ежегодная инициатива, которая объединяет тысячи энтузиастов квантовых технологий.",
-      "Впервые фестиваль пройдёт в Астане, Казахстан. Вы погрузитесь в квантовые вычисления, узнаете об их потенциале и проверите свои навыки на хакатоне QFFCA’26."
+      "Hilbert Space Quantum Fest объединяет энтузиастов квантовых технологий для совместного обучения, исследований и создания проектов.",
+      "Впервые фестиваль пройдёт в Астане, Казахстан. Вы погрузитесь в квантовые вычисления, узнаете об их потенциале и проверите свои навыки на хакатоне Hilbert Space Quantum Fest."
     ]
   },
   "whatYouGet": {
     "title": "Что вы получите",
     "items": [
-      "Лекции, знакомящие с квантовыми вычислениями и Qiskit",
-      "Доступ к настоящим квантовым компьютерам IBM через IBM Quantum Platform",
+      "Лекции, знакомящие с квантовыми вычислениями и квантовым программированием",
+      "Практические занятия по квантовым вычислениям",
       "Экскурсии по лабораториям: Quantum Sensors Lab и Intermediate Physics Lab (Optics)",
-      "Недельный хакатон: превратите полученные знания в проекты на Qiskit"
+      "Недельный хакатон: превратите полученные знания в проекты по квантовым вычислениям"
     ]
   },
   "program": {
@@ -100,10 +100,6 @@
         "title": "Квантовые вычисления: современное состояние",
         "description": "Лекция Salizhan K."
       },
-      "w1-chemistry": {
-        "title": "Вводная лекция: квантовая химия",
-        "description": "Лекция профессора Yonsei University."
-      },
       "w1-coffee": {
         "title": "Кофе-брейк",
         "description": "Перерыв на кофе."
@@ -120,37 +116,21 @@
         "title": "Введение в квантовую механику и информацию",
         "description": "Лекция Salizhan K."
       },
-      "w2-session-1": {
-        "title": "Сессия уточняется",
-        "description": "Тема и спикер будут объявлены позже."
-      },
-      "w2-session-2": {
-        "title": "Сессия уточняется",
-        "description": "Тема и спикер будут объявлены позже."
-      },
       "w3-registration": {
         "title": "Регистрация",
         "description": "Регистрация участников."
       },
       "w3-lecture": {
-        "title": "Введение в SQD",
-        "description": "Лекция Alain Chancé."
-      },
-      "w3-error-correction": {
-        "title": "Вводная лекция: квантовая коррекция ошибок",
-        "description": "Спикер будет объявлен позже."
+        "title": "Qiskit 101",
+        "description": "Лекция Salizhan K."
       },
       "w3-cnot": {
         "title": "Сессия в Intermediate Physics Lab",
         "description": "Занятие в Intermediate Physics Lab."
       },
-      "w4-registration-lecture": {
-        "title": "Регистрация слушателей лекции",
-        "description": "Регистрация слушателей Qiskit 101."
-      },
       "w4-lecture": {
-        "title": "Qiskit 101",
-        "description": "Лекция Irma V."
+        "title": "Введение в SQD",
+        "description": "Лекция Alain Chancé."
       },
       "w4-registration-hackathon": {
         "title": "Регистрация участников хакатона",
@@ -209,8 +189,6 @@
     "items": [
       "Ноутбук",
       "Python 3.11 или новее",
-      "Установленный Qiskit",
-      "Аккаунт IBM Quantum Platform",
       "Базовый уровень — мы начинаем с нуля, квантовая подготовка не требуется"
     ]
   },
@@ -254,7 +232,7 @@
       },
       {
         "q": "Нужно ли уметь программировать?",
-        "a": "Базовый уровень поможет. Лекция Qiskit 101 14 ноября знакомит с программированием на Qiskit."
+        "a": "Базовый уровень поможет. Лекция Qiskit 101 8 ноября знакомит с основами квантового программирования."
       },
       {
         "q": "Обязателен ли хакатон?",
@@ -279,14 +257,13 @@
     "trustTitle": "За командой",
     "trustBody": [
       "Та же команда проводит National Science Battles — 1800 участников из 7 стран — и National Engineering & Science Olympiad — 600 участников из 3 стран.",
-      "В составе: PhD-студент Оксфорда по квантовой информации, выпускники Qiskit Global Summer School и QIntern, стажёр NASA."
+      "В составе: PhD-студент Оксфорда по квантовой информации, выпускники школ квантовых вычислений и исследовательских стажировок, стажёр NASA."
     ]
   },
   "partners": {
     "title": "Партнёры",
     "items": {
       "nazarbayev-university": "Принимающий университет — Астана",
-      "ibm-quantum": "Глобальный организатор Qiskit Fall Fest",
       "google-developer-group": "Партнёр сообщества",
       "central-asian-hilbert-space": "Региональное квантовое сообщество"
     },
@@ -307,13 +284,13 @@
     "communitySoon": "Telegram-канал скоро появится",
     "socialsLabel": "Instagram-канал",
     "coc": "Кодекс поведения",
-    "rights": "Qiskit Fall Fest Central Asia 2026",
-    "disclaimer": "Qiskit и IBM Quantum — товарные знаки IBM. Мероприятие проводится сообществом.",
+    "rights": "Hilbert Space Quantum Fest 2026",
+    "disclaimer": "Мероприятие проводится сообществом.",
     "logosTodo": "Логотипы партнёров"
   },
   "coc": {
     "title": "Кодекс поведения",
-    "lede": "Qiskit Fall Fest Central Asia 2026 — это учебное пространство. Здесь рады каждому, и каждый отвечает за то, чтобы так и оставалось.",
+    "lede": "Hilbert Space Quantum Fest 2026 — это учебное пространство. Здесь рады каждому, и каждый отвечает за то, чтобы так и оставалось.",
     "sections": [
       {
         "heading": "Что мы ожидаем",

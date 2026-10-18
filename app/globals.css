@@ -32,8 +32,8 @@
      сообщение об ошибке набрано мелким кеглем. */
   --color-danger: #c0175c;
 
-  --font-sans: var(--font-ibm-plex-sans), sans-serif;
-  --font-mono: var(--font-ibm-plex-mono), monospace;
+  --font-sans: var(--font-fest-sans), sans-serif;
+  --font-mono: var(--font-fest-mono), monospace;
 
   --container-max: 1512px;
 }
@@ -86,7 +86,7 @@ textarea {
    ТИПОГРАФИКА
    ============================================================ */
 
-/* Кегли ниже прежних: Plex Sans на 11% шире Condensed, которым заголовки
+/* Кегли ниже прежних: Noto Sans на 11% шире Condensed, которым заголовки
    набирались раньше, — при старых значениях строки переставали помещаться.
    Межсловный пробел расширен, как в макете: слова там стоят заметно реже
    букв. */
@@ -657,22 +657,12 @@ h1.display {
 /* Кегль и интерлиньяж заголовка hero отличаются от остальных .display:
    две строки на всю ширину экрана с воздухом между ними. */
 .hero .hero-title {
-  /* 6.7vw = 96px на 1440 — кегль макета: там строка «THE FIRST QISKIT FALL
-     FEST» занимает 1309px, Plex Sans даёт ровно столько при 96px с добавленным
-     межсловным пробелом. Интерлиньяж 1.28 — 126px между строками в макете. */
+  /* Responsive festival title, with room between lines. */
   font-size: clamp(34px, 6.7vw, 100px);
   line-height: 1.28;
   letter-spacing: -0.01em;
   word-spacing: 0.1em;
   max-width: min(100%, 1400px);
-}
-
-/* Кириллица в Plex Sans шире латиницы: на 1280–1440px вторая строка
-   заголовка в ru и kk доставала до карточки-иллюстрации. 6.1vw — крайний
-   кегль, при котором она заканчивается левее карточки. */
-html[lang="ru"] .hero .hero-title,
-html[lang="kk"] .hero .hero-title {
-  font-size: clamp(30px, 5.6vw, 84px);
 }
 
 .hero-lede {

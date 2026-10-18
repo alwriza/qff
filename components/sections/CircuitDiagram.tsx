@@ -10,7 +10,7 @@ const ROW_H = 84;
 const TOP = 38;
 const RIGHT_PAD = 90;
 const hackathonStart = flatGates.find(({ gate }) => gate.id === "w4-hackathon-start")!;
-const BARRIER_COLUMN = hackathonStart.gate.column - 0.5;
+const BARRIER_COLUMN = hackathonStart.gate.column - 1;
 
 const WIDTH = LABEL_W + columnCount * COL_W + RIGHT_PAD;
 const wireY = (i: number) => TOP + i * ROW_H;
@@ -136,7 +136,7 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         <line key={"wire-" + week.id} x1={WIRE_X1} y1={wireY(i)} x2={WIRE_X2} y2={wireY(i)} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
       ))}
 
-      <line x1={BARRIER_X} y1={wireY(hackathonStart.week.index - 1) - 34} x2={BARRIER_X} y2={wireY(hackathonStart.week.index - 1) + 34} stroke="var(--color-pink)" strokeWidth={1.5} strokeDasharray="6 7" />
+      <line x1={BARRIER_X} y1={wireY(0) - 34} x2={BARRIER_X} y2={wireY(hackathonStart.week.index - 1) + 34} stroke="var(--color-pink)" strokeWidth={1.5} strokeDasharray="6 7" />
 
       {program.map((week, i) => week.measuresToClassical && week.gates.filter((gate) => gate.type === "hackathon").map((gate) => {
         const x = colX(gate.column);
@@ -155,8 +155,8 @@ export default function CircuitDiagram({ selectedId, onSelect }: Props) {
         );
       }))}
 
-      <line x1={WIRE_X1} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
-      <line x1={WIRE_X1} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <line x1={colX(program[hackathonStart.week.index - 1].gates[0].column)} y1={CLASSICAL_Y - 2} x2={WIRE_X2} y2={CLASSICAL_Y - 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
+      <line x1={colX(program[hackathonStart.week.index - 1].gates[0].column)} y1={CLASSICAL_Y + 2} x2={WIRE_X2} y2={CLASSICAL_Y + 2} stroke="var(--color-text)" strokeOpacity={0.68} strokeWidth={1.5} />
       <text x={WIRE_X2} y={CLASSICAL_Y + 28} textAnchor="end" fontSize={13} className="svg-mono" fill="var(--color-pink)">
         {t("finishLabel")}
       </text>

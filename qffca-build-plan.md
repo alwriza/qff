@@ -1,8 +1,8 @@
-# QFFCA 2026 — build plan
+# Hilbert Space Quantum Fest 2026 — build plan
 
 Полный план сборки сайта. Документ рассчитан на исполнение агентом: собрать весь сайт целиком, со всеми секциями и страницами. Там, где информации ещё нет, ставить плейсхолдеры вида `[ TBD ]` — не пропускать секцию, не выдумывать данные.
 
-Событие: **Qiskit Fall Fest Central Asia 2026**, Nazarbayev University, Астана. Первый Qiskit Fall Fest в Центральной Азии.
+Событие: **Hilbert Space Quantum Fest 2026**, Nazarbayev University, Астана. Фестиваль квантовых вычислений в Центральной Азии.
 
 ---
 
@@ -11,7 +11,7 @@
 - **Next.js 15**, App Router, TypeScript, `output: 'export'` (статика)
 - **Tailwind CSS v4** — токены через `@theme` в `globals.css`
 - **next-intl** — три локали, сегмент `[locale]`
-- **next/font/google** — IBM Plex Sans, IBM Plex Sans Condensed, IBM Plex Mono, сабсеты `latin`, `cyrillic`, `cyrillic-ext`
+- **next/font/google** — Noto Sans, Noto Sans, Noto Sans Mono, сабсеты `latin`, `cyrillic`, `cyrillic-ext`
 - Анимации — **без библиотек**: CSS-переходы + `IntersectionObserver` + один кастомный хук для декрипшна. Никаких framer-motion, GSAP, three.js.
 - Деплой — Vercel
 
@@ -108,12 +108,12 @@ i18n/
 
 ### Типографика
 
-- Display: `IBM Plex Sans Condensed`, **italic 700**, uppercase, `clamp(38px, 8vw, 124px)`, `line-height: .90`, `letter-spacing: -.02em`
+- Display: `Noto Sans`, **italic 700**, uppercase, `clamp(38px, 8vw, 124px)`, `line-height: .90`, `letter-spacing: -.02em`
 - H2: тот же стиль, `clamp(30px, 5vw, 64px)`
-- Body: `IBM Plex Sans` 300/400, 17px, `line-height: 1.55`
-- Utility: `IBM Plex Mono` 400/500, 11–13px, `letter-spacing: .09em`, uppercase — даты, время, лейблы, метки гейтов, счётчик, значения в readout
+- Body: `Noto Sans` 300/400, 17px, `line-height: 1.55`
+- Utility: `Noto Sans Mono` 400/500, 11–13px, `letter-spacing: .09em`, uppercase — даты, время, лейблы, метки гейтов, счётчик, значения в readout
 
-⚠️ **Проверить первым делом:** казахские глифы `ә ғ қ ң ө ұ ү һ і` в IBM Plex Sans Condensed. Если в Condensed их нет — для локали `kk` заголовки набирать `IBM Plex Sans` Bold Italic, остальные локали не трогать. Проверять рендером, а не предположением.
+⚠️ **Проверить первым делом:** казахские глифы `ә ғ қ ң ө ұ ү һ і` в Noto Sans. Если в Condensed их нет — для локали `kk` заголовки набирать `Noto Sans` Bold Italic, остальные локали не трогать. Проверять рендером, а не предположением.
 
 ### Форма
 
@@ -161,8 +161,8 @@ i18n/
 ### 4.2 Разметка hero
 
 ```
-[eyebrow]  IBM QUANTUM · QISKIT FALL FEST 2026        mono, коралловая черта слева
-[h1]       THE FIRST QISKIT FALL FEST IN CENTRAL ASIA  Condensed Italic, "Central Asia" — coral
+[eyebrow]  HILBERT SPACE QUANTUM FEST 2026
+[h1]       HILBERT SPACE QUANTUM FEST 2026
 [lede]     Introducing future generations to the quantum frontier.
 [facts]    NAZARBAYEV UNIVERSITY · ASTANA │ 5 SATURDAYS │ FREE │ 70–100 SEATS
 [cta]      [ Register ]  [ See the program ↓ ]
@@ -175,7 +175,7 @@ Countdown оставить как есть — работает. Цель бер
 
 ## 5. Readout — замена блока статистики
 
-Текущие три большие цифры в ряд выглядят шаблонно. Заменить на **калибровочную таблицу** — по образцу панели свойств процессора в IBM Quantum.
+Текущие три большие цифры в ряд выглядят шаблонно. Заменить на **калибровочную таблицу** — по образцу панели свойств квантового процессора.
 
 Полноширинная секция на `--surface`. Строки с хайрлайнами, каждая:
 
@@ -239,7 +239,7 @@ mono-лейбл слева ────────── тонкая поло�
 | 7 | Speakers | surface | квадратные фото, имя, аффилиация, тема, LinkedIn | **секция скрыта целиком**, пустые карточки не показывать |
 | 8 | Hackathon | surface | формат, команды, тайминг, критерии, жюри, призы. Единственное место коралла кроме CTA | критерии и жюри `[ TBD ]` |
 | 9 | Certificates | bg | два уровня и критерии | — |
-| 10 | Prerequisites | bg | ноутбук, Python 3.11+, Qiskit, аккаунт IBM Quantum Platform, базовый уровень | — |
+| 10 | Prerequisites | bg | ноутбук, Python 3.11+, базовый уровень | — |
 | 11 | Register | surface | условия, дедлайн, мест, кнопка на внешнюю форму | ссылка `#`, кнопка disabled с подписью «opens soon» |
 | 12 | Venue | bg | NU, корпус, аудитория, карта, как добраться | адрес `[ TBD ]`, карту не вставлять пока нет точного адреса |
 | 13 | FAQ | bg | аккордеон, 10 вопросов | — |
@@ -252,15 +252,15 @@ mono-лейбл слева ────────── тонкая поло�
 
 ### Содержание ключевых секций
 
-**About** — Qiskit Fall Fest это ежегодная глобальная инициатива IBM Quantum: студенческие команды в ведущих университетах мира проводят лекции, воркшопы и хакатоны. В 2025 году это 32 000+ участников в 150 университетах. В 2026 фестиваль впервые приходит в Центральную Азию.
+**About** — Hilbert Space Quantum Fest объединяет энтузиастов квантовых технологий для совместного обучения, исследований и создания проектов в Nazarbayev University, Астана.
 
-**WhatYouGet** — доступ к реальным квантовым компьютерам IBM через IBM Quantum Platform · четыре лекции с нуля: линейная алгебра → Python → квантовая механика → квантовые вычисления · практические сессии после каждой лекции · хакатон с защитой перед жюри · сертификат двух уровней · лаборатория фотоники · спикеры на стыках квант × медицина, финансы, криптография, ИИ · мерч и призы от партнёров
+**WhatYouGet** — практические занятия по квантовым вычислениям · четыре лекции с нуля: линейная алгебра → Python → квантовая механика → квантовые вычисления · практические сессии после каждой лекции · хакатон с защитой перед жюри · сертификат двух уровней · лаборатория фотоники · спикеры на стыках квант × медицина, финансы, криптография, ИИ · мерч и призы от партнёров
 
 **Hackathon** — 4 базовые задачи + 1 project task · команды по 3 · 4–5 часов кода, затем защита · критерии `[ TBD ]` · жюри `[ TBD ]` · призы от партнёров
 
 **Certificates** — With excellence: не менее 4 лекций + участие в хакатоне. Of completion: не менее 3 лекций + участие в хакатоне.
 
-**Team** — 10 человек: Salizhan K. (adviser), Aldiyar B. (adviser), Ilshatrozy A., Arsen A., Symbat B., Aituar A., Dair T., Alisha A., Miras B., Nurkyz Y. Под сеткой блок доверия: за командой National Science Battles (1800 участников, 7 стран) и National Engineering & Science Olympiad (600 участников, 3 страны); в составе PhD-студент Оксфорда по квантовой информации, выпускники Qiskit Global Summer School и QIntern, стажёр NASA.
+**Team** — 10 человек: Salizhan K. (adviser), Aldiyar B. (adviser), Ilshatrozy A., Arsen A., Symbat B., Aituar A., Dair T., Alisha A., Miras B., Nurkyz Y. Под сеткой блок доверия: за командой National Science Battles (1800 участников, 7 стран) и National Engineering & Science Olympiad (600 участников, 3 страны); в составе PhD-студент Оксфорда по квантовой информации, выпускники школ квантовых вычислений и исследовательских стажировок, стажёр NASA.
 
 **Partners** — существующие логотипы с описанием в одну строку. Блок «Стать партнёром»: предлагаем размещение логотипа, выступление на открытии и закрытии, освещение в соцсетях и прессе; поддержать можно призами или финансово.
 
@@ -274,8 +274,8 @@ mono-лейбл слева ────────── тонкая поло�
 
 ```ts
 export const event = {
-  name: "Qiskit Fall Fest Central Asia 2026",
-  shortName: "QFFCA 2026",
+  name: "Hilbert Space Quantum Fest 2026",
+  shortName: "Hilbert Space Quantum Fest 2026",
   university: "Nazarbayev University",
   city: "Astana",
   startDate: null,            // "2026-10-24" — countdown и hero
@@ -300,11 +300,11 @@ export const event = {
 
 ## 9. Локализация
 
-- Локаль в URL: `/en` (дефолт), `/ru`, `/kk`. Не клиентский переключатель — иначе IBM и LinkedIn заиндексируют случайный язык
+- Локаль в URL: `/en` (дефолт), `/ru`, `/kk`. Не клиентский переключатель — иначе поисковики и соцсети заиндексируют случайный язык
 - `generateStaticParams` для трёх локалей, `hreflang` на всех
 - Переключатель языка сохраняет якорь: `/ru#program` → `/en#program`
 - Приоритет заполнения: EN полностью → RU → KK. Сайт должен собираться и с частичным переводом: недостающий ключ падает на английский, не на пустую строку
-- Не переводятся: IBM Quantum, Qiskit, Nazarbayev University, имена людей
+- Не переводятся: Nazarbayev University, имена людей
 
 ---
 
@@ -334,9 +334,6 @@ export const event = {
 
 ## 12. Логотипы
 
-- Оригиналы IBM ещё не получены. Пока — заглушка в шапке, в коде пометка `TODO: replace with official IBM Quantum lockup`
-- Можно: lockup `IBM Quantum` и quantum-globe, без изменений, без дописанных слов, без перекраски
-- Нельзя: 8-полосный логотип IBM
 - Присланный логотип команды — это PNG 3687×3687, вложенный в SVG-обёртку; настоящего вектора внутри нет. Запросить исходный вектор для favicon и печати
 - Нужны векторы: Nazarbayev University, Google Developer Group, Oxford, Central Asian Hilbert Space
 
@@ -345,7 +342,7 @@ export const event = {
 ## 13. SEO и шаринг
 
 - `<title>` и `description` на каждую локаль
-- **OG-изображение 1200×630 на каждую локаль** — ссылку постят в LinkedIn IBM Quantum, битое превью увидят десятки тысяч человек
+- **OG-изображение 1200×630 на каждую локаль** — изображение используется при публикации ссылки в соцсетях
 - `og:locale`, `og:locale:alternate`, `hreflang`, канонические ссылки
 - JSON-LD `Event`: название, даты, место, организатор, `offers.price: 0`
 - favicon и apple-touch-icon

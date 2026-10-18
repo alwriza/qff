@@ -72,7 +72,7 @@ export default function RegistrationForm({ copy, locale }: Props) {
   if (state === "success") {
     return (
       <div className="card p-8 md:p-12" role="status">
-        <p className="mono text-violet">QFFCA 2026 · OK</p>
+        <p className="mono text-violet">Hilbert Space Quantum Fest 2026 · OK</p>
         <h2 className="h2 h2--bare mt-5">
           {copy.successTitle}
         </h2>
@@ -136,7 +136,7 @@ export default function RegistrationForm({ copy, locale }: Props) {
         ]} />
         <SelectField label={copy.fields.quantumLevel} name="quantumLevel" placeholder={copy.placeholders.select} options={[
           { value: "none", label: o.quantumNone }, { value: "heard", label: o.quantumHeard },
-          { value: "course", label: o.quantumCourse }, { value: "qiskit", label: o.quantumQiskit },
+          { value: "course", label: o.quantumCourse }, { value: "programming", label: o.quantumProgramming },
         ]} />
         <SelectField label={copy.fields.pythonLevel} name="pythonLevel" placeholder={copy.placeholders.select} options={[
           { value: "none", label: o.pythonNone }, { value: "basic", label: o.pythonBasic },

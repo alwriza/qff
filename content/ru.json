@@ -38,7 +38,7 @@
     "minutes": "Минут",
     "seconds": "Секунд",
     "factCity": "Астана, Казахстан",
-    "factDates": "24 октября – 21 ноября"
+    "factDates": "31 октября – 28 ноября"
   },
   "about": {
     "title": "О фестивале",
@@ -52,7 +52,7 @@
     "items": [
       "Лекции, знакомящие с квантовыми вычислениями и квантовым программированием",
       "Практические занятия по квантовым вычислениям",
-      "Экскурсии по лабораториям: Quantum Sensors Lab и Intermediate Physics Lab (Optics)",
+      "Экскурсии по лабораториям: Clean Room Nanofabrication & Cryo Superconducting Labs",
       "Недельный хакатон: превратите полученные знания в проекты по квантовым вычислениям"
     ]
   },
@@ -81,11 +81,11 @@
       "break": "перерыв"
     },
     "weeks": {
-      "week-1": "24 октября",
-      "week-2": "31 октября",
-      "week-3": "8 ноября",
-      "week-4": "14 ноября",
-      "week-5": "21 ноября"
+      "week-1": "31 октября",
+      "week-2": "8 ноября",
+      "week-3": "14 ноября",
+      "week-4": "21 ноября",
+      "week-5": "28 ноября"
     },
     "gates": {
       "w1-registration": {
@@ -104,9 +104,13 @@
         "title": "Кофе-брейк",
         "description": "Перерыв на кофе."
       },
+      "w1-communication": {
+        "title": "Квантовая коммуникация",
+        "description": "Лекция Hong S."
+      },
       "w1-cnot": {
-        "title": "Сессия в Quantum Sensors Lab",
-        "description": "Занятие в лаборатории квантовых сенсоров."
+        "title": "Clean Room Nanofabrication & Cryo Superconducting Labs",
+        "description": "Занятие в Clean Room Nanofabrication & Cryo Superconducting Labs."
       },
       "w2-registration": {
         "title": "Регистрация",
@@ -114,23 +118,31 @@
       },
       "w2-lecture": {
         "title": "Введение в квантовую механику и информацию",
-        "description": "Лекция Salizhan K."
+        "description": "Лекция профессора Kyunghwan."
+      },
+      "w2-coffee": {
+        "title": "Кофе-брейк",
+        "description": "Перерыв на кофе."
+      },
+      "w2-sqd": {
+        "title": "Квантовая диагонализация на основе выборок (SQD)",
+        "description": "Лекция Alain Chancé."
       },
       "w3-registration": {
         "title": "Регистрация",
         "description": "Регистрация участников."
       },
       "w3-lecture": {
-        "title": "Qiskit 101",
-        "description": "Лекция Salizhan K."
+        "title": "Лабораторная работа по квантовым вычислениям",
+        "description": "Занятие Salizhan K."
       },
-      "w3-cnot": {
-        "title": "Сессия в Intermediate Physics Lab",
-        "description": "Занятие в Intermediate Physics Lab."
+      "w3-coffee": {
+        "title": "Кофе-брейк",
+        "description": "Перерыв на кофе."
       },
-      "w4-lecture": {
-        "title": "Введение в SQD",
-        "description": "Лекция Alain Chancé."
+      "w3-error-correction": {
+        "title": "Квантовая коррекция ошибок",
+        "description": "Лекция Maria Dinca."
       },
       "w4-registration-hackathon": {
         "title": "Регистрация участников хакатона",
@@ -174,7 +186,7 @@
     },
     "format": "4 задачи и 1 необязательный проект.",
     "teams": "От 1 до 3 участников.",
-    "span": "Одна неделя: 14–21 ноября"
+    "span": "Одна неделя: 21–28 ноября"
   },
   "certificates": {
     "title": "Сертификаты",
@@ -232,7 +244,7 @@
       },
       {
         "q": "Нужно ли уметь программировать?",
-        "a": "Базовый уровень поможет. Лекция Qiskit 101 8 ноября знакомит с основами квантового программирования."
+        "a": "Базовый уровень поможет. Лабораторная работа по квантовым вычислениям 14 ноября знакомит с основами квантового программирования."
       },
       {
         "q": "Обязателен ли хакатон?",

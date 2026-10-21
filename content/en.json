@@ -38,7 +38,7 @@
     "minutes": "Minutes",
     "seconds": "Seconds",
     "factCity": "Astana, Kazakhstan",
-    "factDates": "24 October - 21 November"
+    "factDates": "31 October – 28 November"
   },
   "about": {
     "title": "About the fest",
@@ -52,7 +52,7 @@
     "items": [
       "Lectures introducing quantum computing and quantum programming",
       "Hands-on quantum computing sessions",
-      "Lab tours: Quantum Sensors Lab and Intermediate Physics Lab (Optics)",
+      "Lab tours: Clean Room Nanofabrication & Cryo Superconducting Labs",
       "A week-long hackathon where you can turn what you learn into working quantum computing projects"
     ]
   },
@@ -81,11 +81,11 @@
       "break": "break"
     },
     "weeks": {
-      "week-1": "24 October",
-      "week-2": "31 October",
-      "week-3": "8 November",
-      "week-4": "14 November",
-      "week-5": "21 November"
+      "week-1": "31 October",
+      "week-2": "8 November",
+      "week-3": "14 November",
+      "week-4": "21 November",
+      "week-5": "28 November"
     },
     "gates": {
       "w1-registration": {
@@ -104,9 +104,13 @@
         "title": "Coffee break",
         "description": "Coffee break."
       },
+      "w1-communication": {
+        "title": "Quantum Communication",
+        "description": "Lecture by Hong S."
+      },
       "w1-cnot": {
-        "title": "Quantum Sensors Lab session",
-        "description": "Laboratory session in the Quantum Sensors Lab."
+        "title": "Clean Room Nanofabrication & Cryo Superconducting Labs",
+        "description": "Laboratory session in the Clean Room Nanofabrication & Cryo Superconducting Labs."
       },
       "w2-registration": {
         "title": "Registration",
@@ -114,23 +118,31 @@
       },
       "w2-lecture": {
         "title": "Intro to Quantum Mechanics & Information",
-        "description": "Lecture by Salizhan K."
+        "description": "Lecture by Prof. Kyunghwan."
+      },
+      "w2-coffee": {
+        "title": "Coffee break",
+        "description": "Coffee break."
+      },
+      "w2-sqd": {
+        "title": "Sample-based Quantum Diagonalization (SQD)",
+        "description": "Lecture by Alain Chancé."
       },
       "w3-registration": {
         "title": "Registration",
         "description": "Participant registration."
       },
       "w3-lecture": {
-        "title": "Qiskit 101",
-        "description": "Lecture by Salizhan K."
+        "title": "Quantum Computing Lab",
+        "description": "Session by Salizhan K."
       },
-      "w3-cnot": {
-        "title": "Intermediate Physics Lab session",
-        "description": "Laboratory session in the Intermediate Physics Lab."
+      "w3-coffee": {
+        "title": "Coffee break",
+        "description": "Coffee break."
       },
-      "w4-lecture": {
-        "title": "Intro to SQD",
-        "description": "Lecture by Alain Chancé."
+      "w3-error-correction": {
+        "title": "Quantum Error Correction",
+        "description": "Lecture by Maria Dinca."
       },
       "w4-registration-hackathon": {
         "title": "Registration (hackathon participants)",
@@ -174,7 +186,7 @@
     },
     "format": "4 tasks and 1 optional project.",
     "teams": "From 1 to 3 participants.",
-    "span": "Week-long; 14 November - 21 November"
+    "span": "Week-long; 21 November – 28 November"
   },
   "certificates": {
     "title": "Certificates",
@@ -232,7 +244,7 @@
       },
       {
         "q": "Do I need to know how to program?",
-        "a": "A basic level helps. The Qiskit 101 lecture on 8 November introduces quantum programming."
+        "a": "A basic level helps. The Quantum Computing Lab on 14 November introduces quantum programming."
       },
       {
         "q": "Is the hackathon mandatory?",

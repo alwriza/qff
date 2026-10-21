@@ -3,8 +3,8 @@ export const event = {
   shortName: "HSQF’26",
   university: "Nazarbayev University",
   city: "Astana",
-  startDate: "2026-10-24T09:00:00+05:00" as string | null,
-  endDate: "2026-11-21" as string | null,
+  startDate: "2026-10-31T09:30:00+05:00" as string | null,
+  endDate: "2026-11-28" as string | null,
   saturdays: 5,
   registrationUrl: null as string | null, // null → встроенная форма /[locale]/register
   registrationDeadline: "22 October 2026" as string | null,

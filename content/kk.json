@@ -38,7 +38,7 @@
     "minutes": "Минут",
     "seconds": "Секунд",
     "factCity": "Астана, Қазақстан",
-    "factDates": "24 қазан – 21 қараша"
+    "factDates": "31 қазан – 28 қараша"
   },
   "about": {
     "title": "Фестиваль туралы",
@@ -52,7 +52,7 @@
     "items": [
       "Кванттық есептеулер мен кванттық бағдарламалауға кіріспе дәрістері",
       "Кванттық есептеулер бойынша практикалық сабақтар",
-      "Зертхана турлары: Quantum Sensors Lab және Intermediate Physics Lab (Optics)",
+      "Зертханаларға экскурсиялар: Clean Room Nanofabrication & Cryo Superconducting Labs",
       "Бір апталық хакатонда үйренгендеріңізді кванттық есептеу жобаларына айналдырыңыз"
     ]
   },
@@ -81,11 +81,11 @@
       "break": "үзіліс"
     },
     "weeks": {
-      "week-1": "24 қазан",
-      "week-2": "31 қазан",
-      "week-3": "8 қараша",
-      "week-4": "14 қараша",
-      "week-5": "21 қараша"
+      "week-1": "31 қазан",
+      "week-2": "8 қараша",
+      "week-3": "14 қараша",
+      "week-4": "21 қараша",
+      "week-5": "28 қараша"
     },
     "gates": {
       "w1-registration": {
@@ -104,9 +104,13 @@
         "title": "Кофе үзілісі",
         "description": "Кофе үзілісі."
       },
+      "w1-communication": {
+        "title": "Кванттық коммуникация",
+        "description": "Hong S. дәрісі."
+      },
       "w1-cnot": {
-        "title": "Quantum Sensors Lab сабағы",
-        "description": "Кванттық сенсорлар зертханасындағы сабақ."
+        "title": "Clean Room Nanofabrication & Cryo Superconducting Labs",
+        "description": "Clean Room Nanofabrication & Cryo Superconducting Labs зертханаларындағы сабақ."
       },
       "w2-registration": {
         "title": "Тіркелу",
@@ -114,23 +118,31 @@
       },
       "w2-lecture": {
         "title": "Кванттық механика мен ақпаратқа кіріспе",
-        "description": "Salizhan K. дәрісі."
+        "description": "Профессор Kyunghwan дәрісі."
+      },
+      "w2-coffee": {
+        "title": "Кофе үзілісі",
+        "description": "Кофе үзілісі."
+      },
+      "w2-sqd": {
+        "title": "Іріктемеге негізделген кванттық диагонализация (SQD)",
+        "description": "Alain Chancé дәрісі."
       },
       "w3-registration": {
         "title": "Тіркелу",
         "description": "Қатысушыларды тіркеу."
       },
       "w3-lecture": {
-        "title": "Qiskit 101",
-        "description": "Salizhan K. дәрісі."
+        "title": "Кванттық есептеулер зертханасы",
+        "description": "Salizhan K. сабағы."
       },
-      "w3-cnot": {
-        "title": "Intermediate Physics Lab сабағы",
-        "description": "Intermediate Physics Lab зертханасындағы сабақ."
+      "w3-coffee": {
+        "title": "Кофе үзілісі",
+        "description": "Кофе үзілісі."
       },
-      "w4-lecture": {
-        "title": "SQD-ге кіріспе",
-        "description": "Alain Chancé дәрісі."
+      "w3-error-correction": {
+        "title": "Кванттық қателерді түзету",
+        "description": "Maria Dinca дәрісі."
       },
       "w4-registration-hackathon": {
         "title": "Хакатон қатысушыларын тіркеу",
@@ -174,7 +186,7 @@
     },
     "format": "4 тапсырма және 1 қосымша жоба.",
     "teams": "1-ден 3-ке дейін қатысушы.",
-    "span": "Бір апта: 14–21 қараша"
+    "span": "Бір апта: 21–28 қараша"
   },
   "certificates": {
     "title": "Сертификаттар",
@@ -232,7 +244,7 @@
       },
       {
         "q": "Бағдарламалауды білу қажет пе?",
-        "a": "Бастапқы деңгей пайдалы. 8 қарашадағы Qiskit 101 дәрісі кванттық бағдарламалау негіздерімен таныстырады."
+        "a": "Бастапқы деңгей пайдалы. 14 қарашадағы кванттық есептеулер зертханасы кванттық бағдарламалау негіздерімен таныстырады."
       },
       {
         "q": "Хакатон міндетті ме?",

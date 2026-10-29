@@ -15,8 +15,9 @@ const links = [
 
 export default function Nav() {
   const t = useTranslations("nav");
+  const registration = useTranslations("register");
   const locale = useLocale();
-  const registrationHref = event.registrationUrl ?? `/${locale}/register`;
+  const registrationHref = `/${locale}/register`;
 
   const resolved = links.map((link) => ({
     href: `/${locale}/${link.href}`,
@@ -56,14 +57,14 @@ export default function Nav() {
           {/* В макете кнопка шапки — белая с тёмной обводкой; розовая
               заливка приберегается для главных CTA в hero и регистрации. */}
           <Button href={registrationHref} variant="secondary">
-            {t("register")}
+            {registration("closedTitle")}
           </Button>
         </div>
 
         <MobileMenu
           links={resolved}
           menuLabel={t("menu")}
-          registerLabel={t("register")}
+          registerLabel={registration("closedTitle")}
           registerHref={registrationHref}
           registerDisabled={false}
         />

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Nav from "@/components/nav/Nav";
 import Footer from "@/components/sections/Footer";
-import RegistrationForm from "@/components/registration/RegistrationForm";
 import { registrationCopy } from "@/config/registration";
 import { Link } from "@/i18n/navigation";
 import ContourField from "@/components/ui/ContourField";
@@ -21,8 +20,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
-  const copy = registrationCopy[locale];
-  return { title: copy.metaTitle, description: copy.metaDescription };
+  const t = await getTranslations({ locale, namespace: "register" });
+  return { title: `${t("closedTitle")} — Hilbert Space Quantum Fest 2026`, description: t("closedBody") };
 }
 
 export default async function RegistrationPage({
@@ -35,6 +34,7 @@ export default async function RegistrationPage({
 
   setRequestLocale(locale);
   const copy = registrationCopy[locale as Locale];
+  const t = await getTranslations({ locale, namespace: "register" });
 
   return (
     <>
@@ -47,21 +47,11 @@ export default async function RegistrationPage({
             <Link href="/" className="mono underline-sweep text-violet transition-colors hover:text-text">
               ← {copy.back}
             </Link>
-            <p className="mono mt-12 text-violet">{copy.eyebrow}</p>
-            <h1 className="h2 mt-6 max-w-[18ch]">{copy.title}</h1>
-            <p className="mt-7 max-w-[62ch] text-lg text-muted md:text-xl">{copy.lede}</p>
+            <p className="mono mt-12 text-violet">Hilbert Space Quantum Fest 2026</p>
+            <h1 className="h2 mt-6 max-w-[18ch]">{t("closedTitle")}</h1>
+            <p className="mt-7 max-w-[62ch] text-lg text-muted md:text-xl">{t("closedBody")}</p>
           </div>
         </header>
-
-        <section className="container-max py-12 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] lg:gap-16">
-            <aside className="lg:sticky lg:top-28 lg:self-start">
-              <p className="mono text-muted">13 / fields</p>
-              <p className="mt-4 max-w-[26ch] text-sm text-muted">{copy.required}</p>
-            </aside>
-            <RegistrationForm copy={copy} locale={locale as Locale} />
-          </div>
-        </section>
         </main>
         <Footer />
       </div>

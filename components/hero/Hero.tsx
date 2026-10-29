@@ -1,12 +1,11 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { event } from "@/config/event";
 import Countdown from "@/components/hero/Countdown";
 import HeroArtCard from "@/components/hero/HeroArtCard";
 
 export default function Hero() {
   const t = useTranslations("hero");
-  const locale = useLocale();
-  const registrationHref = event.registrationUrl ?? `/${locale}/register`;
+  const registration = useTranslations("register");
 
   const facts = [
     `${event.university} · ${t("factCity")}`,
@@ -44,9 +43,7 @@ export default function Hero() {
             </ul>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a href={registrationHref} className="btn btn--primary">
-                {t("ctaRegister")}
-              </a>
+              <p className="mono text-violet">{registration("closedTitle")}</p>
               <a href="#program" className="btn btn--secondary">
                 {t("ctaProgram")} ↓
               </a>

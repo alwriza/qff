@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { event } from "@/config/event";
 import Countdown from "@/components/hero/Countdown";
 import HeroArtCard from "@/components/hero/HeroArtCard";
+import { Link } from "@/i18n/navigation";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -43,7 +44,7 @@ export default function Hero() {
             </ul>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <p className="mono text-violet">{registration("closedTitle")}</p>
+              <Link href="/register" className="btn btn--primary">{registration("cta")}</Link>
               <a href="#program" className="btn btn--secondary">
                 {t("ctaProgram")} ↓
               </a>

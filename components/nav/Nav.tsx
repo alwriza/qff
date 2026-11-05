@@ -57,14 +57,14 @@ export default function Nav() {
           {/* В макете кнопка шапки — белая с тёмной обводкой; розовая
               заливка приберегается для главных CTA в hero и регистрации. */}
           <Button href={registrationHref} variant="secondary">
-            {registration("closedTitle")}
+            {registration("cta")}
           </Button>
         </div>
 
         <MobileMenu
           links={resolved}
           menuLabel={t("menu")}
-          registerLabel={registration("closedTitle")}
+          registerLabel={registration("cta")}
           registerHref={registrationHref}
           registerDisabled={false}
         />

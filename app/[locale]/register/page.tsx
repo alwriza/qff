@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Nav from "@/components/nav/Nav";
 import Footer from "@/components/sections/Footer";
 import { registrationCopy } from "@/config/registration";
 import { Link } from "@/i18n/navigation";
 import ContourField from "@/components/ui/ContourField";
+import RegistrationForm from "@/components/registration/RegistrationForm";
 import { routing, type Locale } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -20,8 +21,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) return {};
-  const t = await getTranslations({ locale, namespace: "register" });
-  return { title: `${t("closedTitle")} — Hilbert Space Quantum Fest 2026`, description: t("closedBody") };
+  const copy = registrationCopy[locale as Locale];
+  return { title: copy.metaTitle, description: copy.metaDescription };
 }
 
 export default async function RegistrationPage({
@@ -34,7 +35,6 @@ export default async function RegistrationPage({
 
   setRequestLocale(locale);
   const copy = registrationCopy[locale as Locale];
-  const t = await getTranslations({ locale, namespace: "register" });
 
   return (
     <>
@@ -48,10 +48,16 @@ export default async function RegistrationPage({
               ← {copy.back}
             </Link>
             <p className="mono mt-12 text-violet">Hilbert Space Quantum Fest 2026</p>
-            <h1 className="h2 mt-6 max-w-[18ch]">{t("closedTitle")}</h1>
-            <p className="mt-7 max-w-[62ch] text-lg text-muted md:text-xl">{t("closedBody")}</p>
+            <h1 className="h2 mt-6 max-w-[18ch]">{copy.title}</h1>
+            <p className="mt-7 max-w-[62ch] text-lg text-muted md:text-xl">{copy.lede}</p>
           </div>
         </header>
+          <section className="container-max relative z-10 py-12 md:py-16" aria-label={copy.title}>
+            <div className="mx-auto max-w-3xl">
+              <p className="mb-8 text-sm text-muted">{copy.required}</p>
+              <RegistrationForm copy={copy} />
+            </div>
+          </section>
         </main>
         <Footer />
       </div>

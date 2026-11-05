@@ -207,8 +207,8 @@
   "register": {
     "closedTitle": "Registration is closed",
     "closedBody": "Applications for Hilbert Space Quantum Fest 2026 are now closed. Thank you to everyone who registered!",
-    "title": "Register",
-    "lede": "The fest is for university students, high-schoolers and independent researchers.",
+    "title": "Hackathon registration",
+    "lede": "Register your team to join the hackathon online or offline.",
     "labels": {
       "audience": "Who it is for",
       "deadline": "Deadline",
@@ -217,9 +217,9 @@
     "hybrid": "Hybrid",
     "inPerson": "In person",
     "audience": "University students, high-schoolers and independent researchers",
-    "cta": "Register",
+    "cta": "Join the hackathon",
     "opensSoon": "Registration opens soon",
-    "note": "The application takes about 3–5 minutes. Your answers are sent directly to the organizing team."
+    "note": "Five fields — one application per team captain."
   },
   "venue": {
     "title": "Venue",

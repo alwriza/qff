@@ -20,6 +20,8 @@ export function ensureHackathonSchema() {
         id BIGSERIAL PRIMARY KEY,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
         full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(full_name)) > 0),
+        participant_1_full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(participant_1_full_name)) > 0),
+        participant_2_full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(participant_2_full_name)) > 0),
         captain_telegram VARCHAR(33) NOT NULL
           CHECK (captain_telegram ~ '^@[A-Za-z][A-Za-z0-9_]{4,31}$'),
         captain_email VARCHAR(254) NOT NULL CHECK (LENGTH(BTRIM(captain_email)) > 0),
@@ -27,6 +29,13 @@ export function ensureHackathonSchema() {
         participation_format VARCHAR(7) NOT NULL
           CHECK (participation_format IN ('offline', 'online'))
       )
+    `;
+    await sql`
+      ALTER TABLE hackathon.registrations
+        ADD COLUMN IF NOT EXISTS participant_1_full_name VARCHAR(120)
+          CHECK (LENGTH(BTRIM(participant_1_full_name)) > 0),
+        ADD COLUMN IF NOT EXISTS participant_2_full_name VARCHAR(120)
+          CHECK (LENGTH(BTRIM(participant_2_full_name)) > 0)
     `;
     await sql`
       CREATE UNIQUE INDEX IF NOT EXISTS hackathon_captain_email_unique

@@ -7,8 +7,8 @@ export type RegistrationCopy = {
   lede: string;
   back: string;
   required: string;
-  fields: Record<"fullName" | "captainTelegram" | "captainEmail" | "teamName" | "participationFormat", string>;
-  placeholders: Record<"fullName" | "captainTelegram" | "captainEmail" | "teamName" | "select", string>;
+  fields: Record<"fullName" | "participant1FullName" | "participant2FullName" | "captainTelegram" | "captainEmail" | "teamName" | "participationFormat", string>;
+  placeholders: Record<"fullName" | "participant1FullName" | "participant2FullName" | "captainTelegram" | "captainEmail" | "teamName" | "select", string>;
   options: { offline: string; online: string };
   submit: string;
   submitting: string;
@@ -24,11 +24,11 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Регистрация на хакатон — Hilbert Space Quantum Fest 2026",
     metaDescription: "Зарегистрируйте команду на хакатон Hilbert Space Quantum Fest 2026. Участие онлайн или оффлайн.",
     title: "Регистрация на хакатон",
-    lede: "Укажите ФИО капитана, его контакты, название команды и формат участия.",
+    lede: "Укажите ФИО капитана и двух участников, контакты капитана, название команды и формат участия.",
     back: "Вернуться к фестивалю",
     required: "Все поля обязательны",
-    fields: { fullName: "ФИО", captainTelegram: "Телеграм капитана", captainEmail: "Почта капитана", teamName: "Название команды", participationFormat: "Оффлайн / онлайн" },
-    placeholders: { fullName: "Фамилия, имя, отчество капитана", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Название вашей команды", select: "Выберите формат участия" },
+    fields: { fullName: "ФИО капитана", participant1FullName: "ФИО участника 1", participant2FullName: "ФИО участника 2", captainTelegram: "Телеграм капитана", captainEmail: "Почта капитана", teamName: "Название команды", participationFormat: "Оффлайн / онлайн" },
+    placeholders: { fullName: "Фамилия, имя, отчество капитана", participant1FullName: "Фамилия, имя, отчество первого участника", participant2FullName: "Фамилия, имя, отчество второго участника", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Название вашей команды", select: "Выберите формат участия" },
     options: { offline: "Оффлайн", online: "Онлайн" },
     submit: "Зарегистрировать команду",
     submitting: "Отправляем…",
@@ -42,11 +42,11 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Hackathon registration — Hilbert Space Quantum Fest 2026",
     metaDescription: "Register your team for the Hilbert Space Quantum Fest 2026 hackathon. Join online or offline.",
     title: "Hackathon registration",
-    lede: "Enter the captain’s full name, contact details, team name and participation format.",
+    lede: "Enter the full names of the captain and two participants, the captain’s contact details, team name and participation format.",
     back: "Back to the festival",
     required: "All fields are required",
-    fields: { fullName: "Full name", captainTelegram: "Captain’s Telegram", captainEmail: "Captain’s email", teamName: "Team name", participationFormat: "Offline / online" },
-    placeholders: { fullName: "Captain’s full name", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Your team name", select: "Choose your participation format" },
+    fields: { fullName: "Captain’s full name", participant1FullName: "Participant 1 full name", participant2FullName: "Participant 2 full name", captainTelegram: "Captain’s Telegram", captainEmail: "Captain’s email", teamName: "Team name", participationFormat: "Offline / online" },
+    placeholders: { fullName: "Captain’s full name", participant1FullName: "First participant’s full name", participant2FullName: "Second participant’s full name", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Your team name", select: "Choose your participation format" },
     options: { offline: "Offline", online: "Online" },
     submit: "Register team",
     submitting: "Submitting…",
@@ -60,11 +60,11 @@ export const registrationCopy: Record<Locale, RegistrationCopy> = {
     metaTitle: "Хакатонға тіркелу — Hilbert Space Quantum Fest 2026",
     metaDescription: "Hilbert Space Quantum Fest 2026 хакатонына командаңызды тіркеңіз. Онлайн немесе офлайн қатысу.",
     title: "Хакатонға тіркелу",
-    lede: "Капитанның аты-жөнін, байланыс деректерін, команда атауын және қатысу форматын көрсетіңіз.",
+    lede: "Капитан мен екі қатысушының аты-жөнін, капитанның байланыс деректерін, команда атауын және қатысу форматын көрсетіңіз.",
     back: "Фестивальге оралу",
     required: "Барлық өрістерді толтыру қажет",
-    fields: { fullName: "Аты-жөні", captainTelegram: "Капитанның Telegram-ы", captainEmail: "Капитанның электрондық поштасы", teamName: "Команда атауы", participationFormat: "Офлайн / онлайн" },
-    placeholders: { fullName: "Капитанның толық аты-жөні", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Командаңыздың атауы", select: "Қатысу форматын таңдаңыз" },
+    fields: { fullName: "Капитанның аты-жөні", participant1FullName: "1-қатысушының аты-жөні", participant2FullName: "2-қатысушының аты-жөні", captainTelegram: "Капитанның Telegram-ы", captainEmail: "Капитанның электрондық поштасы", teamName: "Команда атауы", participationFormat: "Офлайн / онлайн" },
+    placeholders: { fullName: "Капитанның толық аты-жөні", participant1FullName: "Бірінші қатысушының толық аты-жөні", participant2FullName: "Екінші қатысушының толық аты-жөні", captainTelegram: "@username", captainEmail: "captain@example.com", teamName: "Командаңыздың атауы", select: "Қатысу форматын таңдаңыз" },
     options: { offline: "Офлайн", online: "Онлайн" },
     submit: "Команданы тіркеу",
     submitting: "Жіберілуде…",

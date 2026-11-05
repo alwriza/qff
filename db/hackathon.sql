@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS hackathon.registrations (
   id BIGSERIAL PRIMARY KEY,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(full_name)) > 0),
+  participant_1_full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(participant_1_full_name)) > 0),
+  participant_2_full_name VARCHAR(120) NOT NULL CHECK (LENGTH(BTRIM(participant_2_full_name)) > 0),
   captain_telegram VARCHAR(33) NOT NULL
     CHECK (captain_telegram ~ '^@[A-Za-z][A-Za-z0-9_]{4,31}$'),
   captain_email VARCHAR(254) NOT NULL CHECK (LENGTH(BTRIM(captain_email)) > 0),
@@ -17,3 +19,10 @@ CREATE UNIQUE INDEX IF NOT EXISTS hackathon_captain_email_unique
 
 CREATE INDEX IF NOT EXISTS hackathon_registrations_created_at_idx
   ON hackathon.registrations (created_at DESC);
+
+-- Existing applications keep NULL for participants whose names were not collected.
+ALTER TABLE hackathon.registrations
+  ADD COLUMN IF NOT EXISTS participant_1_full_name VARCHAR(120)
+    CHECK (LENGTH(BTRIM(participant_1_full_name)) > 0),
+  ADD COLUMN IF NOT EXISTS participant_2_full_name VARCHAR(120)
+    CHECK (LENGTH(BTRIM(participant_2_full_name)) > 0);

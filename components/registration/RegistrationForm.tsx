@@ -48,6 +48,12 @@ export default function RegistrationForm({ copy }: { copy: RegistrationCopy }) {
           {copy.fields.fullName} *
           <input name="fullName" required maxLength={120} pattern={".*\\S.*"} autoComplete="name" placeholder={copy.placeholders.fullName} className="field" />
         </label>
+        {(["participant1FullName", "participant2FullName"] as const).map((name) => (
+          <label key={name} className="block text-sm font-medium text-text">
+            {copy.fields[name]} *
+            <input name={name} required maxLength={120} pattern={".*\\S.*"} autoComplete="off" placeholder={copy.placeholders[name]} className="field" />
+          </label>
+        ))}
         <label className="block text-sm font-medium text-text">
           {copy.fields.captainTelegram} *
           <input name="captainTelegram" required minLength={5} maxLength={33} pattern="@?[A-Za-z][A-Za-z0-9_]{4,31}" autoComplete="off" placeholder={copy.placeholders.captainTelegram} className="field" />

@@ -22,13 +22,15 @@ function loadTs(path, dependencies = {}) {
 
 const { parseHackathonRegistration } = loadTs('lib/hackathon-registration.ts');
 const valid = {
-  fullName: ' Captain Name ', captainTelegram: 'captain_1',
+  fullName: ' Captain Name ', participant1FullName: ' First Participant ', participant2FullName: ' Second Participant ', captainTelegram: 'captain_1',
   captainEmail: ' Captain@Example.com ', teamName: ' Team One ', participationFormat: 'online',
 };
 
 test('normalizes contacts and accepts both participation formats', () => {
   const parsed = parseHackathonRegistration(valid);
   assert.equal(parsed.fullName, 'Captain Name');
+  assert.equal(parsed.participant1FullName, 'First Participant');
+  assert.equal(parsed.participant2FullName, 'Second Participant');
   assert.equal(parsed.captainTelegram, '@captain_1');
   assert.equal(parsed.captainEmail, 'captain@example.com');
   assert.equal(parsed.teamName, 'Team One');
@@ -43,7 +45,7 @@ test('rejects missing fields, invalid values, wrong types and oversized strings'
   }
   for (const value of [null, [], 'text', 12]) assert.equal(parseHackathonRegistration(value), null);
   for (const [field, value] of [
-    ['fullName', 'a'.repeat(121)], ['teamName', 'a'.repeat(121)],
+    ['fullName', 'a'.repeat(121)], ['participant1FullName', 'a'.repeat(121)], ['participant2FullName', 'a'.repeat(121)], ['teamName', 'a'.repeat(121)],
     ['captainEmail', 'not-an-email'], ['captainEmail', 'a'.repeat(250) + '@example.com'],
     ['captainTelegram', '@bad user'], ['captainTelegram', 'https://t.me/captain'],
     ['captainTelegram', 'a'.repeat(33)], ['participationFormat', 'hybrid'],
@@ -70,14 +72,16 @@ function route({ duplicate = false, unavailable = false } = {}) {
 }
 const request = (body) => new Request('http://localhost/api/registrations', { method: 'POST', body: JSON.stringify(body) });
 
-test('API inserts exactly the five normalized fields using query parameters', async () => {
+test('API inserts exactly the seven normalized fields using query parameters', async () => {
   const { POST, queries } = route();
   const response = await POST(request({ ...valid, teamName: "Team '); DROP TABLE registrations; --" }));
   assert.equal(response.status, 201);
   assert.equal(queries.length, 1);
   assert.match(queries[0].query, /INSERT INTO hackathon.registrations/);
-  assert.equal(queries[0].values.length, 5);
-  assert.equal(queries[0].values[2], 'captain@example.com');
+  assert.equal(queries[0].values.length, 7);
+  assert.equal(queries[0].values[1], 'First Participant');
+  assert.equal(queries[0].values[2], 'Second Participant');
+  assert.equal(queries[0].values[4], 'captain@example.com');
   assert.equal(queries[0].query.includes('DROP TABLE'), false);
 });
 

@@ -185,7 +185,7 @@
       "span": "Span"
     },
     "format": "4 tasks and 1 optional project.",
-    "teams": "From 1 to 3 participants.",
+    "teams": "3 people: a captain and two participants.",
     "span": "Week-long; 21 November – 28 November"
   },
   "certificates": {
@@ -219,7 +219,7 @@
     "audience": "University students, high-schoolers and independent researchers",
     "cta": "Join the hackathon",
     "opensSoon": "Registration opens soon",
-    "note": "Five fields — one application per team captain."
+    "note": "Full names of the captain and two participants, captain contacts, team name and participation format."
   },
   "venue": {
     "title": "Venue",
@@ -258,7 +258,7 @@
       },
       {
         "q": "How are hackathon teams formed?",
-        "a": "You may participate individually or in a group of up to three people."
+        "a": "Each team consists of a captain and two participants. Enter all three full names when registering."
       }
     ]
   },

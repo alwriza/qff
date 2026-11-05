@@ -27,11 +27,11 @@ export async function POST(request: Request) {
   try {
     await ensureHackathonSchema();
     const sql = getDatabase();
-    const { fullName, captainTelegram, captainEmail, teamName, participationFormat } = registration;
+    const { fullName, participant1FullName, participant2FullName, captainTelegram, captainEmail, teamName, participationFormat } = registration;
     const rows = await sql`
       INSERT INTO hackathon.registrations
-        (full_name, captain_telegram, captain_email, team_name, participation_format)
-      VALUES (${fullName}, ${captainTelegram}, ${captainEmail}, ${teamName}, ${participationFormat})
+        (full_name, participant_1_full_name, participant_2_full_name, captain_telegram, captain_email, team_name, participation_format)
+      VALUES (${fullName}, ${participant1FullName}, ${participant2FullName}, ${captainTelegram}, ${captainEmail}, ${teamName}, ${participationFormat})
       ON CONFLICT (LOWER(captain_email)) DO NOTHING
       RETURNING id
     `;
